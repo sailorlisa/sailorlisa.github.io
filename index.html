@@ -320,6 +320,285 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Python-Data-Science-Handbook-第1章下/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sailorlisa">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lisa的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/16/Python-Data-Science-Handbook-第1章下/" class="post-title-link" itemprop="url">Python Data Science Handbook 第1章下</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-16 19:07:48 / 修改时间：19:13:02" itemprop="dateCreated datePublished" datetime="2019-05-16T19:07:48+08:00">2019-05-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据科学/" itemprop="url" rel="index"><span itemprop="name">数据科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><a href="https://github.com/jakevdp/PythonDataScienceHandbook" target="_blank" rel="noopener">https://github.com/jakevdp/PythonDataScienceHandbook</a></p>
+</blockquote>
+<h3 id="从头创建数组"><a href="#从头创建数组" class="headerlink" title="从头创建数组"></a>从头创建数组</h3><p>用 NumPy 内置的方法从头创建数组。</p>
+<p>创建一个长度为10的数组，数组的值都是0</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.zeros(<span class="number">10</span>, dtype=int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个3×5的浮点型数组，数组的值都是1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">3</span>, <span class="number">5</span>), dtype=float)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># array([[1., 1., 1., 1., 1.],</span></span><br><span class="line"><span class="comment">#       [1., 1., 1., 1., 1.],</span></span><br><span class="line"><span class="comment">#       [1., 1., 1., 1., 1.]])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个3×5的浮点型数组，数组的值都是3.14</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.full((<span class="number">3</span>, <span class="number">5</span>), <span class="number">3.14</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment"># array([[3.14, 3.14, 3.14, 3.14, 3.14],</span></span><br><span class="line"><span class="comment">#        [3.14, 3.14, 3.14, 3.14, 3.14],</span></span><br><span class="line"><span class="comment">#        [3.14, 3.14, 3.14, 3.14, 3.14]])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个线性序列数组，从0开始，到20结束，步长为2。（它和内置的range()函数类似）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">0</span>, <span class="number">20</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个5个元素的数组，这5个数均匀地分配到0~1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([0.  , 0.25, 0.5 , 0.75, 1.  ])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个3×3的、在0~1均匀分布的随机数组成的数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.random((<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[0.94795687, 0.62658297, 0.4240733 ],</span></span><br><span class="line"><span class="comment">#       [0.75686519, 0.46357097, 0.58682988],</span></span><br><span class="line"><span class="comment">#       [0.37997183, 0.28707067, 0.67190137]])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个3×3的、均值为0、标准差为1的，正态分布的随机数数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[ 0.1348332 , -1.93013655,  1.21003072],</span></span><br><span class="line"><span class="comment">#       [ 1.41562771,  0.29064906,  1.09749629],</span></span><br><span class="line"><span class="comment">#       [-0.16664035, -0.67962834, -0.54942727]])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个3×3的、[0, 10)区间的随机整型数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.randint(<span class="number">0</span>, <span class="number">10</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[8, 0, 5],</span></span><br><span class="line"><span class="comment">#       [6, 5, 9],</span></span><br><span class="line"><span class="comment">#       [9, 9, 0]])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个3×3的单位矩阵</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.eye(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[1., 0., 0.],</span></span><br><span class="line"><span class="comment">#       [0., 1., 0.],</span></span><br><span class="line"><span class="comment">#       [0., 0., 1.]])</span></span><br></pre></td></tr></table></figure>
+<p>创建一个由3个整型数组成的未初始化的数组，数组的值是内存空间中的任意值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.empty(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([1., 1., 1.])</span></span><br></pre></td></tr></table></figure>
+<h3 id="NumPy标准数据类型"><a href="#NumPy标准数据类型" class="headerlink" title="NumPy标准数据类型"></a>NumPy标准数据类型</h3><p>构建数组时，可以用以下2种方式指定数据类型：</p>
+<p>用字符串参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype=<span class="string">'int16'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16)</span></span><br></pre></td></tr></table></figure>
+<p>用相关NumPy对象来指定</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype=np.int16)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16)</span></span><br></pre></td></tr></table></figure>
+<p>NumPy标准数据类型表格：</p>
+<blockquote>
+<p><a href="http://numpy.org/" target="_blank" rel="noopener">http://numpy.org/</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>bool_</code></td>
+<td style="text-align:left">布尔值（真、<code>True</code> 或假、<code>False</code>），用一个字节存储</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int_</code></td>
+<td style="text-align:left">默认整型（类似于 C 语言中的 <code>long</code>，通常情况下是 <code>int64</code> 或 <code>int32</code>）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>intc</code></td>
+<td style="text-align:left">同 C 语言的 <code>int</code> 相同（通常是 <code>int32</code> 或 <code>int64</code>）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>intp</code></td>
+<td style="text-align:left">用作索引的整型（和 C 语言的 <code>ssize_t</code> 相同，通常情况下是 <code>int32</code> 或 <code>int64</code>）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int8</code></td>
+<td style="text-align:left">字节（byte，范围从–128 到 127）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int16</code></td>
+<td style="text-align:left">整型（范围从–32768 到 32767）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int32</code></td>
+<td style="text-align:left">整型（范围从–2147483648 到 2147483647）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>int64</code></td>
+<td style="text-align:left">整型（范围从–9223372036854775808 到 9223372036854775807）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint8</code></td>
+<td style="text-align:left">无符号整型（范围从 0 到 255）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint16</code></td>
+<td style="text-align:left">无符号整型（范围从 0 到 65535）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint32</code></td>
+<td style="text-align:left">无符号整型（范围从 0 到 4294967295）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uint64</code></td>
+<td style="text-align:left">无符号整型（范围从 0 到 18446744073709551615）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>float_</code></td>
+<td style="text-align:left"><code>float64</code> 的简化形式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>float16</code></td>
+<td style="text-align:left">半精度浮点型：符号比特位，5 比特位指数（exponent），10 比特位尾数（mantissa）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>float32</code></td>
+<td style="text-align:left">单精度浮点型：符号比特位，8 比特位指数，23 比特位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>float64</code></td>
+<td style="text-align:left">双精度浮点型：符号比特位，11 比特位指数，52 比特位尾数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>complex_</code></td>
+<td style="text-align:left"><code>complex128</code> 的简化形式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>complex64</code></td>
+<td style="text-align:left">复数，由两个 32 位浮点数表示</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>complex128</code></td>
+<td style="text-align:left">复数，由两个 64 位浮点数表示</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Python-Data-Science-Handbook-第1章上/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -557,7 +836,7 @@
                 
               
 
-              <time title="创建时间：2019-05-16 13:26:18 / 修改时间：16:41:55" itemprop="dateCreated datePublished" datetime="2019-05-16T13:26:18+08:00">2019-05-16</time>
+              <time title="创建时间：2019-05-16 13:26:18 / 修改时间：16:49:57" itemprop="dateCreated datePublished" datetime="2019-05-16T13:26:18+08:00">2019-05-16</time>
             
 
             
@@ -1938,7 +2217,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
