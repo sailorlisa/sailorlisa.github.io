@@ -320,6 +320,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Python-Data-Science-Handbook-第1章上/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sailorlisa">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lisa的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/16/Python-Data-Science-Handbook-第1章上/" class="post-title-link" itemprop="url">Python Data Science Handbook 第1章上</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-16 16:25:57 / 修改时间：16:49:29" itemprop="dateCreated datePublished" datetime="2019-05-16T16:25:57+08:00">2019-05-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据科学/" itemprop="url" rel="index"><span itemprop="name">数据科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><a href="https://github.com/jakevdp/PythonDataScienceHandbook" target="_blank" rel="noopener">https://github.com/jakevdp/PythonDataScienceHandbook</a></p>
+</blockquote>
+<h3 id="Numpy入门"><a href="#Numpy入门" class="headerlink" title="Numpy入门"></a>Numpy入门</h3><p>Numerical Python，提供了高效存储和操作密集数据缓存的接口。</p>
+<p>由于Numpy的内容多，决定分成8次，分而治之，分成8块来学习。</p>
+<p>导入Numpy</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h3 id="理解Python中的数据类型"><a href="#理解Python中的数据类型" class="headerlink" title="理解Python中的数据类型"></a>理解Python中的数据类型</h3><p>学习数据科学，我们要理解数据是如何被储存和操作的。</p>
+<h4 id="python易用性-动态输入"><a href="#python易用性-动态输入" class="headerlink" title="python易用性-动态输入"></a>python易用性-动态输入</h4><p>静态类型的语言（如 C 或 Java）往往需要每一个变量都明确地声明，</p>
+<p>而动态类型的语言（例如 Python）可以跳过这个特殊规定。</p>
+<h3 id="Python整型不仅仅是一个整型"><a href="#Python整型不仅仅是一个整型" class="headerlink" title="Python整型不仅仅是一个整型"></a>Python整型不仅仅是一个整型</h3><p>Python 3.4 中的一个整型实际上包括 4 个部分。</p>
+<ul>
+<li><code>ob_refcnt</code> 是一个引用计数，它帮助 Python 默默地处理内存的分配和回收。</li>
+<li><code>ob_type</code> 将变量的类型编码。</li>
+<li><code>ob_size</code> 指定接下来的数据成员的大小。</li>
+<li><code>ob_digit</code> 包含我们希望 Python 变量表示的实际整型值。</li>
+</ul>
+<h3 id="Python列表不仅仅是一个列表"><a href="#Python列表不仅仅是一个列表" class="headerlink" title="Python列表不仅仅是一个列表"></a>Python列表不仅仅是一个列表</h3><p>整型值列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">L = list (range(<span class="number">10</span>))</span><br><span class="line"></span><br><span class="line">print(L)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">type(L)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output:list</span></span><br><span class="line"></span><br><span class="line">type(L[<span class="number">0</span>])</span><br><span class="line"><span class="comment"># output:int</span></span><br></pre></td></tr></table></figure>
+<p>字符串列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">L2 = [str(c) <span class="keyword">for</span> c <span class="keyword">in</span> L]</span><br><span class="line"></span><br><span class="line">print(L2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']</span></span><br><span class="line"></span><br><span class="line">type(L2[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: str</span></span><br></pre></td></tr></table></figure>
+<p>异构列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">L3 = [<span class="literal">True</span>, <span class="string">"2"</span>, <span class="number">3.0</span>, <span class="number">4</span>]</span><br><span class="line">[type(item) <span class="keyword">for</span> item <span class="keyword">in</span> L3]</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: [bool, str, float, int]</span></span><br></pre></td></tr></table></figure>
+<h3 id="Python中的固定类型数组"><a href="#Python中的固定类型数组" class="headerlink" title="Python中的固定类型数组"></a>Python中的固定类型数组</h3><h4 id="array模块"><a href="#array模块" class="headerlink" title="array模块"></a>array模块</h4><p>创建统一类型的密集数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> array</span><br><span class="line">L = list(range(<span class="number">10</span>))</span><br><span class="line">print(L)</span><br><span class="line">A = array.array(<span class="string">'i'</span>, L)</span><br><span class="line">A</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="comment"># array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</span></span><br></pre></td></tr></table></figure>
+<h3 id="从Python列表创建数组"><a href="#从Python列表创建数组" class="headerlink" title="从Python列表创建数组"></a>从Python列表创建数组</h3><p>NumPy 要求数组必须包含同一类型的数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入Numpy</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 创建数组</span></span><br><span class="line">np.array([<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([1, 4, 2, 5, 3])</span></span><br></pre></td></tr></table></figure>
+<p>如果数据类型不匹配，Numpy向上转换：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([<span class="number">3.14</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 整型int转换为浮点型float</span></span><br><span class="line"><span class="comment"># output: array([3.14, 4.  , 2.  , 3.  ])</span></span><br></pre></td></tr></table></figure>
+<p>也可以用<code>dtype</code>关键词去设置数组的数据类型：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], dtype=<span class="string">'float32'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: array([1., 2., 3., 4.], dtype=float32)</span></span><br></pre></td></tr></table></figure>
+<p>多维数组：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 嵌套列表构成的多维数组</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([range(i, i + <span class="number">3</span>) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[2, 3, 4],</span></span><br><span class="line"><span class="comment">#      [4, 5, 6],</span></span><br><span class="line"><span class="comment">#      [6, 7, 8]])</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -365,7 +557,7 @@
                 
               
 
-              <time title="创建时间：2019-05-16 13:26:18 / 修改时间：13:37:46" itemprop="dateCreated datePublished" datetime="2019-05-16T13:26:18+08:00">2019-05-16</time>
+              <time title="创建时间：2019-05-16 13:26:18 / 修改时间：16:41:55" itemprop="dateCreated datePublished" datetime="2019-05-16T13:26:18+08:00">2019-05-16</time>
             
 
             
@@ -492,7 +684,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/16/SynthWave-84-VS-Code使用流程/" class="post-title-link" itemprop="url">SynthWave '84 - VS Code使用流程</a>
+                <a href="/2019/05/16/SynthWave-84-VS-Code使用流程/" class="post-title-link" itemprop="url">SynthWave'84 - VS Code使用流程</a>
               
             
           </h1>
@@ -517,7 +709,7 @@
                 
               
 
-              <time title="创建时间：2019-05-16 06:22:52 / 修改时间：07:51:15" itemprop="dateCreated datePublished" datetime="2019-05-16T06:22:52+08:00">2019-05-16</time>
+              <time title="创建时间：2019-05-16 06:22:52 / 修改时间：16:48:18" itemprop="dateCreated datePublished" datetime="2019-05-16T06:22:52+08:00">2019-05-16</time>
             
 
             
@@ -527,6 +719,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/主题/" itemprop="url" rel="index"><span itemprop="name">主题</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -559,9 +769,9 @@
         
           
             <p>赛博朋克风，好看！</p>
-<h1 id="安装之前"><a href="#安装之前" class="headerlink" title="安装之前"></a>安装之前</h1><p>Github地址：<a href="https://github.com/robb0wen/synthwave-vscode" target="_blank" rel="noopener">https://github.com/robb0wen/synthwave-vscode</a>，先看文档</p>
+<h3 id="安装之前"><a href="#安装之前" class="headerlink" title="安装之前"></a>安装之前</h3><p>Github地址：<a href="https://github.com/robb0wen/synthwave-vscode" target="_blank" rel="noopener">https://github.com/robb0wen/synthwave-vscode</a>，先看开发者写的文档</p>
 <p>下载安装vs code：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a></p>
-<h1 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h1><p>下载安装theme</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>下载安装theme</p>
 <p>打开vs code，点击​ <code>文件</code> ——&gt; <code>首选项</code>——&gt; <code>扩展（Ctrl + Shift + X）</code>。</p>
 <p>在搜索扩展里搜索 <code>SynthWave</code>，点击 <code>安装</code>。</p>
 <p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy6.png" alt="sy6"></p>
@@ -583,17 +793,17 @@
 <p>点击旁边的齿轮按钮，选择不再显示这条提醒。</p>
 <p>如果还是没有发光效果，使用快捷键 <code>Ctrl + Shift + P</code>，输入 <code>reload custom CSS and JS</code>， 找到后鼠标点击一下，就可以看到发光效果了，不会很刺眼：</p>
 <p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy5.png" alt="sy5"></p>
-<h1 id="不稳定的插件"><a href="#不稳定的插件" class="headerlink" title="不稳定的插件"></a>不稳定的插件</h1><blockquote>
+<h3 id="不稳定的插件"><a href="#不稳定的插件" class="headerlink" title="不稳定的插件"></a>不稳定的插件</h3><blockquote>
 <p>VS code doesn’t natively support text effects and as a result, the glow is experimental. It’s likely to be buggy and, whilst it looks rad, it isn’t intended for extended use.</p>
 </blockquote>
 <p>文档上有这么一句话，注意这个<code>Custom CSS and JS Loader</code> 插件很容易坏掉，不是主题的问题。希望以后这个插件更新后能避免这种情况~</p>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><blockquote>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><blockquote>
 <p>Every time you update VS code, you will need to repeat this step to re-enable custom CSS and JS. Similarly, when the theme updates, you will need to copy the updated css to your chosen location.</p>
 <p>This is less than ideal, but until VS code add the option to use custom CSS natively, it’s unfortunately the only option.</p>
 </blockquote>
 <p>每次我们更新vs code，都需要重复上面的步骤去re-enable custom CSS and JS。</p>
 <p>同样地，主题有了更新后，你也需要去复制最新的css文件去覆盖你的旧css文件。</p>
-<h1 id="关掉发光效果和卸载"><a href="#关掉发光效果和卸载" class="headerlink" title="关掉发光效果和卸载"></a>关掉发光效果和卸载</h1><blockquote>
+<h3 id="关掉发光效果和卸载"><a href="#关掉发光效果和卸载" class="headerlink" title="关掉发光效果和卸载"></a>关掉发光效果和卸载</h3><blockquote>
 <p>The glow effect started as a joke and was never intended for long-term coding sessions. If you want to turn it off, you can disable it at any time by opening your command palette with <code>Ctrl + Shift + P</code> or <code>Shift + ⌘ + P</code> and choose “Disable custom CSS”.</p>
 <p>If you decide to change to a different theme altogether, you will also need to disable the custom css in this way. You may also wish to remove the file path from your <code>settings.json</code>.</p>
 </blockquote>
@@ -601,7 +811,7 @@
 <p>如何卸载主题？</p>
 <p>先根据上面的步骤把发光效果关掉，然后打开<code>settings.json</code>，把之前添加的那行代码删掉</p>
 <p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy7.png" alt="sy7"></p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>1.<a href="https://github.com/robb0wen/synthwave-vscode" target="_blank" rel="noopener">https://github.com/robb0wen/synthwave-vscode</a></p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>1.<a href="https://github.com/robb0wen/synthwave-vscode" target="_blank" rel="noopener">https://github.com/robb0wen/synthwave-vscode</a></p>
 <p>2.<a href="https://jinkey.ai/post/tech/ru-he-pei-zhi-tou-ming-fa-guang-de-sao-qi-vscode" target="_blank" rel="noopener">https://jinkey.ai/post/tech/ru-he-pei-zhi-tou-ming-fa-guang-de-sao-qi-vscode</a></p>
 
           
@@ -704,7 +914,7 @@
                 
               
 
-              <time title="创建时间：2019-05-16 05:32:07 / 修改时间：05:41:49" itemprop="dateCreated datePublished" datetime="2019-05-16T05:32:07+08:00">2019-05-16</time>
+              <time title="创建时间：2019-05-16 05:32:07 / 修改时间：16:46:22" itemprop="dateCreated datePublished" datetime="2019-05-16T05:32:07+08:00">2019-05-16</time>
             
 
             
@@ -714,6 +924,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/游戏/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -745,10 +973,10 @@
       
         
           
-            <h1 id="试玩"><a href="#试玩" class="headerlink" title="试玩"></a>试玩</h1><p>用手机浏览器打开<a href="https://chvin.github.io/react-tetris/" target="_blank" rel="noopener">https://chvin.github.io/react-tetris/</a></p>
+            <h3 id="试玩"><a href="#试玩" class="headerlink" title="试玩"></a>试玩</h3><p>用手机浏览器打开<a href="https://chvin.github.io/react-tetris/" target="_blank" rel="noopener">https://chvin.github.io/react-tetris/</a></p>
 <p><img src="/2019/05/16/俄罗斯方块试玩-react-tetris/react-tetris.jpg" alt="react-tetris"></p>
 <p>真的好经典啊，小时候的游戏机就有，不过我玩这个真的很菜…很快就堵死了hhhhhhhhhhh</p>
-<h1 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a>Github地址</h1><p><a href="https://github.com/chvin/react-tetris" target="_blank" rel="noopener">https://github.com/chvin/react-tetris</a></p>
+<h3 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a>Github地址</h3><p><a href="https://github.com/chvin/react-tetris" target="_blank" rel="noopener">https://github.com/chvin/react-tetris</a></p>
 <p>开发者是用React、Redux、Immutable做俄罗斯方块游戏。响应式设计真的很方便，文档里还讲了开发过程时的细节，好棒！</p>
 <p>果断给了Star，然后把在线玩的地址作为书签放在手机桌面w</p>
 
@@ -852,7 +1080,7 @@
                 
               
 
-              <time title="创建时间：2019-05-16 05:10:15 / 修改时间：07:45:35" itemprop="dateCreated datePublished" datetime="2019-05-16T05:10:15+08:00">2019-05-16</time>
+              <time title="创建时间：2019-05-16 05:10:15 / 修改时间：16:49:45" itemprop="dateCreated datePublished" datetime="2019-05-16T05:10:15+08:00">2019-05-16</time>
             
 
             
@@ -893,7 +1121,7 @@
       
         
           
-            <h1 id="在线Logo制作工具"><a href="#在线Logo制作工具" class="headerlink" title="在线Logo制作工具"></a>在线Logo制作工具</h1><p><a href="https://www.logodiy.online/" target="_blank" rel="noopener">https://www.logodiy.online/</a></p>
+            <h3 id="在线Logo制作工具"><a href="#在线Logo制作工具" class="headerlink" title="在线Logo制作工具"></a>在线Logo制作工具</h3><p><a href="https://www.logodiy.online/" target="_blank" rel="noopener">https://www.logodiy.online/</a></p>
 <p>直接打开就可以制作了！我们熟悉的风格~立马制作了几个试试：</p>
 <p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo1.png" alt="logo1"></p>
 <p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo2.png" alt="logo2"></p>
@@ -902,7 +1130,7 @@
 <p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo5.png" alt="logo5"></p>
 <p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo7.png" alt="logo7"></p>
 <p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo6.png" alt="logo6"></p>
-<h1 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a>Github地址</h1><p><a href="http://t.cn/EKJMeRt" target="_blank" rel="noopener">http://t.cn/EKJMeRt</a></p>
+<h3 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a>Github地址</h3><p><a href="http://t.cn/EKJMeRt" target="_blank" rel="noopener">http://t.cn/EKJMeRt</a></p>
 <p>果断点了star! 美中不足的是，预设的Color Prefix和Suffix只有一种，要是起码有3种搭配好的预设颜色就更好了，希望以后会有</p>
 
           
@@ -1005,16 +1233,46 @@
                 
               
 
-              <time title="创建时间：2019-05-15 18:09:07 / 修改时间：18:57:43" itemprop="dateCreated datePublished" datetime="2019-05-15T18:09:07+08:00">2019-05-15</time>
+              <time title="创建时间：2019-05-15 18:09:07" itemprop="dateCreated datePublished" datetime="2019-05-15T18:09:07+08:00">2019-05-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-16 16:54:37" itemprop="dateModified" datetime="2019-05-16T16:54:37+08:00">2019-05-16</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Chrome/" itemprop="url" rel="index"><span itemprop="name">Chrome</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1049,7 +1307,7 @@
             <p><a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="noopener">https://support.google.com/chrome/answer/157179?hl=zh-Hans</a> </p>
 <p>因为上面那个网址得科学上网才能打开，所以我在这里COPY下来，方便自己使用</p>
 <p><strong>Windows 和 Linux</strong></p>
-<h1 id="标签页和窗口快捷键"><a href="#标签页和窗口快捷键" class="headerlink" title="标签页和窗口快捷键"></a>标签页和窗口快捷键</h1><table>
+<h3 id="标签页和窗口快捷键"><a href="#标签页和窗口快捷键" class="headerlink" title="标签页和窗口快捷键"></a>标签页和窗口快捷键</h3><table>
 <thead>
 <tr>
 <th><strong>操作</strong></th>
@@ -1075,15 +1333,15 @@
 </tr>
 <tr>
 <td>跳转到下一个打开的标签页</td>
-<td><strong>Ctrl + Tab</strong>或<strong>Ctrl + PgDn</strong></td>
+<td><strong>Ctrl + Tab</strong> 或 <strong>Ctrl + PgDn</strong></td>
 </tr>
 <tr>
 <td>跳转到上一个打开的标签页</td>
-<td><strong>Ctrl + Shift + Tab</strong>或<strong>Ctrl + PgUp</strong></td>
+<td><strong>Ctrl + Shift + Tab</strong> 或 <strong>Ctrl + PgUp</strong></td>
 </tr>
 <tr>
 <td>跳转到特定标签页</td>
-<td><strong>Ctrl + 1</strong>到<strong>Ctrl + 8</strong></td>
+<td><strong>Ctrl + 1</strong> 到 <strong>Ctrl + 8</strong></td>
 </tr>
 <tr>
 <td>跳转到最后一个标签页</td>
@@ -1127,7 +1385,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="Google-Chrome-功能快捷键"><a href="#Google-Chrome-功能快捷键" class="headerlink" title="Google Chrome 功能快捷键"></a>Google Chrome 功能快捷键</h1><table>
+<h3 id="Google-Chrome-功能快捷键"><a href="#Google-Chrome-功能快捷键" class="headerlink" title="Google Chrome 功能快捷键"></a>Google Chrome 功能快捷键</h3><table>
 <thead>
 <tr>
 <th><strong>操作</strong></th>
@@ -1137,7 +1395,7 @@
 <tbody>
 <tr>
 <td>打开 Chrome 菜单</td>
-<td><strong>Alt + f</strong>或<strong>Alt + e</strong>或<strong>F10 + Enter 键</strong></td>
+<td><strong>Alt + f</strong>或<strong>Alt + e</strong> 或 <strong>F10 + Enter 键</strong></td>
 </tr>
 <tr>
 <td>显示或隐藏书签栏</td>
@@ -1173,7 +1431,7 @@
 </tr>
 <tr>
 <td>打开查找栏搜索当前网页</td>
-<td><strong>Ctrl + f</strong>或<strong>F3</strong></td>
+<td><strong>Ctrl + f</strong> 或 <strong>F3</strong></td>
 </tr>
 <tr>
 <td>跳转到与查找栏中搜索字词相匹配的下一条内容</td>
@@ -1185,7 +1443,7 @@
 </tr>
 <tr>
 <td>打开“开发者工具”</td>
-<td><strong>Ctrl + Shift + j</strong>或<strong>F12</strong></td>
+<td><strong>Ctrl + Shift + j</strong> 或 <strong>F12</strong></td>
 </tr>
 <tr>
 <td>打开“清除浏览数据”选项</td>
@@ -1205,7 +1463,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="地址栏快捷键"><a href="#地址栏快捷键" class="headerlink" title="地址栏快捷键"></a>地址栏快捷键</h1><table>
+<h3 id="地址栏快捷键"><a href="#地址栏快捷键" class="headerlink" title="地址栏快捷键"></a>地址栏快捷键</h3><table>
 <thead>
 <tr>
 <th><strong>操作</strong></th>
@@ -1243,7 +1501,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h1><table>
+<h3 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h3><table>
 <thead>
 <tr>
 <th><strong>操作</strong></th>
@@ -1265,7 +1523,7 @@
 </tr>
 <tr>
 <td>重新加载当前网页（忽略缓存的内容）</td>
-<td><strong>Shift + F5</strong>或<strong>Ctrl + Shift + r</strong></td>
+<td><strong>Shift + F5</strong> 或<strong>Ctrl + Shift + r</strong></td>
 </tr>
 <tr>
 <td>停止加载网页</td>
@@ -1313,11 +1571,11 @@
 </tr>
 <tr>
 <td>向下滚动网页，一次一个屏幕</td>
-<td><strong>空格键</strong>或<strong>PgDn</strong></td>
+<td><strong>空格键</strong> 或 <strong>PgDn</strong></td>
 </tr>
 <tr>
 <td>向上滚动网页，一次一个屏幕</td>
-<td><strong>Shift + 空格键</strong>或<strong>PgUp</strong></td>
+<td><strong>Shift + 空格键</strong> 或 <strong>PgUp</strong></td>
 </tr>
 <tr>
 <td>转到网页顶部</td>
@@ -1349,7 +1607,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="鼠标快捷键"><a href="#鼠标快捷键" class="headerlink" title="鼠标快捷键"></a>鼠标快捷键</h1><table>
+<h3 id="鼠标快捷键"><a href="#鼠标快捷键" class="headerlink" title="鼠标快捷键"></a>鼠标快捷键</h3><table>
 <thead>
 <tr>
 <th><strong>操作</strong></th>
@@ -1516,16 +1774,46 @@
                 
               
 
-              <time title="创建时间：2019-05-15 17:43:10 / 修改时间：17:55:10" itemprop="dateCreated datePublished" datetime="2019-05-15T17:43:10+08:00">2019-05-15</time>
+              <time title="创建时间：2019-05-15 17:43:10" itemprop="dateCreated datePublished" datetime="2019-05-15T17:43:10+08:00">2019-05-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-16 16:45:52" itemprop="dateModified" datetime="2019-05-16T16:45:52+08:00">2019-05-16</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/win10/" itemprop="url" rel="index"><span itemprop="name">win10</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1557,16 +1845,16 @@
       
         
           
-            <h1 id="Alt-Tab-在打开的应用之间切换"><a href="#Alt-Tab-在打开的应用之间切换" class="headerlink" title="Alt + Tab 在打开的应用之间切换"></a>Alt + Tab 在打开的应用之间切换</h1><p><img src="/2019/05/15/我喜欢用的win10快捷键/key1.jpg" alt="key1"></p>
-<h1 id="F5刷新"><a href="#F5刷新" class="headerlink" title="F5刷新"></a>F5刷新</h1><p>强迫症的我，特别喜欢刷新和清空回收站</p>
-<h1 id="WIN-PrtScn-截图"><a href="#WIN-PrtScn-截图" class="headerlink" title="WIN+PrtScn 截图"></a>WIN+PrtScn 截图</h1><p>就和steam里F12一样，全屏幕截图<br><img src="/2019/05/15/我喜欢用的win10快捷键/key2.jpg" alt="key2"></p>
-<h1 id="WIN-Pause-显示“系统属性”对话框"><a href="#WIN-Pause-显示“系统属性”对话框" class="headerlink" title="WIN + Pause 显示“系统属性”对话框"></a>WIN + Pause 显示“系统属性”对话框</h1><p>我只在这种时候才会用上Pause键…<br><img src="/2019/05/15/我喜欢用的win10快捷键/key3.jpg" alt="key3"></p>
-<h1 id="WIN-加号-打开“放大镜”"><a href="#WIN-加号-打开“放大镜”" class="headerlink" title="WIN + 加号 (+) 打开“放大镜”"></a>WIN + 加号 (+) 打开“放大镜”</h1><p>录教学类视频时才用的功能<br><img src="/2019/05/15/我喜欢用的win10快捷键/key4.jpg" alt="key4"></p>
-<h1 id="Home键"><a href="#Home键" class="headerlink" title="Home键"></a>Home键</h1><p>用电脑刷微博的时候，有时“返回顶部”button怎么找都找不到，这时用键盘右边上角的Home键就行了，一秒带你上天</p>
-<h1 id="虚拟桌面键盘快捷键"><a href="#虚拟桌面键盘快捷键" class="headerlink" title="虚拟桌面键盘快捷键"></a>虚拟桌面键盘快捷键</h1><h2 id="WIN-Tab-打开任务视图"><a href="#WIN-Tab-打开任务视图" class="headerlink" title="WIN  + Tab 打开任务视图"></a>WIN  + Tab 打开任务视图</h2><p>我的大爱<br><img src="/2019/05/15/我喜欢用的win10快捷键/key5.jpg" alt="key5"></p>
-<h2 id="WIN-Ctrl-D-添加虚拟桌面"><a href="#WIN-Ctrl-D-添加虚拟桌面" class="headerlink" title="WIN  + Ctrl + D 添加虚拟桌面"></a>WIN  + Ctrl + D 添加虚拟桌面</h2><p><img src="/2019/05/15/我喜欢用的win10快捷键/key6.jpg" alt="key6"></p>
-<h2 id="WIN-Ctrl-F4-关闭你正在使用的虚拟桌面"><a href="#WIN-Ctrl-F4-关闭你正在使用的虚拟桌面" class="headerlink" title="WIN + Ctrl + F4 关闭你正在使用的虚拟桌面"></a>WIN + Ctrl + F4 关闭你正在使用的虚拟桌面</h2><p>我一开始创建新的虚拟桌面时总是忘记如何关闭，越创越多…</p>
-<h2 id="WIN-Ctrl-向右键→-在你于右侧创建的虚拟桌面之间切换"><a href="#WIN-Ctrl-向右键→-在你于右侧创建的虚拟桌面之间切换" class="headerlink" title="WIN  + Ctrl + 向右键→ 在你于右侧创建的虚拟桌面之间切换"></a>WIN  + Ctrl + 向右键→ 在你于右侧创建的虚拟桌面之间切换</h2><h2 id="WIN-Ctrl-向左键←-在你于左侧创建的虚拟桌面之间切换"><a href="#WIN-Ctrl-向左键←-在你于左侧创建的虚拟桌面之间切换" class="headerlink" title="WIN  + Ctrl + 向左键← 在你于左侧创建的虚拟桌面之间切换"></a>WIN  + Ctrl + 向左键← 在你于左侧创建的虚拟桌面之间切换</h2><p>无缝切换2333</p>
+            <h3 id="Alt-Tab-在打开的应用之间切换"><a href="#Alt-Tab-在打开的应用之间切换" class="headerlink" title="Alt + Tab 在打开的应用之间切换"></a>Alt + Tab 在打开的应用之间切换</h3><p><img src="/2019/05/15/我喜欢用的win10快捷键/key1.jpg" alt="key1"></p>
+<h3 id="F5刷新"><a href="#F5刷新" class="headerlink" title="F5刷新"></a>F5刷新</h3><p>强迫症的我，特别喜欢刷新和清空回收站</p>
+<h3 id="WIN-PrtScn-截图"><a href="#WIN-PrtScn-截图" class="headerlink" title="WIN+PrtScn 截图"></a>WIN+PrtScn 截图</h3><p>就和steam里F12一样，全屏幕截图<br><img src="/2019/05/15/我喜欢用的win10快捷键/key2.jpg" alt="key2"></p>
+<h3 id="WIN-Pause-显示“系统属性”对话框"><a href="#WIN-Pause-显示“系统属性”对话框" class="headerlink" title="WIN + Pause 显示“系统属性”对话框"></a>WIN + Pause 显示“系统属性”对话框</h3><p>我只在这种时候才会用上Pause键…<br><img src="/2019/05/15/我喜欢用的win10快捷键/key3.jpg" alt="key3"></p>
+<h3 id="WIN-加号-打开“放大镜”"><a href="#WIN-加号-打开“放大镜”" class="headerlink" title="WIN + 加号 (+) 打开“放大镜”"></a>WIN + 加号 (+) 打开“放大镜”</h3><p>录教学类视频时才用的功能<br><img src="/2019/05/15/我喜欢用的win10快捷键/key4.jpg" alt="key4"></p>
+<h3 id="Home键"><a href="#Home键" class="headerlink" title="Home键"></a>Home键</h3><p>用电脑刷微博的时候，有时“返回顶部”button怎么找都找不到，这时用键盘右边上角的Home键就行了，一秒带你上天</p>
+<h3 id="虚拟桌面键盘快捷键"><a href="#虚拟桌面键盘快捷键" class="headerlink" title="虚拟桌面键盘快捷键"></a>虚拟桌面键盘快捷键</h3><h4 id="WIN-Tab-打开任务视图"><a href="#WIN-Tab-打开任务视图" class="headerlink" title="WIN  + Tab 打开任务视图"></a>WIN  + Tab 打开任务视图</h4><p>我的大爱<br><img src="/2019/05/15/我喜欢用的win10快捷键/key5.jpg" alt="key5"></p>
+<h4 id="WIN-Ctrl-D-添加虚拟桌面"><a href="#WIN-Ctrl-D-添加虚拟桌面" class="headerlink" title="WIN  + Ctrl + D 添加虚拟桌面"></a>WIN  + Ctrl + D 添加虚拟桌面</h4><p><img src="/2019/05/15/我喜欢用的win10快捷键/key6.jpg" alt="key6"></p>
+<h4 id="WIN-Ctrl-F4-关闭你正在使用的虚拟桌面"><a href="#WIN-Ctrl-F4-关闭你正在使用的虚拟桌面" class="headerlink" title="WIN + Ctrl + F4 关闭你正在使用的虚拟桌面"></a>WIN + Ctrl + F4 关闭你正在使用的虚拟桌面</h4><p>我一开始创建新的虚拟桌面时总是忘记如何关闭，越创越多…</p>
+<h4 id="WIN-Ctrl-向右键→-在你于右侧创建的虚拟桌面之间切换"><a href="#WIN-Ctrl-向右键→-在你于右侧创建的虚拟桌面之间切换" class="headerlink" title="WIN  + Ctrl + 向右键→ 在你于右侧创建的虚拟桌面之间切换"></a>WIN  + Ctrl + 向右键→ 在你于右侧创建的虚拟桌面之间切换</h4><h4 id="WIN-Ctrl-向左键←-在你于左侧创建的虚拟桌面之间切换"><a href="#WIN-Ctrl-向左键←-在你于左侧创建的虚拟桌面之间切换" class="headerlink" title="WIN  + Ctrl + 向左键← 在你于左侧创建的虚拟桌面之间切换"></a>WIN  + Ctrl + 向左键← 在你于左侧创建的虚拟桌面之间切换</h4><p>无缝切换2333</p>
 
           
         
@@ -1650,14 +1938,92 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
