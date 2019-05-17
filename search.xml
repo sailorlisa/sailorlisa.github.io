@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[hexo + NextT主题配置快速教程]]></title>
+    <url>%2F2019%2F05%2F17%2Fhexo-NextT%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[前言博客的初衷是为了写文章、发布文章，追求简洁和加载速度。最终选择了NextT主题。 NextT主题Github地址 NextT主题官方文档 更换主题下载NextT主题 下载后解压ZIP，把文件夹名字修改成NextT，并把主题文件夹复制到 D:\Myblog\themes里面。 修改主题用vs code（你也可以用其他编辑器）打开 D:\Myblog\_config.yml，搜索theme，修改为：NextT，保存并退出。 博客面貌仔细修改改主题样式D:\Myblog\themes\NextT\_config.yml，搜索 Scheme——&gt; 改用 scheme: Gemini 添加目录栏选项D:\Myblog\themes\NextT\_config.yml，搜索 menu——&gt; 设置 about、archives、categories、tags、Books、Video、Game。 添加新的栏： 123456789menu: about: /about/ || user archives: /archives/ || archive categories: /categories/ || th tags: /tags/ || tags Books: /Books/ || eye Video: /Video/ || play-circle Game: /Game/ || gamepad #home: / || home 之后在D:\Myblog右键Git Bash here： 123$ hexo new page "archives"#以及其他菜单项categories、tags、Books、Video、Game。 代码块主题D:\Myblog\themes\NextT\_config.yml，搜索 highlight_theme——&gt; 改为 night eighties 侧边栏D:\Myblog\themes\NextT\_config.yml，搜索 social——&gt;开启微博 首页文章摘要D:\Myblog\themes\NextT\_config.yml，搜索 auto_excerpt——&gt;开启 标签图标更改打开D:\Myblog\themes\NextT\layout\_marcro\post.swig文件，搜索 post_tags，将 #号 换成&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt; 添加背景动态js https://github.com/theme-next/theme-next-canvas-nest D:\Myblog\themes\NextT文件夹下，Git Bash here： 1$ git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest 打开D:\Myblog\themes\NextT\_config.yml，修改： 1234567canvas_nest: enable: true onmobile: true # display on mobile or not color: "255,0,0" # RGB values, use ',' to separate, 改成红色了 opacity: 0.7 # the opacity of line: 0~1 zIndex: -1 # z-index property of the background count: 150 # the number of lines 加载条 https://github.hubspot.com/pace/docs/welcome/ D:\Myblog\themes\NextT文件夹下，Git Bash here： 1$ git clone https://github.com/theme-next/theme-next-pace source/lib/pace D:\Myblog\themes\NextT\_config.yml 12pace: truepace_theme: pace-theme-big-counter 关注Github http://tholman.com/github-corners/ 打开D:\Myblog\themes\NextT\layout\_layout.swig文件，搜索&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt; 将复制的内容粘贴到&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;下面，如下： 1&lt;a href=&quot;https://github.com/sailorlisa&quot; class=&quot;github-corner&quot; aria-label=&quot;View source on GitHub&quot;&gt;&lt;svg width=&quot;92&quot; height=&quot;92&quot; viewBox=&quot;0 0 250 250&quot; style=&quot;fill:#b495e3; color:#fff; position: absolute; top: 0; border: 0; right: 0;&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2&quot; fill=&quot;currentColor&quot; style=&quot;transform-origin: 130px 106px;&quot; class=&quot;octo-arm&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z&quot; fill=&quot;currentColor&quot; class=&quot;octo-body&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;style&gt;.github-corner:hover .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;@keyframes octocat-wave&#123;0%,100%&#123;transform:rotate(0)&#125;20%,60%&#123;transform:rotate(-25deg)&#125;40%,80%&#123;transform:rotate(10deg)&#125;&#125;@media (max-width:500px)&#123;.github-corner:hover .octo-arm&#123;animation:none&#125;.github-corner .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;&#125;&lt;/style&gt; 也可以修改D:\Myblog\themes\NextT\_config.yml里: 1234github_banner: enable: true permalink: https://github.com/sailorlisa title: Follow me on GitHub 白猫插件 Github地址：https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md 123$ npm install --save hexo-helper-live2d$ npm install live2d-widget-model-tororo 之后在D:\Myblog\_config.yml最后添加内容： 1234567891011121314151617# 白猫模型live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false debug: false model: use: live2d-widget-model-tororo display: position: right width: 150 height: 300 mobile: show: true 图片文件夹插件1.将 D:\Myblog\_config.yml文件中的 post_asset_folder 选项设为 true 2.D:\Myblog，右键Git Bash here，输入： 1$ npm install hexo-asset-image --save 添加搜索栏D:\Myblog，右键Git Bash here，输入： 1$ npm install hexo-generator-searchdb --save D:\Myblog\_config.yml添加： 123456#表示站内搜索search: path: search.xml field: post format: html limit: 10000 D:\Myblog\themes\NextT\_config.yml，搜索local_search： 12local_search: enable: true 标签云 https://github.com/MikeCoder/hexo-tag-cloud D:\Myblog，右键Git Bash here，输入： 1$ npm install hexo-tag-cloud --save D:\Myblog\themes\NextT\layout\_macro\sidebar.swig，然后添加内容： 123456789101112&#123;% if site.tags.length &gt; 1 %&#125;&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;&#123;&#123; url_for(&apos;/js/tagcloud.js&apos;) &#125;&#125;&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;&#123;&#123; url_for(&apos;/js/tagcanvas.js&apos;) &#125;&#125;&quot;&gt;&lt;/script&gt;&lt;div class=&quot;widget-wrap&quot;&gt; &lt;h3 class=&quot;widget-title&quot;&gt;Tag Cloud&lt;/h3&gt; &lt;div id=&quot;myCanvasContainer&quot; class=&quot;widget tagcloud&quot;&gt; &lt;canvas width=&quot;250&quot; height=&quot;250&quot; id=&quot;resCanvas&quot; style=&quot;width=100%&quot;&gt; &#123;&#123; list_tags() &#125;&#125; &lt;/canvas&gt; &lt;/div&gt;&lt;/div&gt;&#123;% endif %&#125; D:\Myblog\_config.yml添加： 1234567# hexo-tag-cloudtag_cloud: textFont: Trebuchet MS, Helvetica textColor: '#333' textHeight: 25 outlineColor: '#E2E1D1' maxSpeed: 0.2 最后预览部署1234$ hexo c &amp;&amp; hexo g &amp;&amp; hexo s#预览之后没问题就部署$ hexo d]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>NextT</tag>
+        <tag>theme</tag>
+        <tag>主题</tag>
+        <tag>博客</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo+Github搭建个人博客快速教程]]></title>
+    <url>%2F2019%2F05%2F17%2Fhexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[前言 推荐hexo搭建博客详细教程：&lt;https://eirunye.github.io/categories/Hexo/ 由于同内容的教程实在太多，感觉没多大必要再写。所以简单记录下快速搭建个人博客的流程，方便自己使用。 提前准备 Github 注册账号 Node.js 下载，安装 Git 下载，安装 部署博客Git配置在桌面，右键Git Bash here： 123$ git config --global user.name "sailorlisa" $ git config --global user.email "sailorlisa@outlook.com" 登陆Github，创建新的仓库——&gt;Repository name 为 sailorlisa.github.io——&gt;Public——&gt;Creating repository。 SSH配置在桌面，右键Git Bash here： 1$ ssh-keygen -t rsa -C "sailorlisa@outlook.com" 遇到提示，要你输入密码，按Enter跳过。 上面显示C盘路径里有我的Public key，找到对应路径文件，右键，用记事本打开，复制内容。 接下来去github，点击自己头像下的Settings——&gt;Personal settings——&gt;SSH and GPG keys——&gt;New SSH key。 把刚刚复制的一长串内容粘贴在Key栏，Title填hexoblog。之后点Add SSH key。 安装hexo在桌面，右键Git Bash here： 1234567$ ssh git@github.com$ ssh -T git@github.com #验证SSH是否有效$ npm -v #看看有没有安装npm$ npm install -g hexo #安装hexo博客框架 在D盘创建文件夹“Myblog”，在文件夹内 右键Git Bash here： 1234567$ hexo init$ npm install$ npm install hexo-deployer-git --save #能让你使用hexo deploy命令上传blog到github上$ hexo server 鼠标右键复制localhost:4000，用浏览器进入，预览下看看有没有问题。 没有问题后，打开D盘Myblog文件夹里，找到_config.yml（站点配置文件），右键用vs code打开，下滚，找到deploy，修改后保存。 1234deploy: type: git repository: git@github.com:sailorlisa/sailorlisa.github.io.git branch: master repository后面的内容是来自这里： 修改后回到D盘Myblog文件夹，右键Git Bash here： 1$ hexo c &amp;&amp; hexo g &amp;&amp; hexo s 预览下，没问题之后退出，然后去就换主题和配置主题。]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python Data Science Handbook 第1章下]]></title>
+    <url>%2F2019%2F05%2F16%2FPython-Data-Science-Handbook-%E7%AC%AC1%E7%AB%A0%E4%B8%8B%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook 从头创建数组用 NumPy 内置的方法从头创建数组。 创建一个长度为10的数组，数组的值都是0 1234import numpy as npnp.zeros(10, dtype=int)# output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) 创建一个3×5的浮点型数组，数组的值都是1 123456np.ones((3, 5), dtype=float)# output# array([[1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.]]) 创建一个3×5的浮点型数组，数组的值都是3.14 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]]) 创建一个线性序列数组，从0开始，到20结束，步长为2。（它和内置的range()函数类似） 123np.arange(0, 20, 2)#output: array([ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18]) 创建一个5个元素的数组，这5个数均匀地分配到0~1 123np.linspace(0, 1, 5)#output: array([0. , 0.25, 0.5 , 0.75, 1. ]) 创建一个3×3的、在0~1均匀分布的随机数组成的数组 123456np.random.random((3, 3))#output#array([[0.94795687, 0.62658297, 0.4240733 ],# [0.75686519, 0.46357097, 0.58682988],# [0.37997183, 0.28707067, 0.67190137]]) 创建一个3×3的、均值为0、标准差为1的，正态分布的随机数数组 123456np.random.normal(0, 1, (3, 3))#output#array([[ 0.1348332 , -1.93013655, 1.21003072],# [ 1.41562771, 0.29064906, 1.09749629],# [-0.16664035, -0.67962834, -0.54942727]]) 创建一个3×3的、[0, 10)区间的随机整型数组 123456np.random.randint(0, 10, (3, 3))#output#array([[8, 0, 5],# [6, 5, 9],# [9, 9, 0]]) 创建一个3×3的单位矩阵 123456np.eye(3)#output#array([[1., 0., 0.],# [0., 1., 0.],# [0., 0., 1.]]) 创建一个由3个整型数组成的未初始化的数组，数组的值是内存空间中的任意值 123np.empty(3)#output: array([1., 1., 1.]) NumPy标准数据类型构建数组时，可以用以下2种方式指定数据类型： 用字符串参数 123np.zeros(10, dtype='int16')#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) 用相关NumPy对象来指定 123np.zeros(10, dtype=np.int16)#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) NumPy标准数据类型表格： http://numpy.org/ 数据类型 描述 bool_ 布尔值（真、True 或假、False），用一个字节存储 int_ 默认整型（类似于 C 语言中的 long，通常情况下是 int64 或 int32） intc 同 C 语言的 int 相同（通常是 int32 或 int64） intp 用作索引的整型（和 C 语言的 ssize_t 相同，通常情况下是 int32 或 int64） int8 字节（byte，范围从–128 到 127） int16 整型（范围从–32768 到 32767） int32 整型（范围从–2147483648 到 2147483647） int64 整型（范围从–9223372036854775808 到 9223372036854775807） uint8 无符号整型（范围从 0 到 255） uint16 无符号整型（范围从 0 到 65535） uint32 无符号整型（范围从 0 到 4294967295） uint64 无符号整型（范围从 0 到 18446744073709551615） float_ float64 的简化形式 float16 半精度浮点型：符号比特位，5 比特位指数（exponent），10 比特位尾数（mantissa） float32 单精度浮点型：符号比特位，8 比特位指数，23 比特位尾数 float64 双精度浮点型：符号比特位，11 比特位指数，52 比特位尾数 complex_ complex128 的简化形式 complex64 复数，由两个 32 位浮点数表示 complex128 复数，由两个 64 位浮点数表示]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>data science</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python Data Science Handbook 第1章上]]></title>
+    <url>%2F2019%2F05%2F16%2FPython-Data-Science-Handbook-%E7%AC%AC1%E7%AB%A0%E4%B8%8A%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook Numpy入门Numerical Python，提供了高效存储和操作密集数据缓存的接口。 由于Numpy的内容多，决定分成8次，分而治之，分成8块来学习。 导入Numpy 1import numpy as np 理解Python中的数据类型学习数据科学，我们要理解数据是如何被储存和操作的。 python易用性-动态输入静态类型的语言（如 C 或 Java）往往需要每一个变量都明确地声明， 而动态类型的语言（例如 Python）可以跳过这个特殊规定。 Python整型不仅仅是一个整型Python 3.4 中的一个整型实际上包括 4 个部分。 ob_refcnt 是一个引用计数，它帮助 Python 默默地处理内存的分配和回收。 ob_type 将变量的类型编码。 ob_size 指定接下来的数据成员的大小。 ob_digit 包含我们希望 Python 变量表示的实际整型值。 Python列表不仅仅是一个列表整型值列表 123456789101112L = list (range(10))print(L)# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]type(L)# output:listtype(L[0])# output:int 字符串列表 123456789L2 = [str(c) for c in L]print(L2)# output: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']type(L2[0])# output: str 异构列表 1234L3 = [True, "2", 3.0, 4][type(item) for item in L3]# output: [bool, str, float, int] Python中的固定类型数组array模块创建统一类型的密集数组 12345678import arrayL = list(range(10))print(L)A = array.array('i', L)A# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]# array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) 从Python列表创建数组NumPy 要求数组必须包含同一类型的数据。 123456# 导入Numpyimport numpy as np# 创建数组np.array([1, 4, 2, 5, 3])#output: array([1, 4, 2, 5, 3]) 如果数据类型不匹配，Numpy向上转换： 12345import numpy as npnp.array([3.14, 4, 2, 3])# 整型int转换为浮点型float# output: array([3.14, 4. , 2. , 3. ]) 也可以用dtype关键词去设置数组的数据类型： 1234import numpy as npnp.array([1, 2, 3, 4], dtype='float32')# output: array([1., 2., 3., 4.], dtype=float32) 多维数组： 12345678# 嵌套列表构成的多维数组import numpy as npnp.array([range(i, i + 3) for i in [2, 4, 6]])#output#array([[2, 3, 4],# [4, 5, 6],# [6, 7, 8]])]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>data science</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Jupyter Notebook Cheat Sheet中文]]></title>
+    <url>%2F2019%2F05%2F16%2FJupyter-Notebook-Cheat-Sheet%E4%B8%AD%E6%96%87%2F</url>
+    <content type="text"><![CDATA[https://github.com/FavioVazquez/ds-cheatsheets Working with Different Programming Languages Asking For Help Two Modes Saving/Loading Notebooks Writing Code And Text1 Writing Code And Text2 Widgets]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>jupyter</tag>
+        <tag>jupyter notebook</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SynthWave'84 - VS Code使用流程]]></title>
+    <url>%2F2019%2F05%2F16%2FSynthWave-84-VS-Code%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[赛博朋克风，好看！ 安装之前Github地址：https://github.com/robb0wen/synthwave-vscode，先看开发者写的文档 下载安装vs code：https://code.visualstudio.com/ 配置主题下载安装theme 打开vs code，点击​ 文件 ——&gt; 首选项——&gt; 扩展（Ctrl + Shift + X）。 在搜索扩展里搜索 SynthWave，点击 安装。 再次在搜索扩展里搜索 Custom CSS and JS Loader，点击 安装。 在vs code里，点击 文件 ——&gt; 新建文件，打开网址，把synthwave84.css里的所有代码复制粘贴过去，保存，文件命名为 synthwave84.css，下拉保存类型为css，点击确定。 接下来我们需要修改vs code的settings.json： 最快的方法：点击 文件 ——&gt; 首选项 ——&gt; 设置——&gt; 扩展——&gt;在settings.json中编辑，弹出之后，右键标签，选择 在资源管理器中显示 ，就能自动打开路径文件夹（C:\Users\dell\AppData\Roaming\Code\User）了。 回到vs code，settings.json文件，修改代码，引用刚刚的css文件，windows用户在后面复制粘贴以下内容并保存： 12345&#123; "vscode_custom_css.imports": [ "file:///D:/synthwave84.css" ]&#125; 注意：自己修改file后面的路径，你的css文件保存在哪里，就用对应路径。 修改完后，win用户使用快捷键 Ctrl + Shift + P，输入 Enable custom CSS and JS ， 找到后鼠标点击一下，会出现提示： 点击Restart Visual Studio Code。 点击旁边的齿轮按钮，选择不再显示这条提醒。 如果还是没有发光效果，使用快捷键 Ctrl + Shift + P，输入 reload custom CSS and JS， 找到后鼠标点击一下，就可以看到发光效果了，不会很刺眼： 不稳定的插件 VS code doesn’t natively support text effects and as a result, the glow is experimental. It’s likely to be buggy and, whilst it looks rad, it isn’t intended for extended use. 文档上有这么一句话，注意这个Custom CSS and JS Loader 插件很容易坏掉，不是主题的问题。希望以后这个插件更新后能避免这种情况~ 更新 Every time you update VS code, you will need to repeat this step to re-enable custom CSS and JS. Similarly, when the theme updates, you will need to copy the updated css to your chosen location. This is less than ideal, but until VS code add the option to use custom CSS natively, it’s unfortunately the only option. 每次我们更新vs code，都需要重复上面的步骤去re-enable custom CSS and JS。 同样地，主题有了更新后，你也需要去复制最新的css文件去覆盖你的旧css文件。 关掉发光效果和卸载 The glow effect started as a joke and was never intended for long-term coding sessions. If you want to turn it off, you can disable it at any time by opening your command palette with Ctrl + Shift + P or Shift + ⌘ + P and choose “Disable custom CSS”. If you decide to change to a different theme altogether, you will also need to disable the custom css in this way. You may also wish to remove the file path from your settings.json. 这个发光效果不是很稳定，如果想要关掉，打开vs code，使用快捷键 Ctrl + Shift + P，输入 Disable custom CSS ，找到后鼠标点击一下。 如何卸载主题？ 先根据上面的步骤把发光效果关掉，然后打开settings.json，把之前添加的那行代码删掉 参考资料1.https://github.com/robb0wen/synthwave-vscode 2.https://jinkey.ai/post/tech/ru-he-pei-zhi-tou-ming-fa-guang-de-sao-qi-vscode]]></content>
+      <categories>
+        <category>主题</category>
+      </categories>
+      <tags>
+        <tag>主题</tag>
+        <tag>vs code</tag>
+        <tag>赛博朋克</tag>
+        <tag>霓虹</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[俄罗斯方块试玩-react-tetris]]></title>
+    <url>%2F2019%2F05%2F16%2F%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%E8%AF%95%E7%8E%A9-react-tetris%2F</url>
+    <content type="text"><![CDATA[试玩用手机浏览器打开https://chvin.github.io/react-tetris/ 真的好经典啊，小时候的游戏机就有，不过我玩这个真的很菜…很快就堵死了hhhhhhhhhhh Github地址https://github.com/chvin/react-tetris 开发者是用React、Redux、Immutable做俄罗斯方块游戏。响应式设计真的很方便，文档里还讲了开发过程时的细节，好棒！ 果断给了Star，然后把在线玩的地址作为书签放在手机桌面w]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>React</tag>
+        <tag>Redux</tag>
+        <tag>Immutable</tag>
+        <tag>页面游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LogoDiy试玩-PB风格Logo制作]]></title>
+    <url>%2F2019%2F05%2F16%2FLogoDiy%E8%AF%95%E7%8E%A9-PB%E9%A3%8E%E6%A0%BCLogo%E5%88%B6%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[在线Logo制作工具https://www.logodiy.online/ 直接打开就可以制作了！我们熟悉的风格~立马制作了几个试试： Github地址http://t.cn/EKJMeRt 果断点了star! 美中不足的是，预设的Color Prefix和Suffix只有一种，要是起码有3种搭配好的预设颜色就更好了，希望以后会有]]></content>
+      <tags>
+        <tag>logo制作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[windows下Chrome浏览器快捷键]]></title>
+    <url>%2F2019%2F05%2F15%2Fwindows%E4%B8%8BChrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[https://support.google.com/chrome/answer/157179?hl=zh-Hans 因为上面那个网址得科学上网才能打开，所以我在这里COPY下来，方便自己使用 Windows 和 Linux 标签页和窗口快捷键 操作 快捷键 打开新窗口 Ctrl + n 在无痕模式下打开新窗口 Ctrl + Shift + n 打开新的标签页，并跳转到该标签页 Ctrl + t 重新打开最后关闭的标签页，并跳转到该标签页 Ctrl + Shift + t 跳转到下一个打开的标签页 Ctrl + Tab 或 Ctrl + PgDn 跳转到上一个打开的标签页 Ctrl + Shift + Tab 或 Ctrl + PgUp 跳转到特定标签页 Ctrl + 1 到 Ctrl + 8 跳转到最后一个标签页 Ctrl + 9 在当前标签页中打开主页 Alt + Home 打开当前标签页浏览记录中记录的上一个页面 Alt + 向左箭头键 打开当前标签页浏览记录中记录的下一个页面 Alt + 向右箭头键 关闭当前标签页 Ctrl + w或Ctrl + F4 关闭当前窗口 Ctrl + Shift + w 最小化当前窗口 Alt + 空格键 + n 最大化当前窗口 Alt + 空格键 + x 关闭当前窗口 Alt + F4 退出 Google Chrome Ctrl + Shift + q Google Chrome 功能快捷键 操作 快捷键 打开 Chrome 菜单 Alt + f或Alt + e 或 F10 + Enter 键 显示或隐藏书签栏 Ctrl + Shift + b 打开书签管理器 Ctrl + Shift + o 在新标签页中打开“历史记录”页 Ctrl + h 在新标签页中打开“下载内容”页 Ctrl + j 打开 Chrome 任务管理器 Shift + Esc 将焦点放置在 Chrome 工具栏中的第一项上 Shift + Alt + t 将焦点放置在 Chrome 工具栏中的最后一项上 F10 将焦点移到未聚焦于的对话框（如果显示）中 F6 打开查找栏搜索当前网页 Ctrl + f 或 F3 跳转到与查找栏中搜索字词相匹配的下一条内容 Ctrl + g 跳转到与查找栏中搜索字词相匹配的上一条内容 Ctrl + Shift + g 打开“开发者工具” Ctrl + Shift + j 或 F12 打开“清除浏览数据”选项 Ctrl + Shift + Delete 在新标签页中打开 Chrome 帮助中心 F1 使用其他帐号登录或以访客身份浏览 Ctrl + Shift + m 打开反馈表单 Alt + Shift + i 地址栏快捷键 操作 快捷键 使用默认搜索引擎进行搜索 输入搜索字词并按Enter 键 使用其他搜索引擎进行搜索 输入搜索引擎名称，然后按Tab 键 为网站名称添加 www. 和 .com，并在当前标签页中打开该网站 输入网站名称并按 Ctrl + Enter 键 打开新的标签页并执行 Google 搜索 输入搜索字词并按 Alt + Enter 键 跳转到地址栏 Ctrl + l、Alt + d或F6 从页面中的任意位置搜索 Ctrl + k或Ctrl + e 从地址栏中移除联想查询内容 按向下箭头键以突出显示相应内容，然后按Shift + Delete 键 网页快捷键 操作 快捷键 打开选项以打印当前网页 Ctrl + p 打开选项以保存当前网页 Ctrl + s 重新加载当前网页 F5或Ctrl + r 重新加载当前网页（忽略缓存的内容） Shift + F5 或Ctrl + Shift + r 停止加载网页 Esc 浏览下一个可点击项 Tab 浏览上一个可点击项 Shift + Tab 使用 Chrome 打开计算机中的文件 按住 Ctrl + o 键并选择文件 显示当前网页的 HTML 源代码（不可修改） Ctrl + u 将当前网页保存为书签 Ctrl + d 将所有打开的标签页以书签的形式保存在新文件夹中 Ctrl + Shift + d 开启或关闭全屏模式 F11 放大网页上的所有内容 Ctrl 和 + 缩小网页上的所有内容 Ctrl 和 - 将网页上的所有内容恢复到默认大小 Ctrl + 0 向下滚动网页，一次一个屏幕 空格键 或 PgDn 向上滚动网页，一次一个屏幕 Shift + 空格键 或 PgUp 转到网页顶部 首页 转到网页底部 末尾 在网页上水平滚动 按住 Shift 键并滚动鼠标滚轮 将光标移到文本字段中的上一个字词前面 Ctrl + 向左箭头键 将光标移到文本字段中的上一个字词后面 Ctrl + 向右箭头键 删除文本字段中的上一个字词 Ctrl + Backspace 在当前标签页中打开主页 Alt + Home 鼠标快捷键 操作 快捷键 在当前标签页中打开链接（仅限鼠标） 将链接拖到标签页中 在新的后台标签页中打开链接 按住 Ctrl 键的同时点击链接 打开链接，并跳转到该链接 按住 Ctrl + Shift 键的同时点击链接 打开链接，并跳转到该链接（仅使用鼠标） 将链接拖到标签栏的空白区域 在新窗口中打开链接 按住 Shift 键的同时点击链接 在新窗口中打开标签页（仅使用鼠标） 将标签页拖出标签栏 将标签页移至当前窗口（仅限鼠标） 将标签页拖到现有窗口中 将标签页移回其原始位置 拖动标签页的同时按 Esc 将当前网页保存为书签 将相应网址拖动到书签栏中 下载链接目标 按住 Alt 键的同时点击链接 显示浏览记录 右键点击“后退”箭头 或“前进”箭头 ，或者点击（按住鼠标按键别松手）“后退”箭头 或“前进”箭头 在最大化模式和窗口模式间切换 双击标签栏的空白区域 放大网页上的所有内容 按住 Ctrl 键的同时向上滚动鼠标滚轮 缩小网页上的所有内容 按住 Ctrl 键的同时向下滚动鼠标滚轮]]></content>
+      <categories>
+        <category>Chrome</category>
+      </categories>
+      <tags>
+        <tag>chrome</tag>
+        <tag>快捷键</tag>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我喜欢用的win10快捷键]]></title>
+    <url>%2F2019%2F05%2F15%2F%E6%88%91%E5%96%9C%E6%AC%A2%E7%94%A8%E7%9A%84win10%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[Alt + Tab 在打开的应用之间切换 F5刷新强迫症的我，特别喜欢刷新和清空回收站 WIN+PrtScn 截图就和steam里F12一样，全屏幕截图 WIN + Pause 显示“系统属性”对话框我只在这种时候才会用上Pause键… WIN + 加号 (+) 打开“放大镜”录教学类视频时才用的功能 Home键用电脑刷微博的时候，有时“返回顶部”button怎么找都找不到，这时用键盘右边上角的Home键就行了，一秒带你上天 虚拟桌面键盘快捷键WIN + Tab 打开任务视图我的大爱 WIN + Ctrl + D 添加虚拟桌面 WIN + Ctrl + F4 关闭你正在使用的虚拟桌面我一开始创建新的虚拟桌面时总是忘记如何关闭，越创越多… WIN + Ctrl + 向右键→ 在你于右侧创建的虚拟桌面之间切换WIN + Ctrl + 向左键← 在你于左侧创建的虚拟桌面之间切换无缝切换2333]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>快捷键</tag>
+        <tag>win10</tag>
+        <tag>WIN10</tag>
+      </tags>
+  </entry>
+</search>

@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html class="theme-next gemini use-motion" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,13 @@
 
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css?v=1.0.2">
 
 
 
@@ -72,9 +79,9 @@
     root: '/',
     scheme: 'Gemini',
     version: '7.1.1',
-    sidebar: {"position":"left","display":"always","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: true,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: false,
+    back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -97,12 +104,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="lisa的博客">
+<meta property="og:title" content="Sailorlisa&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="lisa的博客">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Sailorlisa&#39;s blog">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lisa的博客">
+<meta name="twitter:title" content="Sailorlisa&#39;s blog">
 
 
 
@@ -120,7 +127,7 @@
   };
 </script>
 
-  <title>lisa的博客</title>
+  <title>Sailorlisa's blog</title>
   
 
 
@@ -161,7 +168,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
@@ -171,7 +178,9 @@
   <div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
-
+    
+    <a href="https://github.com/sailorlisa" class="github-corner" aria-label="View source on GitHub"><svg width="92" height="92" viewbox="0 0 250 250" style="fill:#b495e3; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta">
@@ -180,16 +189,20 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">lisa的博客</span>
+        <span class="site-title">Sailorlisa's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
+        <p class="site-subtitle">fantastic magic world</p>
+      
     
     
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -207,23 +220,6 @@
         
         
           
-          <li class="menu-item menu-item-archives">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-about">
 
     
@@ -234,14 +230,14 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
         
         
         
           
-          <li class="menu-item menu-item-tags">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -251,7 +247,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
         
@@ -268,17 +264,114 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Books/" rel="section"><i class="menu-item-icon fa fa-fw fa-eye"></i> <br>Books</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-video">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Video/" rel="section"><i class="menu-item-icon fa fa-fw fa-play-circle"></i> <br>Video</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-game">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Game/" rel="section"><i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>Game</a>
 
   </li>
 
       
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
       
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -320,6 +413,360 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sailorlisa">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sailorlisa's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/17/hexo-NextT主题配置快速教程/" class="post-title-link" itemprop="url">hexo + NextT主题配置快速教程</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-17 16:21:49 / Modified: 16:54:51" itemprop="dateCreated datePublished" datetime="2019-05-17T16:21:49+08:00">2019-05-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              前言博客的初衷是为了写文章、发布文章，追求简洁和加载速度。最终选择了NextT主题。
+NextT主题Github地址
+NextT主题官方文档
+更换主题下载NextT主题
+下载后解压ZIP，把文件夹名字修改成NextT，并把主题文件夹复制到 D:\Myblog\themes里面。
+修改主题用vs co
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/17/hexo-NextT主题配置快速教程/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/17/hexo-Github搭建个人博客快速教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sailorlisa">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sailorlisa's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/17/hexo-Github搭建个人博客快速教程/" class="post-title-link" itemprop="url">hexo+Github搭建个人博客快速教程</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-17 15:50:29 / Modified: 16:06:11" itemprop="dateCreated datePublished" datetime="2019-05-17T15:50:29+08:00">2019-05-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              前言
+推荐hexo搭建博客详细教程：&lt;https://eirunye.github.io/categories/Hexo/
+
+由于同内容的教程实在太多，感觉没多大必要再写。所以简单记录下快速搭建个人博客的流程，方便自己使用。
+提前准备
+Github 注册账号
+Node.js 下载，安装
+Git
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/17/hexo-Github搭建个人博客快速教程/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Python-Data-Science-Handbook-第1章下/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -329,7 +776,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -358,14 +805,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-16 19:07:48 / 修改时间：19:13:02" itemprop="dateCreated datePublished" datetime="2019-05-16T19:07:48+08:00">2019-05-16</time>
+              <time title="Created: 2019-05-16 19:07:48 / Modified: 19:13:02" itemprop="dateCreated datePublished" datetime="2019-05-16T19:07:48+08:00">2019-05-16</time>
             
 
             
@@ -384,7 +831,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据科学/" itemprop="url" rel="index"><span itemprop="name">数据科学</span></a></span>
@@ -424,127 +871,24 @@
       
         
           
-            <blockquote>
-<p><a href="https://github.com/jakevdp/PythonDataScienceHandbook" target="_blank" rel="noopener">https://github.com/jakevdp/PythonDataScienceHandbook</a></p>
-</blockquote>
-<h3 id="从头创建数组"><a href="#从头创建数组" class="headerlink" title="从头创建数组"></a>从头创建数组</h3><p>用 NumPy 内置的方法从头创建数组。</p>
-<p>创建一个长度为10的数组，数组的值都是0</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.zeros(<span class="number">10</span>, dtype=int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个3×5的浮点型数组，数组的值都是1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">3</span>, <span class="number">5</span>), dtype=float)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># array([[1., 1., 1., 1., 1.],</span></span><br><span class="line"><span class="comment">#       [1., 1., 1., 1., 1.],</span></span><br><span class="line"><span class="comment">#       [1., 1., 1., 1., 1.]])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个3×5的浮点型数组，数组的值都是3.14</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.full((<span class="number">3</span>, <span class="number">5</span>), <span class="number">3.14</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment"># array([[3.14, 3.14, 3.14, 3.14, 3.14],</span></span><br><span class="line"><span class="comment">#        [3.14, 3.14, 3.14, 3.14, 3.14],</span></span><br><span class="line"><span class="comment">#        [3.14, 3.14, 3.14, 3.14, 3.14]])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个线性序列数组，从0开始，到20结束，步长为2。（它和内置的range()函数类似）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">0</span>, <span class="number">20</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个5个元素的数组，这5个数均匀地分配到0~1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([0.  , 0.25, 0.5 , 0.75, 1.  ])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个3×3的、在0~1均匀分布的随机数组成的数组</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.random((<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[0.94795687, 0.62658297, 0.4240733 ],</span></span><br><span class="line"><span class="comment">#       [0.75686519, 0.46357097, 0.58682988],</span></span><br><span class="line"><span class="comment">#       [0.37997183, 0.28707067, 0.67190137]])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个3×3的、均值为0、标准差为1的，正态分布的随机数数组</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[ 0.1348332 , -1.93013655,  1.21003072],</span></span><br><span class="line"><span class="comment">#       [ 1.41562771,  0.29064906,  1.09749629],</span></span><br><span class="line"><span class="comment">#       [-0.16664035, -0.67962834, -0.54942727]])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个3×3的、[0, 10)区间的随机整型数组</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.random.randint(<span class="number">0</span>, <span class="number">10</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[8, 0, 5],</span></span><br><span class="line"><span class="comment">#       [6, 5, 9],</span></span><br><span class="line"><span class="comment">#       [9, 9, 0]])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个3×3的单位矩阵</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.eye(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[1., 0., 0.],</span></span><br><span class="line"><span class="comment">#       [0., 1., 0.],</span></span><br><span class="line"><span class="comment">#       [0., 0., 1.]])</span></span><br></pre></td></tr></table></figure>
-<p>创建一个由3个整型数组成的未初始化的数组，数组的值是内存空间中的任意值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.empty(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([1., 1., 1.])</span></span><br></pre></td></tr></table></figure>
-<h3 id="NumPy标准数据类型"><a href="#NumPy标准数据类型" class="headerlink" title="NumPy标准数据类型"></a>NumPy标准数据类型</h3><p>构建数组时，可以用以下2种方式指定数据类型：</p>
-<p>用字符串参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype=<span class="string">'int16'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16)</span></span><br></pre></td></tr></table></figure>
-<p>用相关NumPy对象来指定</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype=np.int16)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16)</span></span><br></pre></td></tr></table></figure>
-<p>NumPy标准数据类型表格：</p>
-<blockquote>
-<p><a href="http://numpy.org/" target="_blank" rel="noopener">http://numpy.org/</a></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">数据类型</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>bool_</code></td>
-<td style="text-align:left">布尔值（真、<code>True</code> 或假、<code>False</code>），用一个字节存储</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>int_</code></td>
-<td style="text-align:left">默认整型（类似于 C 语言中的 <code>long</code>，通常情况下是 <code>int64</code> 或 <code>int32</code>）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>intc</code></td>
-<td style="text-align:left">同 C 语言的 <code>int</code> 相同（通常是 <code>int32</code> 或 <code>int64</code>）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>intp</code></td>
-<td style="text-align:left">用作索引的整型（和 C 语言的 <code>ssize_t</code> 相同，通常情况下是 <code>int32</code> 或 <code>int64</code>）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>int8</code></td>
-<td style="text-align:left">字节（byte，范围从–128 到 127）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>int16</code></td>
-<td style="text-align:left">整型（范围从–32768 到 32767）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>int32</code></td>
-<td style="text-align:left">整型（范围从–2147483648 到 2147483647）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>int64</code></td>
-<td style="text-align:left">整型（范围从–9223372036854775808 到 9223372036854775807）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>uint8</code></td>
-<td style="text-align:left">无符号整型（范围从 0 到 255）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>uint16</code></td>
-<td style="text-align:left">无符号整型（范围从 0 到 65535）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>uint32</code></td>
-<td style="text-align:left">无符号整型（范围从 0 到 4294967295）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>uint64</code></td>
-<td style="text-align:left">无符号整型（范围从 0 到 18446744073709551615）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>float_</code></td>
-<td style="text-align:left"><code>float64</code> 的简化形式</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>float16</code></td>
-<td style="text-align:left">半精度浮点型：符号比特位，5 比特位指数（exponent），10 比特位尾数（mantissa）</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>float32</code></td>
-<td style="text-align:left">单精度浮点型：符号比特位，8 比特位指数，23 比特位尾数</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>float64</code></td>
-<td style="text-align:left">双精度浮点型：符号比特位，11 比特位指数，52 比特位尾数</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>complex_</code></td>
-<td style="text-align:left"><code>complex128</code> 的简化形式</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>complex64</code></td>
-<td style="text-align:left">复数，由两个 32 位浮点数表示</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>complex128</code></td>
-<td style="text-align:left">复数，由两个 64 位浮点数表示</td>
-</tr>
-</tbody>
-</table>
+            <p>
+              
+https://github.com/jakevdp/PythonDataScienceHandbook
 
+从头创建数组用 NumPy 内置的方法从头创建数组。
+创建一个长度为10的数组，数组的值都是0
+import numpy as npnp.zeros(10, dtype=int)# outp
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/Python-Data-Science-Handbook-第1章下/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -608,7 +952,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -637,14 +981,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-16 16:25:57 / 修改时间：16:49:29" itemprop="dateCreated datePublished" datetime="2019-05-16T16:25:57+08:00">2019-05-16</time>
+              <time title="Created: 2019-05-16 16:25:57 / Modified: 16:49:29" itemprop="dateCreated datePublished" datetime="2019-05-16T16:25:57+08:00">2019-05-16</time>
             
 
             
@@ -663,7 +1007,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据科学/" itemprop="url" rel="index"><span itemprop="name">数据科学</span></a></span>
@@ -703,40 +1047,25 @@
       
         
           
-            <blockquote>
-<p><a href="https://github.com/jakevdp/PythonDataScienceHandbook" target="_blank" rel="noopener">https://github.com/jakevdp/PythonDataScienceHandbook</a></p>
-</blockquote>
-<h3 id="Numpy入门"><a href="#Numpy入门" class="headerlink" title="Numpy入门"></a>Numpy入门</h3><p>Numerical Python，提供了高效存储和操作密集数据缓存的接口。</p>
-<p>由于Numpy的内容多，决定分成8次，分而治之，分成8块来学习。</p>
-<p>导入Numpy</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<h3 id="理解Python中的数据类型"><a href="#理解Python中的数据类型" class="headerlink" title="理解Python中的数据类型"></a>理解Python中的数据类型</h3><p>学习数据科学，我们要理解数据是如何被储存和操作的。</p>
-<h4 id="python易用性-动态输入"><a href="#python易用性-动态输入" class="headerlink" title="python易用性-动态输入"></a>python易用性-动态输入</h4><p>静态类型的语言（如 C 或 Java）往往需要每一个变量都明确地声明，</p>
-<p>而动态类型的语言（例如 Python）可以跳过这个特殊规定。</p>
-<h3 id="Python整型不仅仅是一个整型"><a href="#Python整型不仅仅是一个整型" class="headerlink" title="Python整型不仅仅是一个整型"></a>Python整型不仅仅是一个整型</h3><p>Python 3.4 中的一个整型实际上包括 4 个部分。</p>
-<ul>
-<li><code>ob_refcnt</code> 是一个引用计数，它帮助 Python 默默地处理内存的分配和回收。</li>
-<li><code>ob_type</code> 将变量的类型编码。</li>
-<li><code>ob_size</code> 指定接下来的数据成员的大小。</li>
-<li><code>ob_digit</code> 包含我们希望 Python 变量表示的实际整型值。</li>
-</ul>
-<h3 id="Python列表不仅仅是一个列表"><a href="#Python列表不仅仅是一个列表" class="headerlink" title="Python列表不仅仅是一个列表"></a>Python列表不仅仅是一个列表</h3><p>整型值列表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">L = list (range(<span class="number">10</span>))</span><br><span class="line"></span><br><span class="line">print(L)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">type(L)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output:list</span></span><br><span class="line"></span><br><span class="line">type(L[<span class="number">0</span>])</span><br><span class="line"><span class="comment"># output:int</span></span><br></pre></td></tr></table></figure>
-<p>字符串列表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">L2 = [str(c) <span class="keyword">for</span> c <span class="keyword">in</span> L]</span><br><span class="line"></span><br><span class="line">print(L2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']</span></span><br><span class="line"></span><br><span class="line">type(L2[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: str</span></span><br></pre></td></tr></table></figure>
-<p>异构列表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">L3 = [<span class="literal">True</span>, <span class="string">"2"</span>, <span class="number">3.0</span>, <span class="number">4</span>]</span><br><span class="line">[type(item) <span class="keyword">for</span> item <span class="keyword">in</span> L3]</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: [bool, str, float, int]</span></span><br></pre></td></tr></table></figure>
-<h3 id="Python中的固定类型数组"><a href="#Python中的固定类型数组" class="headerlink" title="Python中的固定类型数组"></a>Python中的固定类型数组</h3><h4 id="array模块"><a href="#array模块" class="headerlink" title="array模块"></a>array模块</h4><p>创建统一类型的密集数组</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> array</span><br><span class="line">L = list(range(<span class="number">10</span>))</span><br><span class="line">print(L)</span><br><span class="line">A = array.array(<span class="string">'i'</span>, L)</span><br><span class="line">A</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="comment"># array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</span></span><br></pre></td></tr></table></figure>
-<h3 id="从Python列表创建数组"><a href="#从Python列表创建数组" class="headerlink" title="从Python列表创建数组"></a>从Python列表创建数组</h3><p>NumPy 要求数组必须包含同一类型的数据。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入Numpy</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 创建数组</span></span><br><span class="line">np.array([<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#output: array([1, 4, 2, 5, 3])</span></span><br></pre></td></tr></table></figure>
-<p>如果数据类型不匹配，Numpy向上转换：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([<span class="number">3.14</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 整型int转换为浮点型float</span></span><br><span class="line"><span class="comment"># output: array([3.14, 4.  , 2.  , 3.  ])</span></span><br></pre></td></tr></table></figure>
-<p>也可以用<code>dtype</code>关键词去设置数组的数据类型：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], dtype=<span class="string">'float32'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output: array([1., 2., 3., 4.], dtype=float32)</span></span><br></pre></td></tr></table></figure>
-<p>多维数组：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 嵌套列表构成的多维数组</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([range(i, i + <span class="number">3</span>) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment">#array([[2, 3, 4],</span></span><br><span class="line"><span class="comment">#      [4, 5, 6],</span></span><br><span class="line"><span class="comment">#      [6, 7, 8]])</span></span><br></pre></td></tr></table></figure>
+            <p>
+              
+https://github.com/jakevdp/PythonDataScienceHandbook
+
+Numpy入门Numerical Python，提供了高效存储和操作密集数据缓存的接口。
+由于Numpy的内容多，决定分成8次，分而治之，分成8块来学习。
+导入Numpy
+import nu
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/Python-Data-Science-Handbook-第1章上/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -800,7 +1129,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -829,14 +1158,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-16 13:26:18 / 修改时间：16:49:57" itemprop="dateCreated datePublished" datetime="2019-05-16T13:26:18+08:00">2019-05-16</time>
+              <time title="Created: 2019-05-16 13:26:18 / Modified: 16:49:57" itemprop="dateCreated datePublished" datetime="2019-05-16T13:26:18+08:00">2019-05-16</time>
             
 
             
@@ -877,18 +1206,26 @@
       
         
           
-            <blockquote>
-<p><a href="https://github.com/FavioVazquez/ds-cheatsheets" target="_blank" rel="noopener">https://github.com/FavioVazquez/ds-cheatsheets</a></p>
-</blockquote>
-<h3 id="Working-with-Different-Programming-Languages"><a href="#Working-with-Different-Programming-Languages" class="headerlink" title="Working with Different Programming Languages"></a>Working with Different Programming Languages</h3><p><img src="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/JN1.png" alt="JN1"></p>
-<h3 id="Asking-For-Help"><a href="#Asking-For-Help" class="headerlink" title="Asking For Help"></a>Asking For Help</h3><p><img src="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/JN2.png" alt="JN2"></p>
-<h3 id="Two-Modes"><a href="#Two-Modes" class="headerlink" title="Two Modes"></a>Two Modes</h3><p><img src="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/JN3.png" alt="JN3"></p>
-<h3 id="Saving-Loading-Notebooks"><a href="#Saving-Loading-Notebooks" class="headerlink" title="Saving/Loading Notebooks"></a>Saving/Loading Notebooks</h3><p><img src="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/JN4.png" alt="JN4"></p>
-<h3 id="Writing-Code-And-Text1"><a href="#Writing-Code-And-Text1" class="headerlink" title="Writing Code And Text1"></a>Writing Code And Text1</h3><p><img src="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/JN5.png" alt="JN5"></p>
-<h3 id="Writing-Code-And-Text2"><a href="#Writing-Code-And-Text2" class="headerlink" title="Writing Code And Text2"></a>Writing Code And Text2</h3><p><img src="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/JN6.png" alt="JN6"></p>
-<h3 id="Widgets"><a href="#Widgets" class="headerlink" title="Widgets"></a>Widgets</h3><p><img src="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/JN7.png" alt="JN7"></p>
+            <p>
+              
+https://github.com/FavioVazquez/ds-cheatsheets
 
+Working with Different Programming Languages
+Asking For Help
+Two Modes
+Saving/Loading Notebooks
+Writi
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/Jupyter-Notebook-Cheat-Sheet中文/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -952,7 +1289,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -981,14 +1318,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-16 06:22:52 / 修改时间：16:48:18" itemprop="dateCreated datePublished" datetime="2019-05-16T06:22:52+08:00">2019-05-16</time>
+              <time title="Created: 2019-05-16 06:22:52 / Modified: 16:48:18" itemprop="dateCreated datePublished" datetime="2019-05-16T06:22:52+08:00">2019-05-16</time>
             
 
             
@@ -1007,7 +1344,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/主题/" itemprop="url" rel="index"><span itemprop="name">主题</span></a></span>
@@ -1047,53 +1384,23 @@
       
         
           
-            <p>赛博朋克风，好看！</p>
-<h3 id="安装之前"><a href="#安装之前" class="headerlink" title="安装之前"></a>安装之前</h3><p>Github地址：<a href="https://github.com/robb0wen/synthwave-vscode" target="_blank" rel="noopener">https://github.com/robb0wen/synthwave-vscode</a>，先看开发者写的文档</p>
-<p>下载安装vs code：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a></p>
-<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>下载安装theme</p>
-<p>打开vs code，点击​ <code>文件</code> ——&gt; <code>首选项</code>——&gt; <code>扩展（Ctrl + Shift + X）</code>。</p>
-<p>在搜索扩展里搜索 <code>SynthWave</code>，点击 <code>安装</code>。</p>
-<p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy6.png" alt="sy6"></p>
-<p>再次在搜索扩展里搜索 <code>Custom CSS and JS Loader</code>，点击 <code>安装</code>。</p>
-<p>在vs code里，点击 <code>文件</code> ——&gt; <code>新建文件</code>，<a href="https://github.com/robb0wen/synthwave-vscode/blob/master/synthwave84.css" target="_blank" rel="noopener">打开网址</a>，把<strong>synthwave84.css</strong>里的所有代码复制粘贴过去，保存，文件命名为 synthwave84.css，下拉保存类型为css，点击<code>确定</code>。</p>
-<p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy1.png" alt="sy1"></p>
-<hr>
-<p>接下来我们需要修改vs code的<code>settings.json</code>：</p>
-<p>最快的方法：点击 <code>文件</code> ——&gt; <code>首选项</code> ——&gt; <code>设置</code>——&gt; <code>扩展</code>——&gt;<code>在settings.json中编辑</code>，弹出之后，右键标签，选择 <code>在资源管理器中显示</code> ，就能自动打开路径文件夹（C:\Users\dell\AppData\Roaming\Code\User）了。</p>
-<p>回到vs code，<code>settings.json</code>文件，修改代码，引用刚刚的css文件，windows用户在后面复制粘贴以下内容并保存：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"vscode_custom_css.imports"</span>: [</span><br><span class="line">    <span class="string">"file:///D:/synthwave84.css"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意：自己修改file后面的路径，你的css文件保存在哪里，就用对应路径。</p>
-<p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy4.png" alt="sy4"></p>
-<hr>
-<p>修改完后，win用户使用快捷键 <code>Ctrl + Shift + P</code>，输入 <code>Enable custom CSS and JS</code> ， 找到后鼠标点击一下，会出现提示：</p>
-<p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy2.png" alt="sy2"></p>
-<p>点击<code>Restart Visual Studio Code</code>。</p>
-<p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy3.png" alt="sy3"></p>
-<p>点击旁边的齿轮按钮，选择不再显示这条提醒。</p>
-<p>如果还是没有发光效果，使用快捷键 <code>Ctrl + Shift + P</code>，输入 <code>reload custom CSS and JS</code>， 找到后鼠标点击一下，就可以看到发光效果了，不会很刺眼：</p>
-<p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy5.png" alt="sy5"></p>
-<h3 id="不稳定的插件"><a href="#不稳定的插件" class="headerlink" title="不稳定的插件"></a>不稳定的插件</h3><blockquote>
-<p>VS code doesn’t natively support text effects and as a result, the glow is experimental. It’s likely to be buggy and, whilst it looks rad, it isn’t intended for extended use.</p>
-</blockquote>
-<p>文档上有这么一句话，注意这个<code>Custom CSS and JS Loader</code> 插件很容易坏掉，不是主题的问题。希望以后这个插件更新后能避免这种情况~</p>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><blockquote>
-<p>Every time you update VS code, you will need to repeat this step to re-enable custom CSS and JS. Similarly, when the theme updates, you will need to copy the updated css to your chosen location.</p>
-<p>This is less than ideal, but until VS code add the option to use custom CSS natively, it’s unfortunately the only option.</p>
-</blockquote>
-<p>每次我们更新vs code，都需要重复上面的步骤去re-enable custom CSS and JS。</p>
-<p>同样地，主题有了更新后，你也需要去复制最新的css文件去覆盖你的旧css文件。</p>
-<h3 id="关掉发光效果和卸载"><a href="#关掉发光效果和卸载" class="headerlink" title="关掉发光效果和卸载"></a>关掉发光效果和卸载</h3><blockquote>
-<p>The glow effect started as a joke and was never intended for long-term coding sessions. If you want to turn it off, you can disable it at any time by opening your command palette with <code>Ctrl + Shift + P</code> or <code>Shift + ⌘ + P</code> and choose “Disable custom CSS”.</p>
-<p>If you decide to change to a different theme altogether, you will also need to disable the custom css in this way. You may also wish to remove the file path from your <code>settings.json</code>.</p>
-</blockquote>
-<p>这个发光效果不是很稳定，如果想要关掉，打开vs code，使用快捷键 <code>Ctrl + Shift + P</code>，输入 <code>Disable custom CSS</code> ，找到后鼠标点击一下。</p>
-<p>如何卸载主题？</p>
-<p>先根据上面的步骤把发光效果关掉，然后打开<code>settings.json</code>，把之前添加的那行代码删掉</p>
-<p><img src="/2019/05/16/SynthWave-84-VS-Code使用流程/sy7.png" alt="sy7"></p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>1.<a href="https://github.com/robb0wen/synthwave-vscode" target="_blank" rel="noopener">https://github.com/robb0wen/synthwave-vscode</a></p>
-<p>2.<a href="https://jinkey.ai/post/tech/ru-he-pei-zhi-tou-ming-fa-guang-de-sao-qi-vscode" target="_blank" rel="noopener">https://jinkey.ai/post/tech/ru-he-pei-zhi-tou-ming-fa-guang-de-sao-qi-vscode</a></p>
-
+            <p>
+              赛博朋克风，好看！
+安装之前Github地址：https://github.com/robb0wen/synthwave-vscode，先看开发者写的文档
+下载安装vs code：https://code.visualstudio.com/
+配置主题下载安装theme
+打开vs code，点击​ 文
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/SynthWave-84-VS-Code使用流程/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1157,7 +1464,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -1186,14 +1493,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-16 05:32:07 / 修改时间：16:46:22" itemprop="dateCreated datePublished" datetime="2019-05-16T05:32:07+08:00">2019-05-16</time>
+              <time title="Created: 2019-05-16 05:32:07 / Modified: 16:46:22" itemprop="dateCreated datePublished" datetime="2019-05-16T05:32:07+08:00">2019-05-16</time>
             
 
             
@@ -1212,7 +1519,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/游戏/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a></span>
@@ -1252,14 +1559,23 @@
       
         
           
-            <h3 id="试玩"><a href="#试玩" class="headerlink" title="试玩"></a>试玩</h3><p>用手机浏览器打开<a href="https://chvin.github.io/react-tetris/" target="_blank" rel="noopener">https://chvin.github.io/react-tetris/</a></p>
-<p><img src="/2019/05/16/俄罗斯方块试玩-react-tetris/react-tetris.jpg" alt="react-tetris"></p>
-<p>真的好经典啊，小时候的游戏机就有，不过我玩这个真的很菜…很快就堵死了hhhhhhhhhhh</p>
-<h3 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a>Github地址</h3><p><a href="https://github.com/chvin/react-tetris" target="_blank" rel="noopener">https://github.com/chvin/react-tetris</a></p>
-<p>开发者是用React、Redux、Immutable做俄罗斯方块游戏。响应式设计真的很方便，文档里还讲了开发过程时的细节，好棒！</p>
-<p>果断给了Star，然后把在线玩的地址作为书签放在手机桌面w</p>
+            <p>
+              试玩用手机浏览器打开https://chvin.github.io/react-tetris/
 
+真的好经典啊，小时候的游戏机就有，不过我玩这个真的很菜…很快就堵死了hhhhhhhhhhh
+Github地址https://github.com/chvin/react-tetris
+开发者是用Reac
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/俄罗斯方块试玩-react-tetris/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1323,7 +1639,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -1352,14 +1668,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-16 05:10:15 / 修改时间：16:49:45" itemprop="dateCreated datePublished" datetime="2019-05-16T05:10:15+08:00">2019-05-16</time>
+              <time title="Created: 2019-05-16 05:10:15 / Modified: 16:49:45" itemprop="dateCreated datePublished" datetime="2019-05-16T05:10:15+08:00">2019-05-16</time>
             
 
             
@@ -1400,19 +1716,29 @@
       
         
           
-            <h3 id="在线Logo制作工具"><a href="#在线Logo制作工具" class="headerlink" title="在线Logo制作工具"></a>在线Logo制作工具</h3><p><a href="https://www.logodiy.online/" target="_blank" rel="noopener">https://www.logodiy.online/</a></p>
-<p>直接打开就可以制作了！我们熟悉的风格~立马制作了几个试试：</p>
-<p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo1.png" alt="logo1"></p>
-<p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo2.png" alt="logo2"></p>
-<p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo3.png" alt="logo3"></p>
-<p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo4.png" alt="logo4"></p>
-<p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo5.png" alt="logo5"></p>
-<p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo7.png" alt="logo7"></p>
-<p><img src="/2019/05/16/LogoDiy试玩-PB风格Logo制作/logo6.png" alt="logo6"></p>
-<h3 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a>Github地址</h3><p><a href="http://t.cn/EKJMeRt" target="_blank" rel="noopener">http://t.cn/EKJMeRt</a></p>
-<p>果断点了star! 美中不足的是，预设的Color Prefix和Suffix只有一种，要是起码有3种搭配好的预设颜色就更好了，希望以后会有</p>
+            <p>
+              在线Logo制作工具https://www.logodiy.online/
+直接打开就可以制作了！我们熟悉的风格~立马制作了几个试试：
 
+
+
+
+
+
+
+Github地址http://t.cn/EKJMeRt
+果断点了star! 美中不足的是，预设的Color Prefix和Suffix只有一种，要是起
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/16/LogoDiy试玩-PB风格Logo制作/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1476,7 +1802,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -1505,14 +1831,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-15 18:09:07" itemprop="dateCreated datePublished" datetime="2019-05-15T18:09:07+08:00">2019-05-15</time>
+              <time title="Created: 2019-05-15 18:09:07" itemprop="dateCreated datePublished" datetime="2019-05-15T18:09:07+08:00">2019-05-15</time>
             
 
             
@@ -1527,9 +1853,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">更新于</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="修改时间：2019-05-16 16:54:37" itemprop="dateModified" datetime="2019-05-16T16:54:37+08:00">2019-05-16</time>
+                <time title="Modified: 2019-05-16 16:54:37" itemprop="dateModified" datetime="2019-05-16T16:54:37+08:00">2019-05-16</time>
               
             
           </span>
@@ -1543,7 +1869,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Chrome/" itemprop="url" rel="index"><span itemprop="name">Chrome</span></a></span>
@@ -1583,377 +1909,32 @@
       
         
           
-            <p><a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="noopener">https://support.google.com/chrome/answer/157179?hl=zh-Hans</a> </p>
-<p>因为上面那个网址得科学上网才能打开，所以我在这里COPY下来，方便自己使用</p>
-<p><strong>Windows 和 Linux</strong></p>
-<h3 id="标签页和窗口快捷键"><a href="#标签页和窗口快捷键" class="headerlink" title="标签页和窗口快捷键"></a>标签页和窗口快捷键</h3><table>
-<thead>
-<tr>
-<th><strong>操作</strong></th>
-<th><strong>快捷键</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>打开新窗口</td>
-<td><strong>Ctrl + n</strong></td>
-</tr>
-<tr>
-<td>在无痕模式下打开新窗口</td>
-<td><strong>Ctrl + Shift + n</strong></td>
-</tr>
-<tr>
-<td>打开新的标签页，并跳转到该标签页</td>
-<td><strong>Ctrl + t</strong></td>
-</tr>
-<tr>
-<td>重新打开最后关闭的标签页，并跳转到该标签页</td>
-<td><strong>Ctrl + Shift + t</strong></td>
-</tr>
-<tr>
-<td>跳转到下一个打开的标签页</td>
-<td><strong>Ctrl + Tab</strong> 或 <strong>Ctrl + PgDn</strong></td>
-</tr>
-<tr>
-<td>跳转到上一个打开的标签页</td>
-<td><strong>Ctrl + Shift + Tab</strong> 或 <strong>Ctrl + PgUp</strong></td>
-</tr>
-<tr>
-<td>跳转到特定标签页</td>
-<td><strong>Ctrl + 1</strong> 到 <strong>Ctrl + 8</strong></td>
-</tr>
-<tr>
-<td>跳转到最后一个标签页</td>
-<td><strong>Ctrl + 9</strong></td>
-</tr>
-<tr>
-<td>在当前标签页中打开主页</td>
-<td><strong>Alt + Home</strong></td>
-</tr>
-<tr>
-<td>打开当前标签页浏览记录中记录的上一个页面</td>
-<td><strong>Alt + 向左箭头键</strong></td>
-</tr>
-<tr>
-<td>打开当前标签页浏览记录中记录的下一个页面</td>
-<td><strong>Alt + 向右箭头键</strong></td>
-</tr>
-<tr>
-<td>关闭当前标签页</td>
-<td><strong>Ctrl + w</strong>或<strong>Ctrl + F4</strong></td>
-</tr>
-<tr>
-<td>关闭当前窗口</td>
-<td><strong>Ctrl + Shift + w</strong></td>
-</tr>
-<tr>
-<td>最小化当前窗口</td>
-<td><strong>Alt + 空格键 + n</strong></td>
-</tr>
-<tr>
-<td>最大化当前窗口</td>
-<td>Alt + 空格键 + x</td>
-</tr>
-<tr>
-<td>关闭当前窗口</td>
-<td><strong>Alt + F4</strong></td>
-</tr>
-<tr>
-<td>退出 Google Chrome</td>
-<td><strong>Ctrl + Shift + q</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="Google-Chrome-功能快捷键"><a href="#Google-Chrome-功能快捷键" class="headerlink" title="Google Chrome 功能快捷键"></a>Google Chrome 功能快捷键</h3><table>
-<thead>
-<tr>
-<th><strong>操作</strong></th>
-<th><strong>快捷键</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>打开 Chrome 菜单</td>
-<td><strong>Alt + f</strong>或<strong>Alt + e</strong> 或 <strong>F10 + Enter 键</strong></td>
-</tr>
-<tr>
-<td>显示或隐藏书签栏</td>
-<td><strong>Ctrl + Shift + b</strong></td>
-</tr>
-<tr>
-<td>打开书签管理器</td>
-<td><strong>Ctrl + Shift + o</strong></td>
-</tr>
-<tr>
-<td>在新标签页中打开“历史记录”页</td>
-<td><strong>Ctrl + h</strong></td>
-</tr>
-<tr>
-<td>在新标签页中打开“下载内容”页</td>
-<td><strong>Ctrl + j</strong></td>
-</tr>
-<tr>
-<td>打开 Chrome 任务管理器</td>
-<td><strong>Shift + Esc</strong></td>
-</tr>
-<tr>
-<td>将焦点放置在 Chrome 工具栏中的第一项上</td>
-<td><strong>Shift + Alt + t</strong></td>
-</tr>
-<tr>
-<td>将焦点放置在 Chrome 工具栏中的最后一项上</td>
-<td><strong>F10</strong></td>
-</tr>
-<tr>
-<td>将焦点移到未聚焦于的对话框（如果显示）中</td>
-<td><strong>F6</strong></td>
-</tr>
-<tr>
-<td>打开查找栏搜索当前网页</td>
-<td><strong>Ctrl + f</strong> 或 <strong>F3</strong></td>
-</tr>
-<tr>
-<td>跳转到与查找栏中搜索字词相匹配的下一条内容</td>
-<td><strong>Ctrl + g</strong></td>
-</tr>
-<tr>
-<td>跳转到与查找栏中搜索字词相匹配的上一条内容</td>
-<td><strong>Ctrl + Shift + g</strong></td>
-</tr>
-<tr>
-<td>打开“开发者工具”</td>
-<td><strong>Ctrl + Shift + j</strong> 或 <strong>F12</strong></td>
-</tr>
-<tr>
-<td>打开“清除浏览数据”选项</td>
-<td><strong>Ctrl + Shift + Delete</strong></td>
-</tr>
-<tr>
-<td>在新标签页中打开 Chrome 帮助中心</td>
-<td><strong>F1</strong></td>
-</tr>
-<tr>
-<td>使用其他帐号登录或以访客身份浏览</td>
-<td><strong>Ctrl + Shift + m</strong></td>
-</tr>
-<tr>
-<td>打开反馈表单</td>
-<td><strong>Alt + Shift + i</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="地址栏快捷键"><a href="#地址栏快捷键" class="headerlink" title="地址栏快捷键"></a>地址栏快捷键</h3><table>
-<thead>
-<tr>
-<th><strong>操作</strong></th>
-<th><strong>快捷键</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>使用默认搜索引擎进行搜索</td>
-<td>输入搜索字词并按<strong>Enter</strong> 键</td>
-</tr>
-<tr>
-<td>使用其他搜索引擎进行搜索</td>
-<td>输入搜索引擎名称，然后按<strong>Tab</strong> 键</td>
-</tr>
-<tr>
-<td>为网站名称添加 <code>www.</code> 和 <code>.com</code>，并在当前标签页中打开该网站</td>
-<td>输入网站名称并按 <strong>Ctrl + Enter</strong> 键</td>
-</tr>
-<tr>
-<td>打开新的标签页并执行 Google 搜索</td>
-<td>输入搜索字词并按 <strong>Alt + Enter</strong> 键</td>
-</tr>
-<tr>
-<td>跳转到地址栏</td>
-<td><strong>Ctrl + l</strong>、<strong>Alt + d</strong>或<strong>F6</strong></td>
-</tr>
-<tr>
-<td>从页面中的任意位置搜索</td>
-<td><strong>Ctrl + k</strong>或<strong>Ctrl + e</strong></td>
-</tr>
-<tr>
-<td>从地址栏中移除联想查询内容</td>
-<td>按<strong>向下箭头键</strong>以突出显示相应内容，然后按<strong>Shift + Delete</strong> 键</td>
-</tr>
-</tbody>
-</table>
-<h3 id="网页快捷键"><a href="#网页快捷键" class="headerlink" title="网页快捷键"></a>网页快捷键</h3><table>
-<thead>
-<tr>
-<th><strong>操作</strong></th>
-<th><strong>快捷键</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>打开选项以打印当前网页</td>
-<td><strong>Ctrl + p</strong></td>
-</tr>
-<tr>
-<td>打开选项以保存当前网页</td>
-<td><strong>Ctrl + s</strong></td>
-</tr>
-<tr>
-<td>重新加载当前网页</td>
-<td><strong>F5</strong>或<strong>Ctrl + r</strong></td>
-</tr>
-<tr>
-<td>重新加载当前网页（忽略缓存的内容）</td>
-<td><strong>Shift + F5</strong> 或<strong>Ctrl + Shift + r</strong></td>
-</tr>
-<tr>
-<td>停止加载网页</td>
-<td><strong>Esc</strong></td>
-</tr>
-<tr>
-<td>浏览下一个可点击项</td>
-<td><strong>Tab</strong></td>
-</tr>
-<tr>
-<td>浏览上一个可点击项</td>
-<td><strong>Shift + Tab</strong></td>
-</tr>
-<tr>
-<td>使用 Chrome 打开计算机中的文件</td>
-<td>按住 <strong>Ctrl + o</strong> 键并选择文件</td>
-</tr>
-<tr>
-<td>显示当前网页的 HTML 源代码（不可修改）</td>
-<td><strong>Ctrl + u</strong></td>
-</tr>
-<tr>
-<td>将当前网页保存为书签</td>
-<td><strong>Ctrl + d</strong></td>
-</tr>
-<tr>
-<td>将所有打开的标签页以书签的形式保存在新文件夹中</td>
-<td><strong>Ctrl + Shift + d</strong></td>
-</tr>
-<tr>
-<td>开启或关闭全屏模式</td>
-<td><strong>F11</strong></td>
-</tr>
-<tr>
-<td>放大网页上的所有内容</td>
-<td><strong>Ctrl 和 +</strong></td>
-</tr>
-<tr>
-<td>缩小网页上的所有内容</td>
-<td><strong>Ctrl 和 -</strong></td>
-</tr>
-<tr>
-<td>将网页上的所有内容恢复到默认大小</td>
-<td><strong>Ctrl + 0</strong></td>
-</tr>
-<tr>
-<td>向下滚动网页，一次一个屏幕</td>
-<td><strong>空格键</strong> 或 <strong>PgDn</strong></td>
-</tr>
-<tr>
-<td>向上滚动网页，一次一个屏幕</td>
-<td><strong>Shift + 空格键</strong> 或 <strong>PgUp</strong></td>
-</tr>
-<tr>
-<td>转到网页顶部</td>
-<td><strong>首页</strong></td>
-</tr>
-<tr>
-<td>转到网页底部</td>
-<td><strong>末尾</strong></td>
-</tr>
-<tr>
-<td>在网页上水平滚动</td>
-<td>按住 <strong>Shift </strong>键并滚动鼠标滚轮</td>
-</tr>
-<tr>
-<td>将光标移到文本字段中的上一个字词前面</td>
-<td><strong>Ctrl + 向左箭头键</strong></td>
-</tr>
-<tr>
-<td>将光标移到文本字段中的上一个字词后面</td>
-<td><strong>Ctrl + 向右箭头键</strong></td>
-</tr>
-<tr>
-<td>删除文本字段中的上一个字词</td>
-<td><strong>Ctrl + Backspace</strong></td>
-</tr>
-<tr>
-<td>在当前标签页中打开主页</td>
-<td><strong>Alt + Home</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="鼠标快捷键"><a href="#鼠标快捷键" class="headerlink" title="鼠标快捷键"></a>鼠标快捷键</h3><table>
-<thead>
-<tr>
-<th><strong>操作</strong></th>
-<th><strong>快捷键</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>在当前标签页中打开链接（仅限鼠标）</td>
-<td>将链接拖到标签页中</td>
-</tr>
-<tr>
-<td>在新的后台标签页中打开链接</td>
-<td>按住 <strong>Ctrl </strong>键的同时点击链接</td>
-</tr>
-<tr>
-<td>打开链接，并跳转到该链接</td>
-<td>按住 <strong>Ctrl + Shift </strong>键的同时点击链接</td>
-</tr>
-<tr>
-<td>打开链接，并跳转到该链接（仅使用鼠标）</td>
-<td>将链接拖到标签栏的空白区域</td>
-</tr>
-<tr>
-<td>在新窗口中打开链接</td>
-<td>按住 <strong>Shift</strong> 键的同时点击链接</td>
-</tr>
-<tr>
-<td>在新窗口中打开标签页（仅使用鼠标）</td>
-<td>将标签页拖出标签栏</td>
-</tr>
-<tr>
-<td>将标签页移至当前窗口（仅限鼠标）</td>
-<td>将标签页拖到现有窗口中</td>
-</tr>
-<tr>
-<td>将标签页移回其原始位置</td>
-<td>拖动标签页的同时按 <strong>Esc</strong></td>
-</tr>
-<tr>
-<td>将当前网页保存为书签</td>
-<td>将相应网址拖动到书签栏中</td>
-</tr>
-<tr>
-<td>下载链接目标</td>
-<td>按住 <strong>Alt</strong> 键的同时点击链接</td>
-</tr>
-<tr>
-<td>显示浏览记录</td>
-<td>右键点击“后退”箭头  或“前进”箭头 ，或者点击（按住鼠标按键别松手）“后退”箭头  或“前进”箭头</td>
-</tr>
-<tr>
-<td>在最大化模式和窗口模式间切换</td>
-<td>双击标签栏的空白区域</td>
-</tr>
-<tr>
-<td>放大网页上的所有内容</td>
-<td>按住 <strong>Ctrl</strong> 键的同时向上滚动鼠标滚轮</td>
-</tr>
-<tr>
-<td>缩小网页上的所有内容</td>
-<td>按住 <strong>Ctrl</strong> 键的同时向下滚动鼠标滚轮</td>
-</tr>
-</tbody>
-</table>
+            <p>
+              https://support.google.com/chrome/answer/157179?hl=zh-Hans 
+因为上面那个网址得科学上网才能打开，所以我在这里COPY下来，方便自己使用
+Windows 和 Linux
+标签页和窗口快捷键
 
+
+操作
+快捷键
+
+
+
+
+打开新窗口
+Ctrl + 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/15/windows下Chrome浏览器快捷键/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -2017,7 +1998,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lisa的博客">
+      <meta itemprop="name" content="Sailorlisa's blog">
     </span>
 
     
@@ -2046,14 +2027,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="创建时间：2019-05-15 17:43:10" itemprop="dateCreated datePublished" datetime="2019-05-15T17:43:10+08:00">2019-05-15</time>
+              <time title="Created: 2019-05-15 17:43:10" itemprop="dateCreated datePublished" datetime="2019-05-15T17:43:10+08:00">2019-05-15</time>
             
 
             
@@ -2068,9 +2049,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">更新于</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="修改时间：2019-05-16 16:45:52" itemprop="dateModified" datetime="2019-05-16T16:45:52+08:00">2019-05-16</time>
+                <time title="Modified: 2019-05-16 16:45:52" itemprop="dateModified" datetime="2019-05-16T16:45:52+08:00">2019-05-16</time>
               
             
           </span>
@@ -2084,7 +2065,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/win10/" itemprop="url" rel="index"><span itemprop="name">win10</span></a></span>
@@ -2124,18 +2105,23 @@
       
         
           
-            <h3 id="Alt-Tab-在打开的应用之间切换"><a href="#Alt-Tab-在打开的应用之间切换" class="headerlink" title="Alt + Tab 在打开的应用之间切换"></a>Alt + Tab 在打开的应用之间切换</h3><p><img src="/2019/05/15/我喜欢用的win10快捷键/key1.jpg" alt="key1"></p>
-<h3 id="F5刷新"><a href="#F5刷新" class="headerlink" title="F5刷新"></a>F5刷新</h3><p>强迫症的我，特别喜欢刷新和清空回收站</p>
-<h3 id="WIN-PrtScn-截图"><a href="#WIN-PrtScn-截图" class="headerlink" title="WIN+PrtScn 截图"></a>WIN+PrtScn 截图</h3><p>就和steam里F12一样，全屏幕截图<br><img src="/2019/05/15/我喜欢用的win10快捷键/key2.jpg" alt="key2"></p>
-<h3 id="WIN-Pause-显示“系统属性”对话框"><a href="#WIN-Pause-显示“系统属性”对话框" class="headerlink" title="WIN + Pause 显示“系统属性”对话框"></a>WIN + Pause 显示“系统属性”对话框</h3><p>我只在这种时候才会用上Pause键…<br><img src="/2019/05/15/我喜欢用的win10快捷键/key3.jpg" alt="key3"></p>
-<h3 id="WIN-加号-打开“放大镜”"><a href="#WIN-加号-打开“放大镜”" class="headerlink" title="WIN + 加号 (+) 打开“放大镜”"></a>WIN + 加号 (+) 打开“放大镜”</h3><p>录教学类视频时才用的功能<br><img src="/2019/05/15/我喜欢用的win10快捷键/key4.jpg" alt="key4"></p>
-<h3 id="Home键"><a href="#Home键" class="headerlink" title="Home键"></a>Home键</h3><p>用电脑刷微博的时候，有时“返回顶部”button怎么找都找不到，这时用键盘右边上角的Home键就行了，一秒带你上天</p>
-<h3 id="虚拟桌面键盘快捷键"><a href="#虚拟桌面键盘快捷键" class="headerlink" title="虚拟桌面键盘快捷键"></a>虚拟桌面键盘快捷键</h3><h4 id="WIN-Tab-打开任务视图"><a href="#WIN-Tab-打开任务视图" class="headerlink" title="WIN  + Tab 打开任务视图"></a>WIN  + Tab 打开任务视图</h4><p>我的大爱<br><img src="/2019/05/15/我喜欢用的win10快捷键/key5.jpg" alt="key5"></p>
-<h4 id="WIN-Ctrl-D-添加虚拟桌面"><a href="#WIN-Ctrl-D-添加虚拟桌面" class="headerlink" title="WIN  + Ctrl + D 添加虚拟桌面"></a>WIN  + Ctrl + D 添加虚拟桌面</h4><p><img src="/2019/05/15/我喜欢用的win10快捷键/key6.jpg" alt="key6"></p>
-<h4 id="WIN-Ctrl-F4-关闭你正在使用的虚拟桌面"><a href="#WIN-Ctrl-F4-关闭你正在使用的虚拟桌面" class="headerlink" title="WIN + Ctrl + F4 关闭你正在使用的虚拟桌面"></a>WIN + Ctrl + F4 关闭你正在使用的虚拟桌面</h4><p>我一开始创建新的虚拟桌面时总是忘记如何关闭，越创越多…</p>
-<h4 id="WIN-Ctrl-向右键→-在你于右侧创建的虚拟桌面之间切换"><a href="#WIN-Ctrl-向右键→-在你于右侧创建的虚拟桌面之间切换" class="headerlink" title="WIN  + Ctrl + 向右键→ 在你于右侧创建的虚拟桌面之间切换"></a>WIN  + Ctrl + 向右键→ 在你于右侧创建的虚拟桌面之间切换</h4><h4 id="WIN-Ctrl-向左键←-在你于左侧创建的虚拟桌面之间切换"><a href="#WIN-Ctrl-向左键←-在你于左侧创建的虚拟桌面之间切换" class="headerlink" title="WIN  + Ctrl + 向左键← 在你于左侧创建的虚拟桌面之间切换"></a>WIN  + Ctrl + 向左键← 在你于左侧创建的虚拟桌面之间切换</h4><p>无缝切换2333</p>
-
+            <p>
+              Alt + Tab 在打开的应用之间切换
+F5刷新强迫症的我，特别喜欢刷新和清空回收站
+WIN+PrtScn 截图就和steam里F12一样，全屏幕截图
+WIN + Pause 显示“系统属性”对话框我只在这种时候才会用上Pause键…
+WIN + 加号 (+) 打开“放大镜”录教学类视频时才用的功
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/15/我喜欢用的win10快捷键/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -2217,8 +2203,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">日志</span>
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -2244,8 +2230,10 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">分类</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
               
@@ -2256,7 +2244,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/Tags/">
                     
                   
                     
@@ -2299,8 +2287,20 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
-                    <span class="site-state-item-name">标签</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
               
@@ -2311,6 +2311,21 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/yourname" title="Weibo &rarr; https://weibo.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
           
 
           
@@ -2329,12 +2344,18 @@
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+          <h3 class="widget-title">Tag Cloud</h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Immutable/">Immutable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NextT/">NextT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIN10/">WIN10</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-science/">data science</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter/">jupyter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logo制作/">logo制作</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theme/">theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vs-code/">vs code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10/">win10</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/主题/">主题</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据科学/">数据科学</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/赛博朋克/">赛博朋克</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/霓虹/">霓虹</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/页面游戏/">页面游戏</a><span class="tag-list-count">1</span></li></ul>
+              </canvas>
+          </div>
+      </div>
       
 
     </div>
@@ -2360,7 +2381,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -2368,7 +2389,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
 
 
 
@@ -2416,14 +2437,17 @@
 
 
 
-
-
-
-
-
-
   
+    
+    
   
+  <script color="255,0,0" opacity="0.7" zindex="-1" count="150" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
 
 
 
@@ -2439,12 +2463,6 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/three/three.min.js"></script>
-
-  
-  <script src="/lib/three/canvas_sphere.min.js"></script>
 
 
   
@@ -2486,6 +2504,326 @@
 
 
   
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 

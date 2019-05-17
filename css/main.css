@@ -498,8 +498,8 @@ pre,
   margin: 20px 0;
   padding: 0;
   font-size: 14px;
-  color: #fff;
-  background: #002451;
+  color: #ccc;
+  background: #2d2d2d;
   line-height: 1.6;
 }
 pre,
@@ -520,7 +520,7 @@ pre {
 }
 pre code {
   padding: 0;
-  color: #fff;
+  color: #ccc;
   background: none;
   text-shadow: none;
 }
@@ -543,7 +543,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #fff;
+  color: #ccc;
   line-height: 1em;
   margin-bottom: 1em;
   margin: 0em;
@@ -561,23 +561,23 @@ pre code {
 }
 .highlight figcaption a {
   float: right;
-  color: #fff;
+  color: #ccc;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #fff;
+  border-bottom-color: #ccc;
 }
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #7285b7;
+  color: #999;
   text-align: right;
-  background-color: #000e20;
+  background-color: #1b1b1b;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #002451;
+  background-color: #2d2d2d;
 }
 .highlight .line {
   height: 20px;
@@ -601,10 +601,10 @@ pre .addition {
   background: #008000;
 }
 pre .meta {
-  color: #ebbbff;
+  color: #c9c;
 }
 pre .comment {
-  color: #7285b7;
+  color: #999;
 }
 pre .variable,
 pre .attribute,
@@ -619,7 +619,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #ff9da4;
+  color: #f2777a;
 }
 pre .number,
 pre .preprocessor,
@@ -629,7 +629,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #ffc58f;
+  color: #f99157;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -642,11 +642,11 @@ pre .ruby .symbol,
 pre .xml .cdata,
 pre .special,
 pre .formula {
-  color: #d1f1a9;
+  color: #9c9;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #9ff;
+  color: #6cc;
 }
 pre .function,
 pre .python .decorator,
@@ -656,11 +656,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #bbdaff;
+  color: #69c;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #ebbbff;
+  color: #c9c;
 }
 .posts-expand .post-body img.full-image {
   border: none;
@@ -1055,29 +1055,6 @@ pre .javascript .function {
 }
 .comments {
   margin: 60px 20px 0;
-}
-.back-to-top {
-  visibility: hidden;
-  margin: 8px -10px -20px;
-  background: #eee;
-  font-size: 12px;
-  opacity: 0.6;
-  cursor: pointer;
-  text-align: center;
-}
-.back-to-top:hover {
-  opacity: 0.8;
-}
-@media (max-width: 991px) {
-  .back-to-top {
-    display: none;
-  }
-}
-.back-to-top.back-to-top-on {
-  visibility: visible;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
 .header {
   background: transparent;
@@ -1760,7 +1737,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb4cd;
+  background: #7385ff;
 }
 .feed-link,
 .chat {
@@ -1912,10 +1889,11 @@ pre .javascript .function {
 .post-toc .nav-item {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
-  display: block;
+  display: none;
 }
 .post-toc .nav .active > .nav-child {
   display: block;

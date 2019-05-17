@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: false,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言博客的初衷是为了写文章、发布文章，追求简洁和加载速度。最终选择了NextT主题。 NextT主题Github地址 NextT主题官方文档 更换主题下载NextT主题 下载后解压ZIP，把文件夹名字修改成NextT，并把主题文件夹复制到 D:\Myblog\themes里面。 修改主题用vs code（你也可以用其他编辑器）打开 D:\Myblog\_config.yml，搜索theme，修改为">
+<meta name="keywords" content="hexo,NextT,theme,主题,博客,blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo + NextT主题配置快速教程">
+<meta property="og:url" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/index.html">
+<meta property="og:site_name" content="Sailorlisa&#39;s blog">
+<meta property="og:description" content="前言博客的初衷是为了写文章、发布文章，追求简洁和加载速度。最终选择了NextT主题。 NextT主题Github地址 NextT主题官方文档 更换主题下载NextT主题 下载后解压ZIP，把文件夹名字修改成NextT，并把主题文件夹复制到 D:\Myblog\themes里面。 修改主题用vs code（你也可以用其他编辑器）打开 D:\Myblog\_config.yml，搜索theme，修改为">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t1.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t2.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t3.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t4.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t44.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t5.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t6.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t7.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t8.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t9.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t10.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t11.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t12.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t13.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t14.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t15.png">
+<meta property="og:updated_time" content="2019-05-17T08:54:51.262Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo + NextT主题配置快速教程">
+<meta name="twitter:description" content="前言博客的初衷是为了写文章、发布文章，追求简洁和加载速度。最终选择了NextT主题。 NextT主题Github地址 NextT主题官方文档 更换主题下载NextT主题 下载后解压ZIP，把文件夹名字修改成NextT，并把主题文件夹复制到 D:\Myblog\themes里面。 修改主题用vs code（你也可以用其他编辑器）打开 D:\Myblog\_config.yml，搜索theme，修改为">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/t1.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>hexo + NextT主题配置快速教程 | Sailorlisa's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <a href="https://github.com/sailorlisa" class="github-corner" aria-label="View source on GitHub"><svg width="92" height="92" viewbox="0 0 250 250" style="fill:#b495e3; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sailorlisa's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">fantastic magic world</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-books">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Books/" rel="section"><i class="menu-item-icon fa fa-fw fa-eye"></i> <br>Books</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-video">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Video/" rel="section"><i class="menu-item-icon fa fa-fw fa-play-circle"></i> <br>Video</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-game">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Game/" rel="section"><i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>Game</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/17/hexo-NextT主题配置快速教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sailorlisa">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sailorlisa's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hexo + NextT主题配置快速教程
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-17 16:21:49 / Modified: 16:54:51" itemprop="dateCreated datePublished" datetime="2019-05-17T16:21:49+08:00">2019-05-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>博客的初衷是为了写文章、发布文章，追求简洁和加载速度。最终选择了NextT主题。</p>
+<p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NextT主题Github地址</a></p>
+<p><a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NextT主题官方文档</a></p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><h3 id="下载NextT主题"><a href="#下载NextT主题" class="headerlink" title="下载NextT主题"></a>下载NextT主题</h3><p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t1.png" alt="t1"></p>
+<p>下载后解压ZIP，把文件夹名字修改成NextT，并把主题文件夹复制到 D:\Myblog\themes里面。</p>
+<h5 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h5><p>用vs code（你也可以用其他编辑器）打开 <code>D:\Myblog\_config.yml</code>，搜索theme，修改为：NextT，保存并退出。</p>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t2.png" alt="t2"></p>
+<h3 id="博客面貌仔细修改"><a href="#博客面貌仔细修改" class="headerlink" title="博客面貌仔细修改"></a>博客面貌仔细修改</h3><h4 id="改主题样式"><a href="#改主题样式" class="headerlink" title="改主题样式"></a>改主题样式</h4><p><code>D:\Myblog\themes\NextT\_config.yml</code>，搜索 <code>Scheme</code>——&gt; 改用 scheme: Gemini</p>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t3.png" alt="t3"></p>
+<h4 id="添加目录栏选项"><a href="#添加目录栏选项" class="headerlink" title="添加目录栏选项"></a>添加目录栏选项</h4><p><code>D:\Myblog\themes\NextT\_config.yml</code>，搜索 <code>menu</code>——&gt; 设置 about、archives、categories、tags、Books、Video、Game。</p>
+<p>添加新的栏：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  Books:</span> <span class="string">/Books/</span> <span class="string">||</span> <span class="string">eye</span></span><br><span class="line"><span class="attr">  Video:</span> <span class="string">/Video/</span> <span class="string">||</span> <span class="string">play-circle</span></span><br><span class="line"><span class="attr">  Game:</span> <span class="string">/Game/</span> <span class="string">||</span> <span class="string">gamepad</span></span><br><span class="line">  <span class="comment">#home: / || home</span></span><br></pre></td></tr></table></figure>
+<p>之后在<code>D:\Myblog</code>右键Git Bash here：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"archives"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#以及其他菜单项categories、tags、Books、Video、Game。</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t4.png" alt="t4"></p>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t44.png" alt="t44"></p>
+<h4 id="代码块主题"><a href="#代码块主题" class="headerlink" title="代码块主题"></a>代码块主题</h4><p><code>D:\Myblog\themes\NextT\_config.yml</code>，搜索 <code>highlight_theme</code>——&gt; 改为 night eighties</p>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t5.png" alt="t5"></p>
+<h4 id="侧边栏"><a href="#侧边栏" class="headerlink" title="侧边栏"></a>侧边栏</h4><p><code>D:\Myblog\themes\NextT\_config.yml</code>，搜索 <code>social</code>——&gt;开启微博</p>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t6.png" alt="t6"></p>
+<h4 id="首页文章摘要"><a href="#首页文章摘要" class="headerlink" title="首页文章摘要"></a>首页文章摘要</h4><p><code>D:\Myblog\themes\NextT\_config.yml</code>，搜索 <code>auto_excerpt</code>——&gt;开启</p>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t7.png" alt="t7"></p>
+<h4 id="标签图标更改"><a href="#标签图标更改" class="headerlink" title="标签图标更改"></a>标签图标更改</h4><p>打开<code>D:\Myblog\themes\NextT\layout\_marcro\post.swig</code>文件，搜索 <code>post_tags</code>，将 <code>#</code>号 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t8.png" alt="t8"></p>
+<h4 id="添加背景动态js"><a href="#添加背景动态js" class="headerlink" title="添加背景动态js"></a>添加背景动态js</h4><blockquote>
+<p><a href="https://github.com/theme-next/theme-next-canvas-nest" target="_blank" rel="noopener">https://github.com/theme-next/theme-next-canvas-nest</a></p>
+</blockquote>
+<p><code>D:\Myblog\themes\NextT</code>文件夹下，Git Bash here：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-canvas-nest <span class="built_in">source</span>/lib/canvas-nest</span><br></pre></td></tr></table></figure>
+<p>打开<code>D:\Myblog\themes\NextT\_config.yml</code>，修改：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">canvas_nest:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  onmobile:</span> <span class="literal">true</span> <span class="comment"># display on mobile or not</span></span><br><span class="line"><span class="attr">  color:</span> <span class="string">"255,0,0"</span> <span class="comment"># RGB values, use ',' to separate, 改成红色了</span></span><br><span class="line"><span class="attr">  opacity:</span> <span class="number">0.7</span> <span class="comment"># the opacity of line: 0~1</span></span><br><span class="line"><span class="attr">  zIndex:</span> <span class="bullet">-1</span> <span class="comment"># z-index property of the background</span></span><br><span class="line"><span class="attr">  count:</span> <span class="number">150</span> <span class="comment"># the number of lines</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t9.png" alt="t9"></p>
+<h4 id="加载条"><a href="#加载条" class="headerlink" title="加载条"></a>加载条</h4><blockquote>
+<p><a href="https://github.hubspot.com/pace/docs/welcome/" target="_blank" rel="noopener">https://github.hubspot.com/pace/docs/welcome/</a></p>
+</blockquote>
+<p><code>D:\Myblog\themes\NextT</code>文件夹下，Git Bash here：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-pace <span class="built_in">source</span>/lib/pace</span><br></pre></td></tr></table></figure>
+<p><code>D:\Myblog\themes\NextT\_config.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pace:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">pace_theme:</span> <span class="string">pace-theme-big-counter</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t10.png" alt="t10"></p>
+<h4 id="关注Github"><a href="#关注Github" class="headerlink" title="关注Github"></a>关注Github</h4><blockquote>
+<p><a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">http://tholman.com/github-corners/</a></p>
+</blockquote>
+<p>打开<code>D:\Myblog\themes\NextT\layout\_layout.swig</code>文件，搜索<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code> 将复制的内容粘贴到<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>下面，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://github.com/sailorlisa&quot; class=&quot;github-corner&quot; aria-label=&quot;View source on GitHub&quot;&gt;&lt;svg width=&quot;92&quot; height=&quot;92&quot; viewBox=&quot;0 0 250 250&quot; style=&quot;fill:#b495e3; color:#fff; position: absolute; top: 0; border: 0; right: 0;&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2&quot; fill=&quot;currentColor&quot; style=&quot;transform-origin: 130px 106px;&quot; class=&quot;octo-arm&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z&quot; fill=&quot;currentColor&quot; class=&quot;octo-body&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;style&gt;.github-corner:hover .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;@keyframes octocat-wave&#123;0%,100%&#123;transform:rotate(0)&#125;20%,60%&#123;transform:rotate(-25deg)&#125;40%,80%&#123;transform:rotate(10deg)&#125;&#125;@media (max-width:500px)&#123;.github-corner:hover .octo-arm&#123;animation:none&#125;.github-corner .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;&#125;&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>也可以修改<code>D:\Myblog\themes\NextT\_config.yml</code>里:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">github_banner:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  permalink:</span> <span class="attr">https://github.com/sailorlisa</span></span><br><span class="line"><span class="attr">  title:</span> <span class="string">Follow</span> <span class="string">me</span> <span class="string">on</span> <span class="string">GitHub</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t11.png" alt="t11"></p>
+<h4 id="白猫插件"><a href="#白猫插件" class="headerlink" title="白猫插件"></a>白猫插件</h4><blockquote>
+<p>Github地址：<a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-helper-live2d</span><br><span class="line"></span><br><span class="line">$ npm install live2d-widget-model-tororo</span><br></pre></td></tr></table></figure>
+<p>之后在<code>D:\Myblog\_config.yml</code>最后添加内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 白猫模型</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  scriptFrom:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">  pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line"><span class="attr">  pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line"><span class="attr">  pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line"><span class="attr">  tagMode:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  debug:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  model:</span></span><br><span class="line"><span class="attr">    use:</span> <span class="string">live2d-widget-model-tororo</span></span><br><span class="line"><span class="attr">  display:</span></span><br><span class="line"><span class="attr">    position:</span> <span class="string">right</span></span><br><span class="line"><span class="attr">    width:</span> <span class="number">150</span></span><br><span class="line"><span class="attr">    height:</span> <span class="number">300</span></span><br><span class="line"><span class="attr">  mobile:</span></span><br><span class="line"><span class="attr">    show:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t12.png" alt="t12"></p>
+<h4 id="图片文件夹插件"><a href="#图片文件夹插件" class="headerlink" title="图片文件夹插件"></a>图片文件夹插件</h4><p>1.将 <code>D:\Myblog\_config.yml</code>文件中的 <code>post_asset_folder</code> 选项设为 <code>true</code></p>
+<p>2.<code>D:\Myblog</code>，右键Git Bash here，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t13.png" alt="t13"></p>
+<h4 id="添加搜索栏"><a href="#添加搜索栏" class="headerlink" title="添加搜索栏"></a>添加搜索栏</h4><p><code>D:\Myblog</code>，右键Git Bash here，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p><code>D:\Myblog\_config.yml</code>添加：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#表示站内搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">    path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">    field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">    format:</span> <span class="string">html</span></span><br><span class="line"><span class="attr">    limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+<p><code>D:\Myblog\themes\NextT\_config.yml</code>，搜索<code>local_search</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t14.png" alt="t14"></p>
+<h4 id="标签云"><a href="#标签云" class="headerlink" title="标签云"></a>标签云</h4><blockquote>
+<p><a href="https://github.com/MikeCoder/hexo-tag-cloud" target="_blank" rel="noopener">https://github.com/MikeCoder/hexo-tag-cloud</a></p>
+</blockquote>
+<p><code>D:\Myblog</code>，右键Git Bash here，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-tag-cloud --save</span><br></pre></td></tr></table></figure>
+<p><code>D:\Myblog\themes\NextT\layout\_macro\sidebar.swig</code>，然后添加内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;&#123;&#123; url_for(&apos;/js/tagcloud.js&apos;) &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;&#123;&#123; url_for(&apos;/js/tagcanvas.js&apos;) &#125;&#125;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;div class=&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class=&quot;widget-title&quot;&gt;Tag Cloud&lt;/h3&gt;</span><br><span class="line">    &lt;div id=&quot;myCanvasContainer&quot; class=&quot;widget tagcloud&quot;&gt;</span><br><span class="line">        &lt;canvas width=&quot;250&quot; height=&quot;250&quot; id=&quot;resCanvas&quot; style=&quot;width=100%&quot;&gt;</span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        &lt;/canvas&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p><code>D:\Myblog\_config.yml</code>添加：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-tag-cloud</span></span><br><span class="line"><span class="attr">tag_cloud:</span></span><br><span class="line"><span class="attr">    textFont:</span> <span class="string">Trebuchet</span> <span class="string">MS,</span> <span class="string">Helvetica</span></span><br><span class="line"><span class="attr">    textColor:</span> <span class="string">'#333'</span></span><br><span class="line"><span class="attr">    textHeight:</span> <span class="number">25</span></span><br><span class="line"><span class="attr">    outlineColor:</span> <span class="string">'#E2E1D1'</span></span><br><span class="line"><span class="attr">    maxSpeed:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/17/hexo-NextT主题配置快速教程/t15.png" alt="t15"></p>
+<h3 id="最后预览部署"><a href="#最后预览部署" class="headerlink" title="最后预览部署"></a>最后预览部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo c &amp;&amp; hexo g &amp;&amp; hexo s</span><br><span class="line"><span class="comment">#预览之后没问题就部署</span></span><br><span class="line"></span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+          
+            <a href="/tags/NextT/" rel="tag"><i class="fa fa-tag"></i> NextT</a>
+          
+            <a href="/tags/theme/" rel="tag"><i class="fa fa-tag"></i> theme</a>
+          
+            <a href="/tags/主题/" rel="tag"><i class="fa fa-tag"></i> 主题</a>
+          
+            <a href="/tags/博客/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
+          
+            <a href="/tags/blog/" rel="tag"><i class="fa fa-tag"></i> blog</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/17/hexo-Github搭建个人博客快速教程/" rel="next" title="hexo+Github搭建个人博客快速教程">
+                <i class="fa fa-chevron-left"></i> hexo+Github搭建个人博客快速教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Sailorlisa</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/Tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/yourname" title="Weibo &rarr; https://weibo.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换主题"><span class="nav-number">2.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载NextT主题"><span class="nav-number">3.</span> <span class="nav-text">下载NextT主题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#修改主题"><span class="nav-number">3.0.1.</span> <span class="nav-text">修改主题</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#博客面貌仔细修改"><span class="nav-number">4.</span> <span class="nav-text">博客面貌仔细修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#改主题样式"><span class="nav-number">4.1.</span> <span class="nav-text">改主题样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加目录栏选项"><span class="nav-number">4.2.</span> <span class="nav-text">添加目录栏选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码块主题"><span class="nav-number">4.3.</span> <span class="nav-text">代码块主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#侧边栏"><span class="nav-number">4.4.</span> <span class="nav-text">侧边栏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首页文章摘要"><span class="nav-number">4.5.</span> <span class="nav-text">首页文章摘要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签图标更改"><span class="nav-number">4.6.</span> <span class="nav-text">标签图标更改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加背景动态js"><span class="nav-number">4.7.</span> <span class="nav-text">添加背景动态js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载条"><span class="nav-number">4.8.</span> <span class="nav-text">加载条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关注Github"><span class="nav-number">4.9.</span> <span class="nav-text">关注Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#白猫插件"><span class="nav-number">4.10.</span> <span class="nav-text">白猫插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片文件夹插件"><span class="nav-number">4.11.</span> <span class="nav-text">图片文件夹插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加搜索栏"><span class="nav-number">4.12.</span> <span class="nav-text">添加搜索栏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签云"><span class="nav-number">4.13.</span> <span class="nav-text">标签云</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后预览部署"><span class="nav-number">5.</span> <span class="nav-text">最后预览部署</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+          <h3 class="widget-title">Tag Cloud</h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Immutable/">Immutable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NextT/">NextT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIN10/">WIN10</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-science/">data science</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter/">jupyter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logo制作/">logo制作</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theme/">theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vs-code/">vs code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10/">win10</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/主题/">主题</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据科学/">数据科学</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/赛博朋克/">赛博朋克</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/霓虹/">霓虹</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/页面游戏/">页面游戏</a><span class="tag-list-count">1</span></li></ul>
+              </canvas>
+          </div>
+      </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sailorlisa</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="255,0,0" opacity="0.7" zindex="-1" count="150" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
