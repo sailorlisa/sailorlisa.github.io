@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python数据科学Numpy第1章下]]></title>
+    <url>%2F2019%2F05%2F19%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC1%E7%AB%A0%E4%B8%8B%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook 从头创建数组用 NumPy 内置的方法从头创建数组。 创建一个长度为10的数组，数组的值都是0 1234import numpy as npnp.zeros(10, dtype=int)# output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) 创建一个3×5的浮点型数组，数组的值都是1 123456np.ones((3, 5), dtype=float)# output# array([[1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.]]) 创建一个3×5的浮点型数组，数组的值都是3.14 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]]) 创建一个线性序列数组，从0开始，到20结束，步长为2。（它和内置的range()函数类似） 123np.arange(0, 20, 2)#output: array([ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18]) 创建一个5个元素的数组，这5个数均匀地分配到0~1 123np.linspace(0, 1, 5)#output: array([0. , 0.25, 0.5 , 0.75, 1. ]) 创建一个3×3的、在0~1均匀分布的随机数组成的数组 123456np.random.random((3, 3))#output#array([[0.94795687, 0.62658297, 0.4240733 ],# [0.75686519, 0.46357097, 0.58682988],# [0.37997183, 0.28707067, 0.67190137]]) 创建一个3×3的、均值为0、标准差为1的，正态分布的随机数数组 123456np.random.normal(0, 1, (3, 3))#output#array([[ 0.1348332 , -1.93013655, 1.21003072],# [ 1.41562771, 0.29064906, 1.09749629],# [-0.16664035, -0.67962834, -0.54942727]]) 创建一个3×3的、[0, 10)区间的随机整型数组 123456np.random.randint(0, 10, (3, 3))#output#array([[8, 0, 5],# [6, 5, 9],# [9, 9, 0]]) 创建一个3×3的单位矩阵 123456np.eye(3)#output#array([[1., 0., 0.],# [0., 1., 0.],# [0., 0., 1.]]) 创建一个由3个整型数组成的未初始化的数组，数组的值是内存空间中的任意值 123np.empty(3)#output: array([1., 1., 1.]) NumPy标准数据类型构建数组时，可以用以下2种方式指定数据类型： 用字符串参数 123np.zeros(10, dtype='int16')#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) 用相关NumPy对象来指定 123np.zeros(10, dtype=np.int16)#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) NumPy标准数据类型表格： http://numpy.org/ 数据类型 描述 bool_ 布尔值（真、True 或假、False），用一个字节存储 int_ 默认整型（类似于 C 语言中的 long，通常情况下是 int64 或 int32） intc 同 C 语言的 int 相同（通常是 int32 或 int64） intp 用作索引的整型（和 C 语言的 ssize_t 相同，通常情况下是 int32 或 int64） int8 字节（byte，范围从–128 到 127） int16 整型（范围从–32768 到 32767） int32 整型（范围从–2147483648 到 2147483647） int64 整型（范围从–9223372036854775808 到 9223372036854775807） uint8 无符号整型（范围从 0 到 255） uint16 无符号整型（范围从 0 到 65535） uint32 无符号整型（范围从 0 到 4294967295） uint64 无符号整型（范围从 0 到 18446744073709551615） float_ float64 的简化形式 float16 半精度浮点型：符号比特位，5 比特位指数（exponent），10 比特位尾数（mantissa） float32 单精度浮点型：符号比特位，8 比特位指数，23 比特位尾数 float64 双精度浮点型：符号比特位，11 比特位指数，52 比特位尾数 complex_ complex128 的简化形式 complex64 复数，由两个 32 位浮点数表示 complex128 复数，由两个 64 位浮点数表示]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>数据科学</tag>
+        <tag>data science</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python数据科学Numpy第1章上]]></title>
+    <url>%2F2019%2F05%2F19%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC1%E7%AB%A0%E4%B8%8A%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook Numpy入门Numerical Python，提供了高效存储和操作密集数据缓存的接口。 由于Numpy的内容多，决定分成8次，分而治之，分成8块来学习。 导入Numpy 1import numpy as np 理解Python中的数据类型学习数据科学，我们要理解数据是如何被储存和操作的。 python易用性-动态输入静态类型的语言（如 C 或 Java）往往需要每一个变量都明确地声明， 而动态类型的语言（例如 Python）可以跳过这个特殊规定。 Python整型不仅仅是一个整型Python 3.4 中的一个整型实际上包括 4 个部分。 ob_refcnt 是一个引用计数，它帮助 Python 默默地处理内存的分配和回收。 ob_type 将变量的类型编码。 ob_size 指定接下来的数据成员的大小。 ob_digit 包含我们希望 Python 变量表示的实际整型值。 Python列表不仅仅是一个列表整型值列表 123456789101112L = list (range(10))print(L)# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]type(L)# output:listtype(L[0])# output:int 字符串列表 123456789L2 = [str(c) for c in L]print(L2)# output: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']type(L2[0])# output: str 异构列表 1234L3 = [True, "2", 3.0, 4][type(item) for item in L3]# output: [bool, str, float, int] Python中的固定类型数组array模块创建统一类型的密集数组 12345678import arrayL = list(range(10))print(L)A = array.array('i', L)A# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]# array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) 从Python列表创建数组NumPy 要求数组必须包含同一类型的数据。 123456# 导入Numpyimport numpy as np# 创建数组np.array([1, 4, 2, 5, 3])#output: array([1, 4, 2, 5, 3]) 如果数据类型不匹配，Numpy向上转换： 12345import numpy as npnp.array([3.14, 4, 2, 3])# 整型int转换为浮点型float# output: array([3.14, 4. , 2. , 3. ]) 也可以用dtype关键词去设置数组的数据类型： 1234import numpy as npnp.array([1, 2, 3, 4], dtype='float32')# output: array([1., 2., 3., 4.], dtype=float32) 多维数组： 12345678# 嵌套列表构成的多维数组import numpy as npnp.array([range(i, i + 3) for i in [2, 4, 6]])#output#array([[2, 3, 4],# [4, 5, 6],# [6, 7, 8]])]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[翻译-如何使用numpy.zeros函数]]></title>
     <url>%2F2019%2F05%2F19%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-zeros%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-zeros-python/ 快速回顾numpy array A NumPy array is basically like a container that holds numeric data that’s all of the same data type. I’m simplifying things a little, but that’s the essence of them. We can create a very simple NumPy array as follows: Numpy数组就像是一个容器，里面装着相同数据类型的数据。我们可以这样创建数组： 123import numpy as npnp.array([[1,2,3,4,5,6],[7,8,9,10,11,12]]) 我们创建了一个拥有2行6列的二维数组。所有数据都是整数（integers）。记住，在numpy的数组里，所有数据都必须是相同的数据类型。 当然数组可以是更加复杂的三维数组或者N维数组。 创建空的数组Arrays我们可以用Numpy array()函数创建一个空的，全是数字0的数组。 1np.array([[0,0,0],[0,0,0]]) 如果你需要创建更加大的多维数组，效率就不够高了： 123np.array([[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]) 别怕，我们可以用 Numpy reshape()方法： 1np.zeros(90).reshape((3,30)) 这个方法也不是很好，我们有更好的。 走，去看 zeros函数！ Zeros函数语法这个函数可以让你创建只有0的数组。 更重要地，这个函数可以让你指定数组的维度（dimensions）。也可以让你指定数据类型。 Then inside the zeros() function, there is a set of arguments. The first positional argument is a tuple of values that specifies the dimensions of the new array. Next, there’s an argument that enables you to specify the data type. If you don’t specify a data type, np.zeros() will use floats by default. 可以简单地看成，np.zeros(shape = (n行, m列), dtype = 数据类型)。如果不指定数据类型，会默认为floats。 例子例子1有5个0，1维数组 1np.zeros(5) 那我们可以看到数组里有5个元素，都是0。并且都是浮点数。 例子2用 dtype 指定数据类型，整数(int)。 1np.zeros(3, dtype = int) 还可以用dtype测试下数据的类型是不是整数int： 123&gt;&gt;&gt; np.zeros(3, dtype = int).dtype&gt;&gt;&gt; dtype('int64') 例子3指定shape： 1np.zeros(shape = (2, 3)) 也可以写成这样： 1np.zeros((2, 3)) 例子4指定shape和dtype： 1np.zeros(shape = (3, 5), dtype = 'int') 我们创建了一个3行5列的都是0的矩阵。 例子5接下来我们可以试试更加大的数组： 1np.zeros(shape = (3, 3, 5), dtype = 'int')]]></content>
@@ -52,32 +78,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Python Data Science Handbook 第1章下]]></title>
-    <url>%2F2019%2F05%2F16%2FPython-Data-Science-Handbook-%E7%AC%AC1%E7%AB%A0%E4%B8%8B%2F</url>
-    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook 从头创建数组用 NumPy 内置的方法从头创建数组。 创建一个长度为10的数组，数组的值都是0 1234import numpy as npnp.zeros(10, dtype=int)# output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) 创建一个3×5的浮点型数组，数组的值都是1 123456np.ones((3, 5), dtype=float)# output# array([[1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.]]) 创建一个3×5的浮点型数组，数组的值都是3.14 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]]) 创建一个线性序列数组，从0开始，到20结束，步长为2。（它和内置的range()函数类似） 123np.arange(0, 20, 2)#output: array([ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18]) 创建一个5个元素的数组，这5个数均匀地分配到0~1 123np.linspace(0, 1, 5)#output: array([0. , 0.25, 0.5 , 0.75, 1. ]) 创建一个3×3的、在0~1均匀分布的随机数组成的数组 123456np.random.random((3, 3))#output#array([[0.94795687, 0.62658297, 0.4240733 ],# [0.75686519, 0.46357097, 0.58682988],# [0.37997183, 0.28707067, 0.67190137]]) 创建一个3×3的、均值为0、标准差为1的，正态分布的随机数数组 123456np.random.normal(0, 1, (3, 3))#output#array([[ 0.1348332 , -1.93013655, 1.21003072],# [ 1.41562771, 0.29064906, 1.09749629],# [-0.16664035, -0.67962834, -0.54942727]]) 创建一个3×3的、[0, 10)区间的随机整型数组 123456np.random.randint(0, 10, (3, 3))#output#array([[8, 0, 5],# [6, 5, 9],# [9, 9, 0]]) 创建一个3×3的单位矩阵 123456np.eye(3)#output#array([[1., 0., 0.],# [0., 1., 0.],# [0., 0., 1.]]) 创建一个由3个整型数组成的未初始化的数组，数组的值是内存空间中的任意值 123np.empty(3)#output: array([1., 1., 1.]) NumPy标准数据类型构建数组时，可以用以下2种方式指定数据类型： 用字符串参数 123np.zeros(10, dtype='int16')#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) 用相关NumPy对象来指定 123np.zeros(10, dtype=np.int16)#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) NumPy标准数据类型表格： http://numpy.org/ 数据类型 描述 bool_ 布尔值（真、True 或假、False），用一个字节存储 int_ 默认整型（类似于 C 语言中的 long，通常情况下是 int64 或 int32） intc 同 C 语言的 int 相同（通常是 int32 或 int64） intp 用作索引的整型（和 C 语言的 ssize_t 相同，通常情况下是 int32 或 int64） int8 字节（byte，范围从–128 到 127） int16 整型（范围从–32768 到 32767） int32 整型（范围从–2147483648 到 2147483647） int64 整型（范围从–9223372036854775808 到 9223372036854775807） uint8 无符号整型（范围从 0 到 255） uint16 无符号整型（范围从 0 到 65535） uint32 无符号整型（范围从 0 到 4294967295） uint64 无符号整型（范围从 0 到 18446744073709551615） float_ float64 的简化形式 float16 半精度浮点型：符号比特位，5 比特位指数（exponent），10 比特位尾数（mantissa） float32 单精度浮点型：符号比特位，8 比特位指数，23 比特位尾数 float64 双精度浮点型：符号比特位，11 比特位指数，52 比特位尾数 complex_ complex128 的简化形式 complex64 复数，由两个 32 位浮点数表示 complex128 复数，由两个 64 位浮点数表示]]></content>
-      <categories>
-        <category>数据科学</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>data science</tag>
-        <tag>数据科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Python Data Science Handbook 第1章上]]></title>
-    <url>%2F2019%2F05%2F16%2FPython-Data-Science-Handbook-%E7%AC%AC1%E7%AB%A0%E4%B8%8A%2F</url>
-    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook Numpy入门Numerical Python，提供了高效存储和操作密集数据缓存的接口。 由于Numpy的内容多，决定分成8次，分而治之，分成8块来学习。 导入Numpy 1import numpy as np 理解Python中的数据类型学习数据科学，我们要理解数据是如何被储存和操作的。 python易用性-动态输入静态类型的语言（如 C 或 Java）往往需要每一个变量都明确地声明， 而动态类型的语言（例如 Python）可以跳过这个特殊规定。 Python整型不仅仅是一个整型Python 3.4 中的一个整型实际上包括 4 个部分。 ob_refcnt 是一个引用计数，它帮助 Python 默默地处理内存的分配和回收。 ob_type 将变量的类型编码。 ob_size 指定接下来的数据成员的大小。 ob_digit 包含我们希望 Python 变量表示的实际整型值。 Python列表不仅仅是一个列表整型值列表 123456789101112L = list (range(10))print(L)# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]type(L)# output:listtype(L[0])# output:int 字符串列表 123456789L2 = [str(c) for c in L]print(L2)# output: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']type(L2[0])# output: str 异构列表 1234L3 = [True, "2", 3.0, 4][type(item) for item in L3]# output: [bool, str, float, int] Python中的固定类型数组array模块创建统一类型的密集数组 12345678import arrayL = list(range(10))print(L)A = array.array('i', L)A# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]# array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) 从Python列表创建数组NumPy 要求数组必须包含同一类型的数据。 123456# 导入Numpyimport numpy as np# 创建数组np.array([1, 4, 2, 5, 3])#output: array([1, 4, 2, 5, 3]) 如果数据类型不匹配，Numpy向上转换： 12345import numpy as npnp.array([3.14, 4, 2, 3])# 整型int转换为浮点型float# output: array([3.14, 4. , 2. , 3. ]) 也可以用dtype关键词去设置数组的数据类型： 1234import numpy as npnp.array([1, 2, 3, 4], dtype='float32')# output: array([1., 2., 3., 4.], dtype=float32) 多维数组： 12345678# 嵌套列表构成的多维数组import numpy as npnp.array([range(i, i + 3) for i in [2, 4, 6]])#output#array([[2, 3, 4],# [4, 5, 6],# [6, 7, 8]])]]></content>
-      <categories>
-        <category>数据科学</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>data science</tag>
-        <tag>数据科学</tag>
       </tags>
   </entry>
   <entry>
