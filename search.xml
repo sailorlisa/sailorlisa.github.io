@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[翻译-如何使用numpy.arrange函数]]></title>
-    <url>%2F2019%2F05%2F19%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-arrange%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-arange/ The NumPy arange function returns evenly spaced numeric values within an interval, stored as a NumPy array (i.e., an ndarray object). arrange()函数可以生成等间隔的数值。 1numpy.arange(5) 创建了从0到4的5个等间隔的数值。 继续往下走。 使用arrange()函数时，我们有4个参数可以用。 start 指定数值的开头 stop 指定末尾，这个数值不会被包括在结果里 step 数值之间的间隔 dtype 数据类型 来看例子体会吧 先导入模块1import numpy as np 创一个简单的1np.arange(stop = 5) 我们没有指定start，所以数组的开头是“0”。接下来，“stop = 5”指定了停止数值为5，到5就结束了，不包含5。 同样地，由于我们没有指定 “step”，默认间隔为”1“。最后，因为5是整数，尽管我们没有指定数据类型，python默认用5的数据类型，也就是整数(int)作为数组的数据类型。 1np.arange(5) 另外，如果我们没有指定参数名，会默认是”stop“。 创间隔为2的创建从0到8，增数为2： 1np.arange(start = 0, stop = 8, step = 2) 指定数据类型1np.arange(start = 1, stop = 5, dtype = 'float') 创建2维数组需要搭配方法reshape。 先别急，我们先看看这个： 从1到9的1维数组 1np.arange(start = 1, stop = 10, step = 1) 再看这个，使用方法reshape()： 1np.arange(start = 1, stop = 10, step = 1).reshape((3,3)) 可以看到，使用了reshape()方法后，变成了3行3列的2维数组（a 2-dimensional array）。]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Python numpy.full函数]]></title>
-    <url>%2F2019%2F05%2F19%2FPython-numpy-full%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[full函数 用确定的数值创建数组1&gt;&gt;&gt; np.full((n行, n列), value) 例子123&gt;&gt;&gt; np.full((2, 2), 10)&gt;&gt;&gt; array([[10, 10], [10, 10]]) 1234&gt;&gt;&gt;np.full((2,2), 3)&gt;&gt;&gt;array([[3, 3], [3, 3]]) 1234&gt;&gt;&gt; np.full((3, 5), 7)&gt;&gt;&gt;array([[ 7., 7., 7., 7., 7.], [ 7., 7., 7., 7., 7.], [ 7., 7., 7., 7., 7.]]) 1234&gt;&gt;&gt; np.full((3, 5), 7, dtype=int)&gt;&gt;&gt;array([[7, 7, 7, 7, 7], [7, 7, 7, 7, 7], [7, 7, 7, 7, 7]]) https://github.com/jakevdp/PythonDataScienceHandbook 创建一个3×5的浮点型数组，数组的值都是3.14： 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]]) ###]]></content>
+    <title><![CDATA[Python numpy.full使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2FPython-numpy-full%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[full函数 用确定的数值创建数组1&gt;&gt;&gt; np.full((n行, n列), value) 例子123&gt;&gt;&gt; np.full((2, 2), 10)&gt;&gt;&gt; array([[10, 10], [10, 10]]) 1234&gt;&gt;&gt;np.full((2,2), 3)&gt;&gt;&gt;array([[3, 3], [3, 3]]) 1234&gt;&gt;&gt; np.full((3, 5), 7)&gt;&gt;&gt;array([[ 7., 7., 7., 7., 7.], [ 7., 7., 7., 7., 7.], [ 7., 7., 7., 7., 7.]]) 1234&gt;&gt;&gt; np.full((3, 5), 7, dtype=int)&gt;&gt;&gt;array([[7, 7, 7, 7, 7], [7, 7, 7, 7, 7], [7, 7, 7, 7, 7]]) https://github.com/jakevdp/PythonDataScienceHandbook 创建一个3×5的浮点型数组，数组的值都是3.14： 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]])]]></content>
       <categories>
         <category>数据科学</category>
       </categories>
@@ -17,6 +12,11 @@
         <tag>numpy</tag>
         <tag>数据科学</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[翻译-如何使用numpy.arrange函数]]></title>
+    <url>%2F2019%2F05%2F19%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-arrange%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-arange/ The NumPy arange function returns evenly spaced numeric values within an interval, stored as a NumPy array (i.e., an ndarray object). arrange()函数可以生成等间隔的数值。 1numpy.arange(5) 创建了从0到4的5个等间隔的数值。 继续往下走。 使用arrange()函数时，我们有4个参数可以用。 start 指定数值的开头 stop 指定末尾，这个数值不会被包括在结果里 step 数值之间的间隔 dtype 数据类型 来看例子体会吧 先导入模块1import numpy as np 创一个简单的1np.arange(stop = 5) 我们没有指定start，所以数组的开头是“0”。接下来，“stop = 5”指定了停止数值为5，到5就结束了，不包含5。 同样地，由于我们没有指定 “step”，默认间隔为”1“。最后，因为5是整数，尽管我们没有指定数据类型，python默认用5的数据类型，也就是整数(int)作为数组的数据类型。 1np.arange(5) 另外，如果我们没有指定参数名，会默认是”stop“。 创间隔为2的创建从0到8，增数为2： 1np.arange(start = 0, stop = 8, step = 2) 指定数据类型1np.arange(start = 1, stop = 5, dtype = 'float') 创建2维数组需要搭配方法reshape。 先别急，我们先看看这个： 从1到9的1维数组 1np.arange(start = 1, stop = 10, step = 1) 再看这个，使用方法reshape()： 1np.arange(start = 1, stop = 10, step = 1).reshape((3,3)) 可以看到，使用了reshape()方法后，变成了3行3列的2维数组（a 2-dimensional array）。]]></content>
   </entry>
   <entry>
     <title><![CDATA[Python numpy.ones使用方法]]></title>
