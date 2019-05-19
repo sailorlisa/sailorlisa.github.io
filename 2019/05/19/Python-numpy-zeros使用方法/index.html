@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Sailorlisa&#39;s blog">
 <meta property="og:description" content="https://docs.scipy.org/doc/ https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html?highlight=zeros  numpy.zeros(shape, dtype=float, order=’C’) Return a new array of given shape and type,">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-19T01:06:34.985Z">
+<meta property="og:updated_time" content="2019-05-19T01:29:14.555Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python numpy.zeros使用方法">
 <meta name="twitter:description" content="https://docs.scipy.org/doc/ https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html?highlight=zeros  numpy.zeros(shape, dtype=float, order=’C’) Return a new array of given shape and type,">
@@ -458,7 +458,7 @@
                 
               
 
-              <time title="Created: 2019-05-19 08:56:01 / Modified: 09:06:34" itemprop="dateCreated datePublished" datetime="2019-05-19T08:56:01+08:00">2019-05-19</time>
+              <time title="Created: 2019-05-19 08:56:01 / Modified: 09:29:14" itemprop="dateCreated datePublished" datetime="2019-05-19T08:56:01+08:00">2019-05-19</time>
             
 
             
@@ -533,7 +533,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.zeros((<span class="number">5</span>,), dtype=int)</span><br><span class="line">array([<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.zeros((<span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">array([[ <span class="number">0.</span>],</span><br><span class="line">       [ <span class="number">0.</span>]])</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = (<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.zeros(s)</span><br><span class="line">array([[ <span class="number">0.</span>,  <span class="number">0.</span>],</span><br><span class="line">       [ <span class="number">0.</span>,  <span class="number">0.</span>]])</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; np.zeros((2,), dtype=[(&apos;x&apos;, &apos;i4&apos;), (&apos;y&apos;, &apos;i4&apos;)]) # custom dtype</span><br><span class="line">array([(0, 0), (0, 0)],</span><br><span class="line">      dtype=[(&apos;x&apos;, &apos;&lt;i4&apos;), (&apos;y&apos;, &apos;&lt;i4&apos;)])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.zeros((<span class="number">2</span>,), dtype=[(<span class="string">'x'</span>, <span class="string">'i4'</span>), (<span class="string">'y'</span>, <span class="string">'i4'</span>)]) <span class="comment"># custom dtype</span></span><br><span class="line">array([(<span class="number">0</span>, <span class="number">0</span>), (<span class="number">0</span>, <span class="number">0</span>)],</span><br><span class="line">      dtype=[(<span class="string">'x'</span>, <span class="string">'&lt;i4'</span>), (<span class="string">'y'</span>, <span class="string">'&lt;i4'</span>)])</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -583,6 +583,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/19/翻译-如何使用numpy-zeros函数/" rel="prev" title="翻译-如何使用numpy.zeros函数">
+                翻译-如何使用numpy.zeros函数 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -651,7 +655,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -751,7 +755,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">27</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -821,7 +829,7 @@
           <h3 class="widget-title">Tag Cloud</h3>
           <div id="myCanvasContainer" class="widget tagcloud">
               <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Immutable/">Immutable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NextT/">NextT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Numpy/">Numpy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIN10/">WIN10</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-science/">data science</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter/">jupyter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logo制作/">logo制作</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy-zeros/">numpy.zeros</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theme/">theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vs-code/">vs code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10/">win10</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/主题/">主题</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据科学/">数据科学</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/赛博朋克/">赛博朋克</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/霓虹/">霓虹</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/页面游戏/">页面游戏</a><span class="tag-list-count">1</span></li></ul>
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Immutable/">Immutable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NextT/">NextT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Numpy/">Numpy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIN10/">WIN10</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-science/">data science</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter/">jupyter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logo制作/">logo制作</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/">numpy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy-zeros/">numpy.zeros</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theme/">theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vs-code/">vs code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win10/">win10</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zeros/">zeros</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/主题/">主题</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快捷键/">快捷键</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据科学/">数据科学</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/赛博朋克/">赛博朋克</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/霓虹/">霓虹</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/页面游戏/">页面游戏</a><span class="tag-list-count">1</span></li></ul>
               </canvas>
           </div>
       </div>

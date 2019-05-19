@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[翻译-如何使用numpy.zeros函数]]></title>
+    <url>%2F2019%2F05%2F19%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-zeros%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-zeros-python/ 快速回顾numpy array A NumPy array is basically like a container that holds numeric data that’s all of the same data type. I’m simplifying things a little, but that’s the essence of them. We can create a very simple NumPy array as follows: Numpy数组就像是一个容器，里面装着相同数据类型的数据。我们可以这样创建数组： 123import numpy as npnp.array([[1,2,3,4,5,6],[7,8,9,10,11,12]]) 我们创建了一个拥有2行6列的二维数组。所有数据都是整数（integers）。记住，在numpy的数组里，所有数据都必须是相同的数据类型。 当然数组可以是更加复杂的三维数组或者N维数组。 创建空的数组Arrays我们可以用Numpy array()函数创建一个空的，全是数字0的数组。 1np.array([[0,0,0],[0,0,0]]) 如果你需要创建更加大的多维数组，效率就不够高了： 123np.array([[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]) 别怕，我们可以用 Numpy reshape()方法： 1np.zeros(90).reshape((3,30)) 这个方法也不是很好，我们有更好的。 走，去看 zeros函数！ Zeros函数语法这个函数可以让你创建只有0的数组。 更重要地，这个函数可以让你指定数组的维度（dimensions）。也可以让你指定数据类型。 Then inside the zeros() function, there is a set of arguments. The first positional argument is a tuple of values that specifies the dimensions of the new array. Next, there’s an argument that enables you to specify the data type. If you don’t specify a data type, np.zeros() will use floats by default. 可以简单地看成，np.zeros(shape = (n行, m列), dtype = 数据类型)。如果不指定数据类型，会默认为floats。 例子例子1有5个0，1维数组 1np.zeros(5) 那我们可以看到数组里有5个元素，都是0。并且都是浮点数。 例子2用 dtype 指定数据类型，整数(int)。 1np.zeros(3, dtype = int) 还可以用dtype测试下数据的类型是不是整数int： 123&gt;&gt;&gt; np.zeros(3, dtype = int).dtype&gt;&gt;&gt; dtype('int64') 例子3指定shape： 1np.zeros(shape = (2, 3)) 也可以写成这样： 1np.zeros((2, 3)) 例子4指定shape和dtype： 1np.zeros(shape = (3, 5), dtype = 'int') 我们创建了一个3行5列的都是0的矩阵。 例子5接下来我们可以试试更加大的数组： 1np.zeros(shape = (3, 3, 5), dtype = 'int')]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>zeros</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python numpy.zeros使用方法]]></title>
     <url>%2F2019%2F05%2F19%2FPython-numpy-zeros%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[https://docs.scipy.org/doc/ https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html?highlight=zeros numpy.zeros(shape, dtype=float, order=’C’) Return a new array of given shape and type, filled with zeros. Parametersshape : int or tuple of ints Shape of the new array, e.g., (2, 3) or 2. dtype : data-type, optional The desired data-type for the array, e.g., numpy.int8. Default is numpy.float64. order : {‘C’, ‘F’}, optional, default: ‘C’ Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory. Returnsout : ndarray Array of zeros with the given shape, dtype, and order. 例子12&gt;&gt;&gt; np.zeros(5)array([ 0., 0., 0., 0., 0.]) 12&gt;&gt;&gt; np.zeros((5,), dtype=int)array([0, 0, 0, 0, 0]) 123&gt;&gt;&gt; np.zeros((2, 1))array([[ 0.], [ 0.]]) 1234&gt;&gt;&gt; s = (2,2)&gt;&gt;&gt; np.zeros(s)array([[ 0., 0.], [ 0., 0.]]) 123&gt;&gt;&gt; np.zeros((2,), dtype=[(&apos;x&apos;, &apos;i4&apos;), (&apos;y&apos;, &apos;i4&apos;)]) # custom dtypearray([(0, 0), (0, 0)], dtype=[(&apos;x&apos;, &apos;&lt;i4&apos;), (&apos;y&apos;, &apos;&lt;i4&apos;)])]]></content>
+    <content type="text"><![CDATA[https://docs.scipy.org/doc/ https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html?highlight=zeros numpy.zeros(shape, dtype=float, order=’C’) Return a new array of given shape and type, filled with zeros. Parametersshape : int or tuple of ints Shape of the new array, e.g., (2, 3) or 2. dtype : data-type, optional The desired data-type for the array, e.g., numpy.int8. Default is numpy.float64. order : {‘C’, ‘F’}, optional, default: ‘C’ Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory. Returnsout : ndarray Array of zeros with the given shape, dtype, and order. 例子12&gt;&gt;&gt; np.zeros(5)array([ 0., 0., 0., 0., 0.]) 12&gt;&gt;&gt; np.zeros((5,), dtype=int)array([0, 0, 0, 0, 0]) 123&gt;&gt;&gt; np.zeros((2, 1))array([[ 0.], [ 0.]]) 1234&gt;&gt;&gt; s = (2,2)&gt;&gt;&gt; np.zeros(s)array([[ 0., 0.], [ 0., 0.]]) 123&gt;&gt;&gt; np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtypearray([(0, 0), (0, 0)], dtype=[('x', '&lt;i4'), ('y', '&lt;i4')])]]></content>
       <categories>
         <category>数据科学</category>
       </categories>
