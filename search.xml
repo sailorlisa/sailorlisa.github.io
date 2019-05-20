@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python numpy.empty使用方法]]></title>
+    <url>%2F2019%2F05%2F20%2FPython-numpy-empty%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[https://www.runoob.com/numpy/numpy-array-creation.html https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html numpy.emptyReturn a new array of given shape and type, without initializing entries. 返回 一个指定形状（shape）、数据类型（dtype）且未初始化的数组。 参数 shape dtype order 例子1234import numpy as npnp.empty(4)# array([1., 0., 0., 1.]) 1234np.empty([2, 2])# array([[1., 0.],# [0., 1.]]) 12345np.empty([3, 2], dtype=int)# array([[-618601952, 346],# [ 0, 0],# [ 1, 0]])]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python numpy.eye使用方法]]></title>
+    <url>%2F2019%2F05%2F20%2FPython-numpy-eye%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[https://docs.scipy.org/doc/numpy/reference/generated/numpy.eye.html https://www.numpy.org.cn/article/basics/different_ways_create_numpy_arrays.html#%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96Numpy%E5%87%BD%E6%95%B0 https://www.programcreek.com/python/example/6118/numpy.eye 对角矩阵Return a 2-D array with ones on the diagonal and zeros elsewhere. 返回一个 对角线是1，其余是0的 2维数组。 参数 N （行） M （列） K （Index of the diagonal: 0 (the default) refers to the main diagonal, a positive value refers to an upper diagonal, and a negative value to a lower diagonal） dtype 数据类型 order （Whether the output should be stored in row-major (C-style) or column-major (Fortran-style) order in memory） 例子N+dtype12345import numpy as npnp.eye(2, dtype=int)#array([[1, 0],# [0, 1]]) 12345np.eye(3, dtype=int)#array([[1, 0, 0],# [0, 1, 0],# [0, 0, 1]]) 123456np.eye(4, dtype=int)#array([[1, 0, 0, 0],# [0, 1, 0, 0],# [0, 0, 1, 0],# [0, 0, 0, 1]]) N+M1234np.eye(2, 2)#array([[1., 0.],# [0., 1.]]) 12345np.eye(3, 6)#array([[1., 0., 0., 0., 0., 0.],# [0., 1., 0., 0., 0., 0.],# [0., 0., 1., 0., 0., 0.]]) N+K12345np.eye(3, k=1)#array([[0., 1., 0.],# [0., 0., 1.],# [0., 0., 0.]]) 123456np.eye(4, k=1)#array([[0., 1., 0., 0.],# [0., 0., 1., 0.],# [0., 0., 0., 1.],# [0., 0., 0., 0.]])]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python numpy.random.randint使用方法]]></title>
+    <url>%2F2019%2F05%2F20%2FPython-numpy-random-randint%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[https://docs.scipy.org/doc/numpy-1.16.1/reference/generated/numpy.random.randint.html https://blog.csdn.net/tintinetmilou/article/details/79854725 https://www.programcreek.com/python/example/55590/numpy.random.randint https://www.tutorialspoint.com/How-to-use-Python-Numpy-to-generate-Random-Numbers https://segmentfault.com/a/1190000016097466 https://zhuanlan.zhihu.com/p/26889091 random.randintnumpy.random.randint可以创建范围是[low, high]之间的随机整数数组。 有以下几种参数： low high size dtype 来用例子学习吧！ 指定Low+high创建随机整数数组，返回[1, 10]之间的整数： 12import numpy as npnp.random.randint(low = 1, high = 10, dtype=int) 结果只会是1~9。 不指定high12import numpy as npnp.random.randint(low = 1, dtype=int) 不指定high参数，结果只是0。也就是当我们不指定high参数时，low参数的值是数组里的最大范围。 12import numpy as npnp.random.randint(low = 5, dtype=int) 这个的结果只是0~4。证明了low参数的值是数组里的最大范围。 指定size1234import numpy as npnp.random.randint(low = 3, size = 1)# 结果是 array([0/1/2]) 1234import numpy as npnp.random.randint(low = 3, size = 2)# 结果是 array([0~2, 0~2]) 12345import numpy as npnp.random.randint(low = 5, size = (2, 2))# 结果是 array([[0~4, 0~4],# [0~4, 0~4]]) 只指定size123&gt;&gt;&gt; np.random.randint(2, size=10)&gt;&gt;&gt; array([1, 0, 0, 0, 1, 1, 0, 0, 1, 0]) 123&gt;&gt;&gt; np.random.randint(1, size=10)&gt;&gt;&gt; array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) 1234&gt;&gt;&gt; np.random.randint(5, size=(2, 4))&gt;&gt;&gt; array([[4, 0, 2, 1], [3, 2, 2, 0]]) 没有明确指定12345&gt;&gt;&gt; np.random.randint(1, 5)# 返回[1, 5)之间随机的一个数字 &gt;&gt;&gt; 0~4]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[翻译-如何使用numpy.random函数]]></title>
     <url>%2F2019%2F05%2F20%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-random%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-random-normal/ HOW TO USE NUMPY RANDOM NORMAL IN PYTHON这篇教程会覆盖numpy random normal函数 (AKA, np.random.normal)。 Normal distrubutionThe NumPy random normal function generates a sample of numbers drawn from the normal distribution（正态分布、常态分布）, otherwise called the Gaussian distribution（高斯分布）. 参考链接：维基百科 NUMPY RANDOM NORMAL GENERATES NORMALLY DISTRIBUTED NUMBERSrandom normal函数可以让你创建一个包含正态分布数据的numpy数组。 下图是我们用直方图绘制数据： 正态分布数据，就像bell（钟、铃铛），所以经常被称为“钟形曲线”。 接下来我们看看语法。 THE SYNTAX OF NUMPY RANDOM NORMAL不要忘了导入模块： 1import numpy as np np.random.normal()函数有3个参数： loc scale size THE PARAMETERS OF THE NP.RANDOM.NORMAL FUNCTIONloc：控制函数的平均值（Mean），默认值是0。 scale：控制正态分布的标准偏差，默认值是1。 size：控制输出的大小和形状。 If you provide a single integer, x, np.random.normal will provide x random normal values in a 1-dimensional NumPy array. 如果 size = x，那np.random.normal函数就会提供一个有x个正态分布数值的1维numpy数组。 For example, if you specify size = (2, 3), np.random.normal will produce a numpy array with 2 rows and 3 columns. It will be filled with numbers drawn from a random normal distribution. 例如，你指定 size = (2, 3)，那就会产生一个2行3列的numpy数组。 THE NP.RANDOM.RANDN FUNCTION还有一个类似的函数：np.random.randn()。 这个代码： 12np.random.seed(1)np.random.normal(loc = 0, scale = 1, size = (3,3)) 等于下面这个： 12np.random.seed(1)np.random.randn(3, 3) EXAMPLES: HOW TO USE THE NUMPY RANDOM NORMAL FUNCTIONDRAW A SINGLE NUMBER FROM THE NORMAL DISTRIBUTION123np.random.normal(1)# 等于： np.random.normal(size = 1, loc = 0, scale = 1) DRAW 5 NUMBERS FROM THE NORMAL DISTRIBUTION1np.random.normal(5) CREATE A 2-DIMENSIONAL NUMPY ARRAY OF NORMALLY DISTRIBUTED VALUES12345np.random.seed(42)np.random.normal(size = (2, 3))#array([[ 1.62434536, -0.61175641, -0.52817175],# [-1.07296862, 0.86540763, -2.3015387 ]]) GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC MEAN1234567np.random.seed(42)np.random.normal(size = 1000, loc = 50)# array([ 50.49671415, 49.8617357 , 50.64768854, 51.52302986,# 49.76584663, 49.76586304, 51.57921282, 50.76743473,# 49.53052561, 50.54256004, 49.53658231, 49.53427025 # ... GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC STANDARD DEVIATION1234567np.random.seed(42)np.random.normal(size = 1000, scale = 100)#array([ 4.96714153e+01, -1.38264301e+01, 6.47688538e+01,# 1.52302986e+02, -2.34153375e+01, -2.34136957e+01,# 1.57921282e+02, 7.67434729e+01, -4.69474386e+01# ... 我们可以用std()方法去计算标准偏差： 1234np.random.seed(42)np.random.normal(size = 1000, scale = 100).std()# 99.695552529463015 HOW TO USE THE LOC AND SCALE PARAMETER IN NP.RANDOM.NORMAL12np.random.seed(42)np.random.normal(size = 1000, loc = 50, scale = 100) numpy.random.normal https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.normal.html]]></content>
@@ -104,8 +143,8 @@
         <category>数据科学</category>
       </categories>
       <tags>
-        <tag>numpy.zeros</tag>
         <tag>python</tag>
+        <tag>numpy.zeros</tag>
         <tag>Numpy</tag>
       </tags>
   </entry>
@@ -117,8 +156,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>主题</tag>
         <tag>hexo</tag>
+        <tag>主题</tag>
         <tag>NextT</tag>
         <tag>theme</tag>
         <tag>博客</tag>
