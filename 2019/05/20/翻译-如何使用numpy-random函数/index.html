@@ -96,18 +96,23 @@
 
 
 
-  <meta name="description" content="full函数 用确定的数值创建数组1&amp;gt;&amp;gt;&amp;gt; np.full((n行, n列), value) 例子123&amp;gt;&amp;gt;&amp;gt; np.full((2, 2), 10)&amp;gt;&amp;gt;&amp;gt; array([[10, 10],           [10, 10]]) 1234&amp;gt;&amp;gt;&amp;gt;np.full((2,2), 3)&amp;gt;&amp;gt;&amp;gt;array([[3,">
+  <meta name="description" content="https://www.sharpsightlabs.com/blog/numpy-random-normal/  HOW TO USE NUMPY RANDOM NORMAL IN PYTHON这篇教程会覆盖numpy random normal函数 (AKA, np.random.normal)。 Normal distrubutionThe NumPy random normal func">
 <meta name="keywords" content="python,numpy,数据科学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python numpy.full使用方法">
-<meta property="og:url" content="http://yoursite.com/2019/05/19/Python-numpy-full使用方法/index.html">
+<meta property="og:title" content="翻译-如何使用numpy.random函数">
+<meta property="og:url" content="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/index.html">
 <meta property="og:site_name" content="Sailorlisa&#39;s blog">
-<meta property="og:description" content="full函数 用确定的数值创建数组1&amp;gt;&amp;gt;&amp;gt; np.full((n行, n列), value) 例子123&amp;gt;&amp;gt;&amp;gt; np.full((2, 2), 10)&amp;gt;&amp;gt;&amp;gt; array([[10, 10],           [10, 10]]) 1234&amp;gt;&amp;gt;&amp;gt;np.full((2,2), 3)&amp;gt;&amp;gt;&amp;gt;array([[3,">
+<meta property="og:description" content="https://www.sharpsightlabs.com/blog/numpy-random-normal/  HOW TO USE NUMPY RANDOM NORMAL IN PYTHON这篇教程会覆盖numpy random normal函数 (AKA, np.random.normal)。 Normal distrubutionThe NumPy random normal func">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-19T12:58:27.040Z">
+<meta property="og:image" content="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/rr1.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/rr2.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/arr3.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/arr4.png">
+<meta property="og:updated_time" content="2019-05-20T02:03:50.041Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python numpy.full使用方法">
-<meta name="twitter:description" content="full函数 用确定的数值创建数组1&amp;gt;&amp;gt;&amp;gt; np.full((n行, n列), value) 例子123&amp;gt;&amp;gt;&amp;gt; np.full((2, 2), 10)&amp;gt;&amp;gt;&amp;gt; array([[10, 10],           [10, 10]]) 1234&amp;gt;&amp;gt;&amp;gt;np.full((2,2), 3)&amp;gt;&amp;gt;&amp;gt;array([[3,">
+<meta name="twitter:title" content="翻译-如何使用numpy.random函数">
+<meta name="twitter:description" content="https://www.sharpsightlabs.com/blog/numpy-random-normal/  HOW TO USE NUMPY RANDOM NORMAL IN PYTHON这篇教程会覆盖numpy random normal函数 (AKA, np.random.normal)。 Normal distrubutionThe NumPy random normal func">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/rr1.png">
 
 
 
@@ -115,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/19/Python-numpy-full使用方法/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/">
 
 
 
@@ -125,7 +130,7 @@
   };
 </script>
 
-  <title>Python numpy.full使用方法 | Sailorlisa's blog</title>
+  <title>翻译-如何使用numpy.random函数 | Sailorlisa's blog</title>
   
 
 
@@ -408,7 +413,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/19/Python-numpy-full使用方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/20/翻译-如何使用numpy-random函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sailorlisa">
@@ -425,7 +430,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python numpy.full使用方法
+          <h1 class="post-title" itemprop="name headline">翻译-如何使用numpy.random函数
 
               
             
@@ -451,7 +456,7 @@
                 
               
 
-              <time title="Created: 2019-05-19 20:57:27 / Modified: 20:58:27" itemprop="dateCreated datePublished" datetime="2019-05-19T20:57:27+08:00">2019-05-19</time>
+              <time title="Created: 2019-05-20 08:44:33 / Modified: 10:03:50" itemprop="dateCreated datePublished" datetime="2019-05-20T08:44:33+08:00">2019-05-20</time>
             
 
             
@@ -508,16 +513,56 @@
       
 
       
-        <h3 id="full函数-用确定的数值创建数组"><a href="#full函数-用确定的数值创建数组" class="headerlink" title="full函数 用确定的数值创建数组"></a>full函数 用确定的数值创建数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.full((n行, n列), value)</span><br></pre></td></tr></table></figure>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.full((<span class="number">2</span>, <span class="number">2</span>), <span class="number">10</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>array([[<span class="number">10</span>, <span class="number">10</span>],</span><br><span class="line">           [<span class="number">10</span>, <span class="number">10</span>]])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;np.full((<span class="number">2</span>,<span class="number">2</span>), <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;array([[<span class="number">3</span>, <span class="number">3</span>],</span><br><span class="line">          [<span class="number">3</span>, <span class="number">3</span>]])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.full((<span class="number">3</span>, <span class="number">5</span>), <span class="number">7</span>)</span><br><span class="line">&gt;&gt;&gt;array([[ <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>],</span><br><span class="line">          [ <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>],</span><br><span class="line">          [ <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>,  <span class="number">7.</span>]])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>np.full((<span class="number">3</span>, <span class="number">5</span>), <span class="number">7</span>, dtype=int)</span><br><span class="line">&gt;&gt;&gt;array([[<span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>],</span><br><span class="line">          [<span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>],</span><br><span class="line">          [<span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>]])</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><a href="https://github.com/jakevdp/PythonDataScienceHandbook" target="_blank" rel="noopener">https://github.com/jakevdp/PythonDataScienceHandbook</a></p>
+        <blockquote>
+<p><a href="https://www.sharpsightlabs.com/blog/numpy-random-normal/" target="_blank" rel="noopener">https://www.sharpsightlabs.com/blog/numpy-random-normal/</a></p>
 </blockquote>
-<p>创建一个3×5的浮点型数组，数组的值都是3.14：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">np.full((<span class="number">3</span>, <span class="number">5</span>), <span class="number">3.14</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#output</span></span><br><span class="line"><span class="comment"># array([[3.14, 3.14, 3.14, 3.14, 3.14],</span></span><br><span class="line"><span class="comment">#        [3.14, 3.14, 3.14, 3.14, 3.14],</span></span><br><span class="line"><span class="comment">#        [3.14, 3.14, 3.14, 3.14, 3.14]])</span></span><br></pre></td></tr></table></figure>
+<h3 id="HOW-TO-USE-NUMPY-RANDOM-NORMAL-IN-PYTHON"><a href="#HOW-TO-USE-NUMPY-RANDOM-NORMAL-IN-PYTHON" class="headerlink" title="HOW TO USE NUMPY RANDOM NORMAL IN PYTHON"></a>HOW TO USE NUMPY RANDOM NORMAL IN PYTHON</h3><p>这篇教程会覆盖numpy random normal函数 (AKA, np.random.normal)。</p>
+<h3 id="Normal-distrubution"><a href="#Normal-distrubution" class="headerlink" title="Normal distrubution"></a>Normal distrubution</h3><p>The NumPy random normal function generates a sample of numbers drawn from the normal distribution（正态分布、常态分布）, otherwise called the Gaussian distribution（高斯分布）.</p>
+<p>参考链接：<a href="https://zh.wikipedia.org/wiki/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83" target="_blank" rel="noopener">维基百科</a></p>
+<h3 id="NUMPY-RANDOM-NORMAL-GENERATES-NORMALLY-DISTRIBUTED-NUMBERS"><a href="#NUMPY-RANDOM-NORMAL-GENERATES-NORMALLY-DISTRIBUTED-NUMBERS" class="headerlink" title="NUMPY RANDOM NORMAL GENERATES NORMALLY DISTRIBUTED NUMBERS"></a>NUMPY RANDOM NORMAL GENERATES NORMALLY DISTRIBUTED NUMBERS</h3><p>random normal函数可以让你创建一个包含正态分布数据的numpy数组。</p>
+<p>下图是我们用直方图绘制数据：</p>
+<p><img src="/2019/05/20/翻译-如何使用numpy-random函数/rr1.png" alt="rr1"></p>
+<p>正态分布数据，就像bell（钟、铃铛），所以经常被称为“钟形曲线”。</p>
+<p>接下来我们看看语法。</p>
+<h3 id="THE-SYNTAX-OF-NUMPY-RANDOM-NORMAL"><a href="#THE-SYNTAX-OF-NUMPY-RANDOM-NORMAL" class="headerlink" title="THE SYNTAX OF NUMPY RANDOM NORMAL"></a>THE SYNTAX OF NUMPY RANDOM NORMAL</h3><p>不要忘了导入模块：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/20/翻译-如何使用numpy-random函数/rr2.png" alt="rr2"></p>
+<p>np.random.normal()函数有3个参数：</p>
+<ul>
+<li>loc</li>
+<li>scale</li>
+<li>size</li>
+</ul>
+<h3 id="THE-PARAMETERS-OF-THE-NP-RANDOM-NORMAL-FUNCTION"><a href="#THE-PARAMETERS-OF-THE-NP-RANDOM-NORMAL-FUNCTION" class="headerlink" title="THE PARAMETERS OF THE NP.RANDOM.NORMAL FUNCTION"></a>THE PARAMETERS OF THE NP.RANDOM.NORMAL FUNCTION</h3><p>loc：控制函数的平均值（Mean），默认值是0。</p>
+<p><img src="/2019/05/20/翻译-如何使用numpy-random函数/arr3.png" alt="arr3"></p>
+<p>scale：控制正态分布的标准偏差，默认值是1。</p>
+<p><img src="/2019/05/20/翻译-如何使用numpy-random函数/arr4.png" alt="arr4"></p>
+<p>size：控制输出的大小和形状。</p>
+<blockquote>
+<p>If you provide a single integer, <code>x</code>, np.random.normal will provide <code>x</code> random normal values in a 1-dimensional NumPy array.</p>
+</blockquote>
+<p>如果 size = x，那np.random.normal函数就会提供一个有x个正态分布数值的1维numpy数组。</p>
+<blockquote>
+<p>For example, if you specify <code>size = (2, 3)</code>, np.random.normal will produce a numpy array with 2 rows and 3 columns. It will be filled with numbers drawn from a random normal distribution.</p>
+</blockquote>
+<p>例如，你指定 size = (2, 3)，那就会产生一个2行3列的numpy数组。</p>
+<h3 id="THE-NP-RANDOM-RANDN-FUNCTION"><a href="#THE-NP-RANDOM-RANDN-FUNCTION" class="headerlink" title="THE NP.RANDOM.RANDN FUNCTION"></a>THE NP.RANDOM.RANDN FUNCTION</h3><p>还有一个类似的函数：np.random.randn()。</p>
+<p>这个代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">1</span>)</span><br><span class="line">np.random.normal(loc = <span class="number">0</span>, scale = <span class="number">1</span>, size = (<span class="number">3</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<p>等于下面这个：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">1</span>)</span><br><span class="line">np.random.randn(<span class="number">3</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="EXAMPLES-HOW-TO-USE-THE-NUMPY-RANDOM-NORMAL-FUNCTION"><a href="#EXAMPLES-HOW-TO-USE-THE-NUMPY-RANDOM-NORMAL-FUNCTION" class="headerlink" title="EXAMPLES: HOW TO USE THE NUMPY RANDOM NORMAL FUNCTION"></a>EXAMPLES: HOW TO USE THE NUMPY RANDOM NORMAL FUNCTION</h3><h4 id="DRAW-A-SINGLE-NUMBER-FROM-THE-NORMAL-DISTRIBUTION"><a href="#DRAW-A-SINGLE-NUMBER-FROM-THE-NORMAL-DISTRIBUTION" class="headerlink" title="DRAW A SINGLE NUMBER FROM THE NORMAL DISTRIBUTION"></a>DRAW A SINGLE NUMBER FROM THE NORMAL DISTRIBUTION</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等于： np.random.normal(size = 1, loc = 0, scale = 1)</span></span><br></pre></td></tr></table></figure>
+<h4 id="DRAW-5-NUMBERS-FROM-THE-NORMAL-DISTRIBUTION"><a href="#DRAW-5-NUMBERS-FROM-THE-NORMAL-DISTRIBUTION" class="headerlink" title="DRAW 5 NUMBERS FROM THE NORMAL DISTRIBUTION"></a>DRAW 5 NUMBERS FROM THE NORMAL DISTRIBUTION</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="CREATE-A-2-DIMENSIONAL-NUMPY-ARRAY-OF-NORMALLY-DISTRIBUTED-VALUES"><a href="#CREATE-A-2-DIMENSIONAL-NUMPY-ARRAY-OF-NORMALLY-DISTRIBUTED-VALUES" class="headerlink" title="CREATE A 2-DIMENSIONAL NUMPY ARRAY OF NORMALLY DISTRIBUTED VALUES"></a>CREATE A 2-DIMENSIONAL NUMPY ARRAY OF NORMALLY DISTRIBUTED VALUES</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line">np.random.normal(size = (<span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#array([[ 1.62434536, -0.61175641, -0.52817175],</span></span><br><span class="line"><span class="comment">#       [-1.07296862,  0.86540763, -2.3015387 ]])</span></span><br></pre></td></tr></table></figure>
+<h4 id="GENERATE-NORMALLY-DISTRIBUTED-VALUES-WITH-A-SPECIFIC-MEAN"><a href="#GENERATE-NORMALLY-DISTRIBUTED-VALUES-WITH-A-SPECIFIC-MEAN" class="headerlink" title="GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC MEAN"></a>GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC <em>MEAN</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line">np.random.normal(size = <span class="number">1000</span>, loc = <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># array([ 50.49671415,  49.8617357 ,  50.64768854,  51.52302986,</span></span><br><span class="line"><span class="comment">#        49.76584663,  49.76586304,  51.57921282,  50.76743473,</span></span><br><span class="line"><span class="comment">#        49.53052561,  50.54256004,  49.53658231,  49.53427025 </span></span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<h4 id="GENERATE-NORMALLY-DISTRIBUTED-VALUES-WITH-A-SPECIFIC-STANDARD-DEVIATION"><a href="#GENERATE-NORMALLY-DISTRIBUTED-VALUES-WITH-A-SPECIFIC-STANDARD-DEVIATION" class="headerlink" title="GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC STANDARD DEVIATION"></a>GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC <em>STANDARD DEVIATION</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line">np.random.normal(size = <span class="number">1000</span>, scale = <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#array([  4.96714153e+01,  -1.38264301e+01,   6.47688538e+01,</span></span><br><span class="line"><span class="comment">#         1.52302986e+02,  -2.34153375e+01,  -2.34136957e+01,</span></span><br><span class="line"><span class="comment">#         1.57921282e+02,   7.67434729e+01,  -4.69474386e+01</span></span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+<p>我们可以用std()方法去计算标准偏差：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line">np.random.normal(size = <span class="number">1000</span>, scale = <span class="number">100</span>).std()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 99.695552529463015</span></span><br></pre></td></tr></table></figure>
+<h4 id="HOW-TO-USE-THE-LOC-AND-SCALE-PARAMETER-IN-NP-RANDOM-NORMAL"><a href="#HOW-TO-USE-THE-LOC-AND-SCALE-PARAMETER-IN-NP-RANDOM-NORMAL" class="headerlink" title="HOW TO USE THE LOC AND SCALE PARAMETER IN NP.RANDOM.NORMAL"></a>HOW TO USE THE LOC AND SCALE PARAMETER IN NP.RANDOM.NORMAL</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line">np.random.normal(size = <span class="number">1000</span>, loc = <span class="number">50</span>, scale = <span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="numpy-random-normal"><a href="#numpy-random-normal" class="headerlink" title="numpy.random.normal"></a>numpy.random.normal</h3><blockquote>
+<p><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.normal.html" target="_blank" rel="noopener">https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.normal.html</a></p>
+</blockquote>
+
       
     </div>
 
@@ -557,8 +602,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/19/翻译-如何使用numpy-arrange函数/" rel="next" title="翻译-如何使用numpy.arrange函数">
-                <i class="fa fa-chevron-left"></i> 翻译-如何使用numpy.arrange函数
+              <a href="/2019/05/20/翻译-如何使用numpy-linspace函数/" rel="next" title="翻译-如何使用numpy.linspace函数">
+                <i class="fa fa-chevron-left"></i> 翻译-如何使用numpy.linspace函数
               </a>
             
           </div>
@@ -566,10 +611,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/20/翻译-如何使用numpy-linspace函数/" rel="prev" title="翻译-如何使用numpy.linspace函数">
-                翻译-如何使用numpy.linspace函数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -806,7 +847,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#full函数-用确定的数值创建数组"><span class="nav-number">1.</span> <span class="nav-text">full函数 用确定的数值创建数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">2.</span> <span class="nav-text">例子</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HOW-TO-USE-NUMPY-RANDOM-NORMAL-IN-PYTHON"><span class="nav-number">1.</span> <span class="nav-text">HOW TO USE NUMPY RANDOM NORMAL IN PYTHON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Normal-distrubution"><span class="nav-number">2.</span> <span class="nav-text">Normal distrubution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NUMPY-RANDOM-NORMAL-GENERATES-NORMALLY-DISTRIBUTED-NUMBERS"><span class="nav-number">3.</span> <span class="nav-text">NUMPY RANDOM NORMAL GENERATES NORMALLY DISTRIBUTED NUMBERS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#THE-SYNTAX-OF-NUMPY-RANDOM-NORMAL"><span class="nav-number">4.</span> <span class="nav-text">THE SYNTAX OF NUMPY RANDOM NORMAL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#THE-PARAMETERS-OF-THE-NP-RANDOM-NORMAL-FUNCTION"><span class="nav-number">5.</span> <span class="nav-text">THE PARAMETERS OF THE NP.RANDOM.NORMAL FUNCTION</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#THE-NP-RANDOM-RANDN-FUNCTION"><span class="nav-number">6.</span> <span class="nav-text">THE NP.RANDOM.RANDN FUNCTION</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EXAMPLES-HOW-TO-USE-THE-NUMPY-RANDOM-NORMAL-FUNCTION"><span class="nav-number">7.</span> <span class="nav-text">EXAMPLES: HOW TO USE THE NUMPY RANDOM NORMAL FUNCTION</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DRAW-A-SINGLE-NUMBER-FROM-THE-NORMAL-DISTRIBUTION"><span class="nav-number">7.1.</span> <span class="nav-text">DRAW A SINGLE NUMBER FROM THE NORMAL DISTRIBUTION</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DRAW-5-NUMBERS-FROM-THE-NORMAL-DISTRIBUTION"><span class="nav-number">7.2.</span> <span class="nav-text">DRAW 5 NUMBERS FROM THE NORMAL DISTRIBUTION</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CREATE-A-2-DIMENSIONAL-NUMPY-ARRAY-OF-NORMALLY-DISTRIBUTED-VALUES"><span class="nav-number">7.3.</span> <span class="nav-text">CREATE A 2-DIMENSIONAL NUMPY ARRAY OF NORMALLY DISTRIBUTED VALUES</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GENERATE-NORMALLY-DISTRIBUTED-VALUES-WITH-A-SPECIFIC-MEAN"><span class="nav-number">7.4.</span> <span class="nav-text">GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC MEAN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GENERATE-NORMALLY-DISTRIBUTED-VALUES-WITH-A-SPECIFIC-STANDARD-DEVIATION"><span class="nav-number">7.5.</span> <span class="nav-text">GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC STANDARD DEVIATION</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HOW-TO-USE-THE-LOC-AND-SCALE-PARAMETER-IN-NP-RANDOM-NORMAL"><span class="nav-number">7.6.</span> <span class="nav-text">HOW TO USE THE LOC AND SCALE PARAMETER IN NP.RANDOM.NORMAL</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-random-normal"><span class="nav-number">8.</span> <span class="nav-text">numpy.random.normal</span></a></li></ol></div>
             
 
           </div>
