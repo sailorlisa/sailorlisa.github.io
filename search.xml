@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python数据科学Numpy第2章 数组索引1]]></title>
+    <url>%2F2019%2F05%2F22%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC2%E7%AB%A0-%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%951%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook 一维数组里进行索引123456789101112131415161718192021222324import numpy as npnp.random.seed(0)x1 = np.random.randint(10, size=6) # 一维数组x2 = np.random.randint(10, size=(3, 4)) # 二维数组x3 = np.random.randint(10, size=(3, 4, 5)) # 三维数组x1&gt;&gt;&gt; array([5, 0, 3, 3, 7, 9])x1[0]&gt;&gt;&gt; 5x1[4] &gt;&gt;&gt; 7x1[-1]&gt;&gt;&gt; 9x1[-2]&gt;&gt;&gt; 7 多维数组里进行索引1234567891011121314151617181920x2&gt;&gt;&gt; array([[3, 5, 2, 4], [7, 6, 8, 8], [1, 6, 7, 7]])x2[0, 0]&gt;&gt;&gt; 3x2[2, 0]&gt;&gt;&gt; 1x2[2, -1]&gt;&gt;&gt; 7x2[0, 0] = 12x2&gt;&gt;&gt; array([[12, 5, 2, 4], [ 7, 6, 8, 8], [ 1, 6, 7, 7]]) 修改浮点数如果把x1的位置0元素改为浮点数，那结果会被截短成整型。 1234x1[0] = 3.14159x1&gt;&gt;&gt; array([3, 0, 3, 3, 7, 9])]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python数据科学Numpy第2章 数组属性]]></title>
+    <url>%2F2019%2F05%2F22%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC2%E7%AB%A0-%E6%95%B0%E7%BB%84%E5%B1%9E%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook NumPy数组的属性 ndim 数组的维度 shape 数组每个维度的大小 size 数组的总大小 dtype 数组的数据类型 itemsize 每个数组元素字节的大小 nbytes 数组总字节大小的属 用例子体会123456789101112131415161718192021222324import numpy as npnp.random.seed(0)x1 = np.random.randint(10, size=6) # 一维数组x2 = np.random.randint(10, size=(3, 4)) # 二维数组x3 = np.random.randint(10, size=(3, 4, 5)) # 三维数组print("x3 ndim: ", x3.ndim)print("x3 shape:", x3.shape)print("x3 size: ", x3.size)&gt;&gt;&gt; x3 ndim: 3&gt;&gt;&gt; x3 shape: (3, 4, 5)&gt;&gt;&gt; x3 size: 60print("dtype:", x3.dtype)&gt;&gt;&gt;dtype: int64print("itemsize:", x3.itemsize, "bytes")print("nbytes:", x3.nbytes, "bytes")&gt;&gt;&gt; itemsize: 8 bytes&gt;&gt;&gt; nbytes: 480 bytes]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何使用random.seed函数]]></title>
+    <url>%2F2019%2F05%2F22%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8random-seed%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-random-seed/ PSEUDO-RANDOM NUMBER首先提一下 “pseudo-random number”（伪随机数），它不是真正的随机，而是用确定性的算法计算出来的均匀分布随机数序列。 https://zh.wikipedia.org/zh-hans/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%80%A7 那因为伪随机数是确定的，所以它们是可重复的（repeatable）。 seed的结果1234np.random.seed(0)np.random.randint(10, size = 5)&gt;&gt;&gt; array([5, 0, 3, 3, 7]) 如果你把以上代码再重复run一次，会发现结果是一样的。 numpy.random.seed函数会把 输出 （ seed value）传给那个在numpy里产生伪随机数的算法。 搭配numpy.random.seed经常和numpy.random.randint一起使用。 THE SYNTAX OF NUMPY RANDOM SEED只有一个参数，那就是seed value。]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python numpy.empty使用方法]]></title>
     <url>%2F2019%2F05%2F20%2FPython-numpy-empty%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://www.runoob.com/numpy/numpy-array-creation.html https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html numpy.emptyReturn a new array of given shape and type, without initializing entries. 返回 一个指定形状（shape）、数据类型（dtype）且未初始化的数组。 参数 shape dtype order 例子1234import numpy as npnp.empty(4)# array([1., 0., 0., 1.]) 1234np.empty([2, 2])# array([[1., 0.],# [0., 1.]]) 12345np.empty([3, 2], dtype=int)# array([[-618601952, 346],# [ 0, 0],# [ 1, 0]])]]></content>
@@ -156,8 +195,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>主题</tag>
+        <tag>hexo</tag>
         <tag>NextT</tag>
         <tag>theme</tag>
         <tag>博客</tag>
