@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Python数据科学Numpy第2章 数组索引1]]></title>
-    <url>%2F2019%2F05%2F22%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC2%E7%AB%A0-%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%951%2F</url>
+    <title><![CDATA[读书笔记 numpy入门 第2章 数据切片]]></title>
+    <url>%2F2019%2F05%2F19%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%20numpy%E5%85%A5%E9%97%A8%20%E7%AC%AC2%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E5%88%87%E7%89%87%2F</url>
+    <content type="text"><![CDATA[切片语法1x[start:stop:step] 如果以上 3 个参数都未指定，那么它们会被分别设置默认值 start=0、stop= 维度的大小（size of dimension）和 step=1。 一维子数组1234567891011121314151617181920212223x = np.arange(10)x&gt;&gt;&gt; array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])x[:5] # 前五个元素&gt;&gt;&gt; array([0, 1, 2, 3, 4])x[5:] # 索引五之后的元素&gt;&gt;&gt; array([5, 6, 7, 8, 9])x[4:7] # 中间的子数组&gt;&gt;&gt; array([4, 5, 6])x[::2] # 每隔一个元素&gt;&gt;&gt; array([0, 2, 4, 6, 8])x[1::2] # 每隔一个元素，从索引1开始&gt;&gt;&gt; array([1, 3, 5, 7, 9]) 逆序数组1234567x[::-1] # 所有元素，逆序的&gt;&gt;&gt; array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])x[5::-2] # 从索引5开始每隔一个元素逆序&gt;&gt;&gt; array([5, 3, 1]) 多维子数组12345678910111213141516x2&gt;&gt;&gt; array([[12, 5, 2, 4], [ 7, 6, 8, 8], [ 1, 6, 7, 7]])x2[:2, :3] # 两行，三列&gt;&gt;&gt; array([[12, 5, 2], [ 7, 6, 8]])x2[:3, ::2] # 所有行，每隔一列&gt;&gt;&gt; array([[12, 2], [ 7, 8], [ 1, 7]]) 逆序数组12345x2[::-1, ::-1]&gt;&gt;&gt; array([[ 7, 7, 6, 1], [ 8, 8, 6, 7], [ 4, 2, 5, 12]]) 获取数组的行和列一个冒号（:）表示空切片 1234567891011print(x2[:, 0]) # x2的第一列&gt;&gt;&gt; [12 7 1]print(x2[0, :]) # x2的第一行&gt;&gt;&gt; [12 5 2 4]print(x2[0]) #等于x2[0, :]&gt;&gt;&gt; [12 5 2 4] 非副本视图的子数组数组切片返回的是数组数据的视图，而不是数值数据的副本。这一点也是 NumPy 数组切片和 Python 列表切片的不同之处：在 Python 列表中，切片是值的副本。 1234567891011121314151617181920212223242526print(x2)&gt;&gt;&gt; [[12 5 2 4] [ 7 6 8 8] [ 1 6 7 7]] # 从中抽取一个 2×2 的子数组x2_sub = x2[:2, :2]print(x2_sub)&gt;&gt;&gt;[[12 5] [ 7 6]]# 现在如果修改这个子数组，将会看到原始数组也被修改了x2_sub[0, 0] = 99print(x2_sub)&gt;&gt;&gt; [[99 5] [ 7 6]]print(x2)&gt;&gt;&gt; [[99 5 2 4] [ 7 6 8 8] [ 1 6 7 7]] 创建数组的副本copy()函数 12345678910111213141516171819x2_sub_copy = x2[:2, :2].copy()print(x2_sub_copy)&gt;&gt;&gt; [[99 5] [ 7 6]] # 如果修改这个子数组，原始的数组不会被改变x2_sub_copy[0, 0] = 42print(x2_sub_copy)&gt;&gt;&gt; [[42 5] [ 7 6]]print(x2)&gt;&gt;&gt;[[99 5 2 4] [ 7 6 8 8] [ 1 6 7 7]]]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>data science</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[读书笔记 numpy入门 第2章 数据索引]]></title>
+    <url>%2F2019%2F05%2F19%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%20numpy%E5%85%A5%E9%97%A8%20%E7%AC%AC2%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E7%B4%A2%E5%BC%95%2F</url>
     <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook 一维数组里进行索引123456789101112131415161718192021222324import numpy as npnp.random.seed(0)x1 = np.random.randint(10, size=6) # 一维数组x2 = np.random.randint(10, size=(3, 4)) # 二维数组x3 = np.random.randint(10, size=(3, 4, 5)) # 三维数组x1&gt;&gt;&gt; array([5, 0, 3, 3, 7, 9])x1[0]&gt;&gt;&gt; 5x1[4] &gt;&gt;&gt; 7x1[-1]&gt;&gt;&gt; 9x1[-2]&gt;&gt;&gt; 7 多维数组里进行索引1234567891011121314151617181920x2&gt;&gt;&gt; array([[3, 5, 2, 4], [7, 6, 8, 8], [1, 6, 7, 7]])x2[0, 0]&gt;&gt;&gt; 3x2[2, 0]&gt;&gt;&gt; 1x2[2, -1]&gt;&gt;&gt; 7x2[0, 0] = 12x2&gt;&gt;&gt; array([[12, 5, 2, 4], [ 7, 6, 8, 8], [ 1, 6, 7, 7]]) 修改浮点数如果把x1的位置0元素改为浮点数，那结果会被截短成整型。 1234x1[0] = 3.14159x1&gt;&gt;&gt; array([3, 0, 3, 3, 7, 9])]]></content>
       <categories>
         <category>数据科学</category>
@@ -10,25 +24,55 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
+        <tag>data science</tag>
         <tag>数据科学</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python数据科学Numpy第2章 数组属性]]></title>
-    <url>%2F2019%2F05%2F22%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC2%E7%AB%A0-%E6%95%B0%E7%BB%84%E5%B1%9E%E6%80%A7%2F</url>
-    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook NumPy数组的属性 ndim 数组的维度 shape 数组每个维度的大小 size 数组的总大小 dtype 数组的数据类型 itemsize 每个数组元素字节的大小 nbytes 数组总字节大小的属 用例子体会123456789101112131415161718192021222324import numpy as npnp.random.seed(0)x1 = np.random.randint(10, size=6) # 一维数组x2 = np.random.randint(10, size=(3, 4)) # 二维数组x3 = np.random.randint(10, size=(3, 4, 5)) # 三维数组print("x3 ndim: ", x3.ndim)print("x3 shape:", x3.shape)print("x3 size: ", x3.size)&gt;&gt;&gt; x3 ndim: 3&gt;&gt;&gt; x3 shape: (3, 4, 5)&gt;&gt;&gt; x3 size: 60print("dtype:", x3.dtype)&gt;&gt;&gt;dtype: int64print("itemsize:", x3.itemsize, "bytes")print("nbytes:", x3.nbytes, "bytes")&gt;&gt;&gt; itemsize: 8 bytes&gt;&gt;&gt; nbytes: 480 bytes]]></content>
+    <title><![CDATA[读书笔记 numpy入门 第2章 数据属性]]></title>
+    <url>%2F2019%2F05%2F19%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%20numpy%E5%85%A5%E9%97%A8%20%E7%AC%AC2%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E5%B1%9E%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook NumPy数组的属性 ndim 数组的维度 shape 数组每个维度的大小 size 数组的总大小 dtype 数组的数据类型 itemsize 每个数组元素字节的大小 nbytes 数组总字节大小的属性 用例子体会123456789101112131415161718192021222324import numpy as npnp.random.seed(0)x1 = np.random.randint(10, size=6) # 一维数组x2 = np.random.randint(10, size=(3, 4)) # 二维数组x3 = np.random.randint(10, size=(3, 4, 5)) # 三维数组print("x3 ndim: ", x3.ndim)print("x3 shape:", x3.shape)print("x3 size: ", x3.size)&gt;&gt;&gt; x3 ndim: 3&gt;&gt;&gt; x3 shape: (3, 4, 5)&gt;&gt;&gt; x3 size: 60print("dtype:", x3.dtype)&gt;&gt;&gt;dtype: int64print("itemsize:", x3.itemsize, "bytes")print("nbytes:", x3.nbytes, "bytes")&gt;&gt;&gt; itemsize: 8 bytes&gt;&gt;&gt; nbytes: 480 bytes]]></content>
       <categories>
         <category>数据科学</category>
       </categories>
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
+        <tag>data science</tag>
         <tag>数据科学</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[如何使用random.seed函数]]></title>
-    <url>%2F2019%2F05%2F22%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8random-seed%E5%87%BD%E6%95%B0%2F</url>
+    <title><![CDATA[读书笔记 numpy入门 第1章 创建数组方法和数据类型]]></title>
+    <url>%2F2019%2F05%2F19%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%20numpy%E5%85%A5%E9%97%A8%20%E7%AC%AC1%E7%AB%A0%20%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook 从头创建数组用 NumPy 内置的方法从头创建数组。 创建一个长度为10的数组，数组的值都是0 1234import numpy as npnp.zeros(10, dtype=int)# output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) 创建一个3×5的浮点型数组，数组的值都是1 123456np.ones((3, 5), dtype=float)# output# array([[1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.]]) 创建一个3×5的浮点型数组，数组的值都是3.14 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]]) 创建一个线性序列数组，从0开始，到20结束，步长为2。（它和内置的range()函数类似） 123np.arange(0, 20, 2)#output: array([ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18]) 创建一个5个元素的数组，这5个数均匀地分配到0~1 123np.linspace(0, 1, 5)#output: array([0. , 0.25, 0.5 , 0.75, 1. ]) 创建一个3×3的、在0~1均匀分布的随机数组成的数组 123456np.random.random((3, 3))#output#array([[0.94795687, 0.62658297, 0.4240733 ],# [0.75686519, 0.46357097, 0.58682988],# [0.37997183, 0.28707067, 0.67190137]]) 创建一个3×3的、均值为0、标准差为1的，正态分布的随机数数组 123456np.random.normal(0, 1, (3, 3))#output#array([[ 0.1348332 , -1.93013655, 1.21003072],# [ 1.41562771, 0.29064906, 1.09749629],# [-0.16664035, -0.67962834, -0.54942727]]) 创建一个3×3的、[0, 10)区间的随机整型数组 123456np.random.randint(0, 10, (3, 3))#output#array([[8, 0, 5],# [6, 5, 9],# [9, 9, 0]]) 创建一个3×3的单位矩阵 123456np.eye(3)#output#array([[1., 0., 0.],# [0., 1., 0.],# [0., 0., 1.]]) 创建一个由3个整型数组成的未初始化的数组，数组的值是内存空间中的任意值 123np.empty(3)#output: array([1., 1., 1.]) NumPy标准数据类型构建数组时，可以用以下2种方式指定数据类型： 用字符串参数 123np.zeros(10, dtype='int16')#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) 用相关NumPy对象来指定 123np.zeros(10, dtype=np.int16)#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) NumPy标准数据类型表格： http://numpy.org/ 数据类型 描述 bool_ 布尔值（真、True 或假、False），用一个字节存储 int_ 默认整型（类似于 C 语言中的 long，通常情况下是 int64 或 int32） intc 同 C 语言的 int 相同（通常是 int32 或 int64） intp 用作索引的整型（和 C 语言的 ssize_t 相同，通常情况下是 int32 或 int64） int8 字节（byte，范围从–128 到 127） int16 整型（范围从–32768 到 32767） int32 整型（范围从–2147483648 到 2147483647） int64 整型（范围从–9223372036854775808 到 9223372036854775807） uint8 无符号整型（范围从 0 到 255） uint16 无符号整型（范围从 0 到 65535） uint32 无符号整型（范围从 0 到 4294967295） uint64 无符号整型（范围从 0 到 18446744073709551615） float_ float64 的简化形式 float16 半精度浮点型：符号比特位，5 比特位指数（exponent），10 比特位尾数（mantissa） float32 单精度浮点型：符号比特位，8 比特位指数，23 比特位尾数 float64 双精度浮点型：符号比特位，11 比特位指数，52 比特位尾数 complex_ complex128 的简化形式 complex64 复数，由两个 32 位浮点数表示 complex128 复数，由两个 64 位浮点数表示]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>data science</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[读书笔记 numpy入门 第1章 python的特殊]]></title>
+    <url>%2F2019%2F05%2F19%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%20numpy%E5%85%A5%E9%97%A8%20%E7%AC%AC1%E7%AB%A0%20python%E7%9A%84%E7%89%B9%E6%AE%8A%2F</url>
+    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook Numpy入门Numerical Python，提供了高效存储和操作密集数据缓存的接口。 导入Numpy 1import numpy as np 理解Python中的数据类型学习数据科学，我们要理解数据是如何被储存和操作的。 python易用性-动态输入静态类型的语言（如 C 或 Java）往往需要每一个变量都明确地声明， 而动态类型的语言（例如 Python）可以跳过这个特殊规定。 Python整型不仅仅是一个整型Python 3.4 中的一个整型实际上包括 4 个部分。 ob_refcnt 是一个引用计数，它帮助 Python 默默地处理内存的分配和回收。 ob_type 将变量的类型编码。 ob_size 指定接下来的数据成员的大小。 ob_digit 包含我们希望 Python 变量表示的实际整型值。 Python列表不仅仅是一个列表整型值列表 123456789101112L = list (range(10))print(L)# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]type(L)# output:listtype(L[0])# output:int 字符串列表 123456789L2 = [str(c) for c in L]print(L2)# output: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']type(L2[0])# output: str 异构列表 1234L3 = [True, "2", 3.0, 4][type(item) for item in L3]# output: [bool, str, float, int] Python中的固定类型数组array模块创建统一类型的密集数组 12345678import arrayL = list(range(10))print(L)A = array.array('i', L)A# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]# array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) 从Python列表创建数组NumPy 要求数组必须包含同一类型的数据。 123456# 导入Numpyimport numpy as np# 创建数组np.array([1, 4, 2, 5, 3])#output: array([1, 4, 2, 5, 3]) 如果数据类型不匹配，Numpy向上转换： 12345import numpy as npnp.array([3.14, 4, 2, 3])# 整型int转换为浮点型float# output: array([3.14, 4. , 2. , 3. ]) 也可以用dtype关键词去设置数组的数据类型： 1234import numpy as npnp.array([1, 2, 3, 4], dtype='float32')# output: array([1., 2., 3., 4.], dtype=float32) 多维数组： 12345678# 嵌套列表构成的多维数组import numpy as npnp.array([range(i, i + 3) for i in [2, 4, 6]])#output#array([[2, 3, 4],# [4, 5, 6],# [6, 7, 8]])]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>data science</tag>
+        <tag>数据科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[numpy.random.seed使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-random-seed%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-random-seed/ PSEUDO-RANDOM NUMBER首先提一下 “pseudo-random number”（伪随机数），它不是真正的随机，而是用确定性的算法计算出来的均匀分布随机数序列。 https://zh.wikipedia.org/zh-hans/%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%80%A7 那因为伪随机数是确定的，所以它们是可重复的（repeatable）。 seed的结果1234np.random.seed(0)np.random.randint(10, size = 5)&gt;&gt;&gt; array([5, 0, 3, 3, 7]) 如果你把以上代码再重复run一次，会发现结果是一样的。 numpy.random.seed函数会把 输出 （ seed value）传给那个在numpy里产生伪随机数的算法。 搭配numpy.random.seed经常和numpy.random.randint一起使用。 THE SYNTAX OF NUMPY RANDOM SEED只有一个参数，那就是seed value。]]></content>
       <categories>
         <category>数据科学</category>
@@ -36,12 +80,12 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python numpy.empty使用方法]]></title>
-    <url>%2F2019%2F05%2F20%2FPython-numpy-empty%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <title><![CDATA[numpy.empty使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-empty%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://www.runoob.com/numpy/numpy-array-creation.html https://docs.scipy.org/doc/numpy/reference/generated/numpy.empty.html numpy.emptyReturn a new array of given shape and type, without initializing entries. 返回 一个指定形状（shape）、数据类型（dtype）且未初始化的数组。 参数 shape dtype order 例子1234import numpy as npnp.empty(4)# array([1., 0., 0., 1.]) 1234np.empty([2, 2])# array([[1., 0.],# [0., 1.]]) 12345np.empty([3, 2], dtype=int)# array([[-618601952, 346],# [ 0, 0],# [ 1, 0]])]]></content>
       <categories>
         <category>数据科学</category>
@@ -49,12 +93,12 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python numpy.eye使用方法]]></title>
-    <url>%2F2019%2F05%2F20%2FPython-numpy-eye%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <title><![CDATA[numpy.eye使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-eye%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://docs.scipy.org/doc/numpy/reference/generated/numpy.eye.html https://www.numpy.org.cn/article/basics/different_ways_create_numpy_arrays.html#%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96Numpy%E5%87%BD%E6%95%B0 https://www.programcreek.com/python/example/6118/numpy.eye 对角矩阵Return a 2-D array with ones on the diagonal and zeros elsewhere. 返回一个 对角线是1，其余是0的 2维数组。 参数 N （行） M （列） K （Index of the diagonal: 0 (the default) refers to the main diagonal, a positive value refers to an upper diagonal, and a negative value to a lower diagonal） dtype 数据类型 order （Whether the output should be stored in row-major (C-style) or column-major (Fortran-style) order in memory） 例子N+dtype12345import numpy as npnp.eye(2, dtype=int)#array([[1, 0],# [0, 1]]) 12345np.eye(3, dtype=int)#array([[1, 0, 0],# [0, 1, 0],# [0, 0, 1]]) 123456np.eye(4, dtype=int)#array([[1, 0, 0, 0],# [0, 1, 0, 0],# [0, 0, 1, 0],# [0, 0, 0, 1]]) N+M1234np.eye(2, 2)#array([[1., 0.],# [0., 1.]]) 12345np.eye(3, 6)#array([[1., 0., 0., 0., 0., 0.],# [0., 1., 0., 0., 0., 0.],# [0., 0., 1., 0., 0., 0.]]) N+K12345np.eye(3, k=1)#array([[0., 1., 0.],# [0., 0., 1.],# [0., 0., 0.]]) 123456np.eye(4, k=1)#array([[0., 1., 0., 0.],# [0., 0., 1., 0.],# [0., 0., 0., 1.],# [0., 0., 0., 0.]])]]></content>
       <categories>
         <category>数据科学</category>
@@ -62,12 +106,12 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python numpy.random.randint使用方法]]></title>
-    <url>%2F2019%2F05%2F20%2FPython-numpy-random-randint%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <title><![CDATA[numpy.random.randint使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-random-randint%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://docs.scipy.org/doc/numpy-1.16.1/reference/generated/numpy.random.randint.html https://blog.csdn.net/tintinetmilou/article/details/79854725 https://www.programcreek.com/python/example/55590/numpy.random.randint https://www.tutorialspoint.com/How-to-use-Python-Numpy-to-generate-Random-Numbers https://segmentfault.com/a/1190000016097466 https://zhuanlan.zhihu.com/p/26889091 random.randintnumpy.random.randint可以创建范围是[low, high]之间的随机整数数组。 有以下几种参数： low high size dtype 来用例子学习吧！ 指定Low+high创建随机整数数组，返回[1, 10]之间的整数： 12import numpy as npnp.random.randint(low = 1, high = 10, dtype=int) 结果只会是1~9。 不指定high12import numpy as npnp.random.randint(low = 1, dtype=int) 不指定high参数，结果只是0。也就是当我们不指定high参数时，low参数的值是数组里的最大范围。 12import numpy as npnp.random.randint(low = 5, dtype=int) 这个的结果只是0~4。证明了low参数的值是数组里的最大范围。 指定size1234import numpy as npnp.random.randint(low = 3, size = 1)# 结果是 array([0/1/2]) 1234import numpy as npnp.random.randint(low = 3, size = 2)# 结果是 array([0~2, 0~2]) 12345import numpy as npnp.random.randint(low = 5, size = (2, 2))# 结果是 array([[0~4, 0~4],# [0~4, 0~4]]) 只指定size123&gt;&gt;&gt; np.random.randint(2, size=10)&gt;&gt;&gt; array([1, 0, 0, 0, 1, 1, 0, 0, 1, 0]) 123&gt;&gt;&gt; np.random.randint(1, size=10)&gt;&gt;&gt; array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) 1234&gt;&gt;&gt; np.random.randint(5, size=(2, 4))&gt;&gt;&gt; array([[4, 0, 2, 1], [3, 2, 2, 0]]) 没有明确指定12345&gt;&gt;&gt; np.random.randint(1, 5)# 返回[1, 5)之间随机的一个数字 &gt;&gt;&gt; 0~4]]></content>
       <categories>
         <category>数据科学</category>
@@ -75,12 +119,12 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[翻译-如何使用numpy.random函数]]></title>
-    <url>%2F2019%2F05%2F20%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-random%E5%87%BD%E6%95%B0%2F</url>
+    <title><![CDATA[numpy.random使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-random%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-random-normal/ HOW TO USE NUMPY RANDOM NORMAL IN PYTHON这篇教程会覆盖numpy random normal函数 (AKA, np.random.normal)。 Normal distrubutionThe NumPy random normal function generates a sample of numbers drawn from the normal distribution（正态分布、常态分布）, otherwise called the Gaussian distribution（高斯分布）. 参考链接：维基百科 NUMPY RANDOM NORMAL GENERATES NORMALLY DISTRIBUTED NUMBERSrandom normal函数可以让你创建一个包含正态分布数据的numpy数组。 下图是我们用直方图绘制数据： 正态分布数据，就像bell（钟、铃铛），所以经常被称为“钟形曲线”。 接下来我们看看语法。 THE SYNTAX OF NUMPY RANDOM NORMAL不要忘了导入模块： 1import numpy as np np.random.normal()函数有3个参数： loc scale size THE PARAMETERS OF THE NP.RANDOM.NORMAL FUNCTIONloc：控制函数的平均值（Mean），默认值是0。 scale：控制正态分布的标准偏差，默认值是1。 size：控制输出的大小和形状。 If you provide a single integer, x, np.random.normal will provide x random normal values in a 1-dimensional NumPy array. 如果 size = x，那np.random.normal函数就会提供一个有x个正态分布数值的1维numpy数组。 For example, if you specify size = (2, 3), np.random.normal will produce a numpy array with 2 rows and 3 columns. It will be filled with numbers drawn from a random normal distribution. 例如，你指定 size = (2, 3)，那就会产生一个2行3列的numpy数组。 THE NP.RANDOM.RANDN FUNCTION还有一个类似的函数：np.random.randn()。 这个代码： 12np.random.seed(1)np.random.normal(loc = 0, scale = 1, size = (3,3)) 等于下面这个： 12np.random.seed(1)np.random.randn(3, 3) EXAMPLES: HOW TO USE THE NUMPY RANDOM NORMAL FUNCTIONDRAW A SINGLE NUMBER FROM THE NORMAL DISTRIBUTION123np.random.normal(1)# 等于： np.random.normal(size = 1, loc = 0, scale = 1) DRAW 5 NUMBERS FROM THE NORMAL DISTRIBUTION1np.random.normal(5) CREATE A 2-DIMENSIONAL NUMPY ARRAY OF NORMALLY DISTRIBUTED VALUES12345np.random.seed(42)np.random.normal(size = (2, 3))#array([[ 1.62434536, -0.61175641, -0.52817175],# [-1.07296862, 0.86540763, -2.3015387 ]]) GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC MEAN1234567np.random.seed(42)np.random.normal(size = 1000, loc = 50)# array([ 50.49671415, 49.8617357 , 50.64768854, 51.52302986,# 49.76584663, 49.76586304, 51.57921282, 50.76743473,# 49.53052561, 50.54256004, 49.53658231, 49.53427025 # ... GENERATE NORMALLY DISTRIBUTED VALUES WITH A SPECIFIC STANDARD DEVIATION1234567np.random.seed(42)np.random.normal(size = 1000, scale = 100)#array([ 4.96714153e+01, -1.38264301e+01, 6.47688538e+01,# 1.52302986e+02, -2.34153375e+01, -2.34136957e+01,# 1.57921282e+02, 7.67434729e+01, -4.69474386e+01# ... 我们可以用std()方法去计算标准偏差： 1234np.random.seed(42)np.random.normal(size = 1000, scale = 100).std()# 99.695552529463015 HOW TO USE THE LOC AND SCALE PARAMETER IN NP.RANDOM.NORMAL12np.random.seed(42)np.random.normal(size = 1000, loc = 50, scale = 100) numpy.random.normal https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.normal.html]]></content>
       <categories>
         <category>数据科学</category>
@@ -88,12 +132,12 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[翻译-如何使用numpy.linspace函数]]></title>
-    <url>%2F2019%2F05%2F20%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-linspace%E5%87%BD%E6%95%B0%2F</url>
+    <title><![CDATA[numpy.linspace使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-linspace%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[Numpy refer https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0) Parameters start : array_like The starting value of the sequence. 序列的初始值。 stop : array_like The end value of the sequence, unless endpoint is set to False. In that case, the sequence consists of all but the last of num + 1 evenly spaced samples, so that stop is excluded. Note that the step size changes when endpoint is False. num : int, optional Number of samples to generate. Default is 50. Must be non-negative. 默认值是50，必须是非负数。 endpoint : bool, optional If True, stop is the last sample. Otherwise, it is not included. Default is True. retstep : bool, optional If True, return (samples, step), where step is the spacing between samples. dtype : dtype, optional The type of the output array. If dtype is not given, infer the data type from the other input arguments. axis : int, optional The axis in the result to store the samples. Relevant only if start or stop are array-like. By default (0), the samples will be along a new axis inserted at the beginning. Use -1 to get an axis at the end. Returns samples : ndarray There are num equally spaced samples in the closed interval [start, stop] or the half-open interval [start, stop) (depending on whether endpoint is True or False). step : float, optional Only returned if retstep is True Size of spacing between samples. 例子12345678&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5)array([ 2. , 2.25, 2.5 , 2.75, 3. ])&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, endpoint=False)array([ 2. , 2.2, 2.4, 2.6, 2.8])&gt;&gt;&gt; np.linspace(2.0, 3.0, num=5, retstep=True)(array([ 2. , 2.25, 2.5 , 2.75, 3. ]), 0.25) Graphical illustration: 1234567891011121314&gt;&gt;&gt; import matplotlib.pyplot as plt&gt;&gt;&gt; N = 8&gt;&gt;&gt; y = np.zeros(N)&gt;&gt;&gt; x1 = np.linspace(0, 10, N, endpoint=True)&gt;&gt;&gt; x2 = np.linspace(0, 10, N, endpoint=False)&gt;&gt;&gt; plt.plot(x1, y, 'o')[&lt;matplotlib.lines.Line2D object at 0x...&gt;]&gt;&gt;&gt; plt.plot(x2, y + 0.5, 'o')[&lt;matplotlib.lines.Line2D object at 0x...&gt;]&gt;&gt;&gt; plt.ylim([-0.5, 1])(-0.5, 1)&gt;&gt;&gt; plt.show() Numpy sharpsightlab https://www.sharpsightlabs.com/blog/numpy-linspace/ 先看个简单的例子： 1np.linspace(start = 0, stop = 100, num = 5) 看这张图可能更加好理解： 可以看出，在我们指定的范围内（从0开始，100为结束），有5个元素（0、25、50、75、100）。 另外，如果指定endpoint = False，那100这个值就不包括在内。num在这里我们指定的是5，如果没有指定，那默认值是50。 这张图里有3个参数，分别是start、stop、num。这会是我们很常用的参数。 OK，接下来我们看看默认写法是怎么样的： 1np.linspace(0, 100, 5) 相当于： 1np.linspace(start = 0, stop = 100, num = 5) 例子123&gt;&gt;&gt; np.linspace(start = 0, stop = 1, num = 11)&gt;&gt;&gt; array([ 0. , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1. ]) 123&gt;&gt;&gt; np.linspace(start = 0, stop = 100, num = 11)&gt;&gt;&gt; array([ 0., 10., 20., 30., 40., 50., 60., 70., 80., 90., 100.]) 123&gt;&gt;&gt; np.linspace(start = 1, stop = 5, num = 4, endpoint = False)&gt;&gt;&gt; array([ 1., 2., 3., 4.]) 123&gt;&gt;&gt; np.linspace(start = 0, stop = 100, num = 5, dtype = int)&gt;&gt;&gt; array([ 0, 25, 50, 75, 100])]]></content>
       <categories>
         <category>数据科学</category>
@@ -101,12 +145,12 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python numpy.full使用方法]]></title>
-    <url>%2F2019%2F05%2F19%2FPython-numpy-full%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <title><![CDATA[numpy.full使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-full%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[full函数 用确定的数值创建数组1&gt;&gt;&gt; np.full((n行, n列), value) 例子123&gt;&gt;&gt; np.full((2, 2), 10)&gt;&gt;&gt; array([[10, 10], [10, 10]]) 1234&gt;&gt;&gt;np.full((2,2), 3)&gt;&gt;&gt;array([[3, 3], [3, 3]]) 1234&gt;&gt;&gt; np.full((3, 5), 7)&gt;&gt;&gt;array([[ 7., 7., 7., 7., 7.], [ 7., 7., 7., 7., 7.], [ 7., 7., 7., 7., 7.]]) 1234&gt;&gt;&gt; np.full((3, 5), 7, dtype=int)&gt;&gt;&gt;array([[7, 7, 7, 7, 7], [7, 7, 7, 7, 7], [7, 7, 7, 7, 7]]) https://github.com/jakevdp/PythonDataScienceHandbook 创建一个3×5的浮点型数组，数组的值都是3.14： 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]])]]></content>
       <categories>
         <category>数据科学</category>
@@ -114,17 +158,25 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[翻译-如何使用numpy.arrange函数]]></title>
-    <url>%2F2019%2F05%2F19%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-arrange%E5%87%BD%E6%95%B0%2F</url>
+    <title><![CDATA[numpy.arrange使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-arrange%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-arange/ The NumPy arange function returns evenly spaced numeric values within an interval, stored as a NumPy array (i.e., an ndarray object). arrange()函数可以生成等间隔的数值。 1numpy.arange(5) 创建了从0到4的5个等间隔的数值。 继续往下走。 使用arrange()函数时，我们有4个参数可以用。 start 指定数值的开头 stop 指定末尾，这个数值不会被包括在结果里 step 数值之间的间隔 dtype 数据类型 来看例子体会吧 先导入模块1import numpy as np 创一个简单的1np.arange(stop = 5) 我们没有指定start，所以数组的开头是“0”。接下来，“stop = 5”指定了停止数值为5，到5就结束了，不包含5。 同样地，由于我们没有指定 “step”，默认间隔为”1“。最后，因为5是整数，尽管我们没有指定数据类型，python默认用5的数据类型，也就是整数(int)作为数组的数据类型。 1np.arange(5) 另外，如果我们没有指定参数名，会默认是”stop“。 创间隔为2的创建从0到8，增数为2： 1np.arange(start = 0, stop = 8, step = 2) 指定数据类型1np.arange(start = 1, stop = 5, dtype = 'float') 创建2维数组需要搭配方法reshape。 先别急，我们先看看这个： 从1到9的1维数组 1np.arange(start = 1, stop = 10, step = 1) 再看这个，使用方法reshape()： 1np.arange(start = 1, stop = 10, step = 1).reshape((3,3)) 可以看到，使用了reshape()方法后，变成了3行3列的2维数组（a 2-dimensional array）。]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>numpy</tag>
+        <tag>data science</tag>
+      </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python numpy.ones使用方法]]></title>
-    <url>%2F2019%2F05%2F19%2FPython-numpy-ones%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <title><![CDATA[numpy.ones使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-ones%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[https://docs.scipy.org/doc/numpy-1.16.1/reference/generated/numpy.ones.html?highlight=ones numpy.ones(shape, dtype=None, order=’C’) Return a new array of given shape and type, filled with ones. 例子12&gt;&gt;&gt; np.ones(5)array([ 1., 1., 1., 1., 1.]) 12&gt;&gt;&gt; np.ones((5,), dtype=int)array([1, 1, 1, 1, 1]) 123&gt;&gt;&gt; np.ones((2, 1))array([[ 1.], [ 1.]]) 1234&gt;&gt;&gt; s = (2,2)&gt;&gt;&gt; np.ones(s)array([[ 1., 1.], [ 1., 1.]])]]></content>
       <categories>
         <category>数据科学</category>
@@ -132,59 +184,20 @@
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Python数据科学Numpy第1章下]]></title>
-    <url>%2F2019%2F05%2F19%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC1%E7%AB%A0%E4%B8%8B%2F</url>
-    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook 从头创建数组用 NumPy 内置的方法从头创建数组。 创建一个长度为10的数组，数组的值都是0 1234import numpy as npnp.zeros(10, dtype=int)# output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) 创建一个3×5的浮点型数组，数组的值都是1 123456np.ones((3, 5), dtype=float)# output# array([[1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.],# [1., 1., 1., 1., 1.]]) 创建一个3×5的浮点型数组，数组的值都是3.14 123456np.full((3, 5), 3.14)#output# array([[3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14],# [3.14, 3.14, 3.14, 3.14, 3.14]]) 创建一个线性序列数组，从0开始，到20结束，步长为2。（它和内置的range()函数类似） 123np.arange(0, 20, 2)#output: array([ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18]) 创建一个5个元素的数组，这5个数均匀地分配到0~1 123np.linspace(0, 1, 5)#output: array([0. , 0.25, 0.5 , 0.75, 1. ]) 创建一个3×3的、在0~1均匀分布的随机数组成的数组 123456np.random.random((3, 3))#output#array([[0.94795687, 0.62658297, 0.4240733 ],# [0.75686519, 0.46357097, 0.58682988],# [0.37997183, 0.28707067, 0.67190137]]) 创建一个3×3的、均值为0、标准差为1的，正态分布的随机数数组 123456np.random.normal(0, 1, (3, 3))#output#array([[ 0.1348332 , -1.93013655, 1.21003072],# [ 1.41562771, 0.29064906, 1.09749629],# [-0.16664035, -0.67962834, -0.54942727]]) 创建一个3×3的、[0, 10)区间的随机整型数组 123456np.random.randint(0, 10, (3, 3))#output#array([[8, 0, 5],# [6, 5, 9],# [9, 9, 0]]) 创建一个3×3的单位矩阵 123456np.eye(3)#output#array([[1., 0., 0.],# [0., 1., 0.],# [0., 0., 1.]]) 创建一个由3个整型数组成的未初始化的数组，数组的值是内存空间中的任意值 123np.empty(3)#output: array([1., 1., 1.]) NumPy标准数据类型构建数组时，可以用以下2种方式指定数据类型： 用字符串参数 123np.zeros(10, dtype='int16')#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) 用相关NumPy对象来指定 123np.zeros(10, dtype=np.int16)#output: array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16) NumPy标准数据类型表格： http://numpy.org/ 数据类型 描述 bool_ 布尔值（真、True 或假、False），用一个字节存储 int_ 默认整型（类似于 C 语言中的 long，通常情况下是 int64 或 int32） intc 同 C 语言的 int 相同（通常是 int32 或 int64） intp 用作索引的整型（和 C 语言的 ssize_t 相同，通常情况下是 int32 或 int64） int8 字节（byte，范围从–128 到 127） int16 整型（范围从–32768 到 32767） int32 整型（范围从–2147483648 到 2147483647） int64 整型（范围从–9223372036854775808 到 9223372036854775807） uint8 无符号整型（范围从 0 到 255） uint16 无符号整型（范围从 0 到 65535） uint32 无符号整型（范围从 0 到 4294967295） uint64 无符号整型（范围从 0 到 18446744073709551615） float_ float64 的简化形式 float16 半精度浮点型：符号比特位，5 比特位指数（exponent），10 比特位尾数（mantissa） float32 单精度浮点型：符号比特位，8 比特位指数，23 比特位尾数 float64 双精度浮点型：符号比特位，11 比特位指数，52 比特位尾数 complex_ complex128 的简化形式 complex64 复数，由两个 32 位浮点数表示 complex128 复数，由两个 64 位浮点数表示]]></content>
-      <categories>
-        <category>数据科学</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>数据科学</tag>
         <tag>data science</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python数据科学Numpy第1章上]]></title>
-    <url>%2F2019%2F05%2F19%2FPython%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6Numpy%E7%AC%AC1%E7%AB%A0%E4%B8%8A%2F</url>
-    <content type="text"><![CDATA[https://github.com/jakevdp/PythonDataScienceHandbook Numpy入门Numerical Python，提供了高效存储和操作密集数据缓存的接口。 由于Numpy的内容多，决定分成8次，分而治之，分成8块来学习。 导入Numpy 1import numpy as np 理解Python中的数据类型学习数据科学，我们要理解数据是如何被储存和操作的。 python易用性-动态输入静态类型的语言（如 C 或 Java）往往需要每一个变量都明确地声明， 而动态类型的语言（例如 Python）可以跳过这个特殊规定。 Python整型不仅仅是一个整型Python 3.4 中的一个整型实际上包括 4 个部分。 ob_refcnt 是一个引用计数，它帮助 Python 默默地处理内存的分配和回收。 ob_type 将变量的类型编码。 ob_size 指定接下来的数据成员的大小。 ob_digit 包含我们希望 Python 变量表示的实际整型值。 Python列表不仅仅是一个列表整型值列表 123456789101112L = list (range(10))print(L)# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]type(L)# output:listtype(L[0])# output:int 字符串列表 123456789L2 = [str(c) for c in L]print(L2)# output: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']type(L2[0])# output: str 异构列表 1234L3 = [True, "2", 3.0, 4][type(item) for item in L3]# output: [bool, str, float, int] Python中的固定类型数组array模块创建统一类型的密集数组 12345678import arrayL = list(range(10))print(L)A = array.array('i', L)A# output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]# array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) 从Python列表创建数组NumPy 要求数组必须包含同一类型的数据。 123456# 导入Numpyimport numpy as np# 创建数组np.array([1, 4, 2, 5, 3])#output: array([1, 4, 2, 5, 3]) 如果数据类型不匹配，Numpy向上转换： 12345import numpy as npnp.array([3.14, 4, 2, 3])# 整型int转换为浮点型float# output: array([3.14, 4. , 2. , 3. ]) 也可以用dtype关键词去设置数组的数据类型： 1234import numpy as npnp.array([1, 2, 3, 4], dtype='float32')# output: array([1., 2., 3., 4.], dtype=float32) 多维数组： 12345678# 嵌套列表构成的多维数组import numpy as npnp.array([range(i, i + 3) for i in [2, 4, 6]])#output#array([[2, 3, 4],# [4, 5, 6],# [6, 7, 8]])]]></content>
+    <title><![CDATA[numpy.zeros使用方法]]></title>
+    <url>%2F2019%2F05%2F19%2Fnumpy-zeros%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-zeros-python/ 快速回顾numpy array A NumPy array is basically like a container that holds numeric data that’s all of the same data type. I’m simplifying things a little, but that’s the essence of them. We can create a very simple NumPy array as follows: Numpy数组就像是一个容器，里面装着相同数据类型的数据。我们可以这样创建数组： 123import numpy as npnp.array([[1,2,3,4,5,6],[7,8,9,10,11,12]]) 我们创建了一个拥有2行6列的二维数组。所有数据都是整数（integers）。记住，在numpy的数组里，所有数据都必须是相同的数据类型。 当然数组可以是更加复杂的三维数组或者N维数组。 创建空的数组Arrays我们可以用Numpy array()函数创建一个空的，全是数字0的数组。 1np.array([[0,0,0],[0,0,0]]) 如果你需要创建更加大的多维数组，效率就不够高了： 123np.array([[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]) 别怕，我们可以用 Numpy reshape()方法： 1np.zeros(90).reshape((3,30)) 这个方法也不是很好，我们有更好的。 走，去看 zeros函数！ Zeros函数语法这个函数可以让你创建只有0的数组。 更重要地，这个函数可以让你指定数组的维度（dimensions）。也可以让你指定数据类型。 Then inside the zeros() function, there is a set of arguments. The first positional argument is a tuple of values that specifies the dimensions of the new array. Next, there’s an argument that enables you to specify the data type. If you don’t specify a data type, np.zeros() will use floats by default. 可以简单地看成，np.zeros(shape = (n行, m列), dtype = 数据类型)。如果不指定数据类型，会默认为floats。 例子例子1有5个0，1维数组 1np.zeros(5) 那我们可以看到数组里有5个元素，都是0。并且都是浮点数。 例子2用 dtype 指定数据类型，整数(int)。 1np.zeros(3, dtype = int) 还可以用dtype测试下数据的类型是不是整数int： 123&gt;&gt;&gt; np.zeros(3, dtype = int).dtype&gt;&gt;&gt; dtype('int64') 例子3指定shape： 1np.zeros(shape = (2, 3)) 也可以写成这样： 1np.zeros((2, 3)) 例子4指定shape和dtype： 1np.zeros(shape = (3, 5), dtype = 'int') 我们创建了一个3行5列的都是0的矩阵。 例子5接下来我们可以试试更加大的数组： 1np.zeros(shape = (3, 3, 5), dtype = 'int') https://docs.scipy.org/doc/ https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html?highlight=zeros numpy.zeros(shape, dtype=float, order=’C’) Return a new array of given shape and type, filled with zeros. Parametersshape : int or tuple of ints Shape of the new array, e.g., (2, 3) or 2. dtype : data-type, optional The desired data-type for the array, e.g., numpy.int8. Default is numpy.float64. order : {‘C’, ‘F’}, optional, default: ‘C’ Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory. Returnsout : ndarray Array of zeros with the given shape, dtype, and order. 例子12&gt;&gt;&gt; np.zeros(5)array([ 0., 0., 0., 0., 0.]) 12&gt;&gt;&gt; np.zeros((5,), dtype=int)array([0, 0, 0, 0, 0]) 123&gt;&gt;&gt; np.zeros((2, 1))array([[ 0.], [ 0.]]) 1234&gt;&gt;&gt; s = (2,2)&gt;&gt;&gt; np.zeros(s)array([[ 0., 0.], [ 0., 0.]]) 123&gt;&gt;&gt; np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtypearray([(0, 0), (0, 0)], dtype=[('x', '&lt;i4'), ('y', '&lt;i4')])]]></content>
       <categories>
         <category>数据科学</category>
       </categories>
       <tags>
         <tag>python</tag>
         <tag>numpy</tag>
-        <tag>数据科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[翻译-如何使用numpy.zeros函数]]></title>
-    <url>%2F2019%2F05%2F19%2F%E7%BF%BB%E8%AF%91-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8numpy-zeros%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[https://www.sharpsightlabs.com/blog/numpy-zeros-python/ 快速回顾numpy array A NumPy array is basically like a container that holds numeric data that’s all of the same data type. I’m simplifying things a little, but that’s the essence of them. We can create a very simple NumPy array as follows: Numpy数组就像是一个容器，里面装着相同数据类型的数据。我们可以这样创建数组： 123import numpy as npnp.array([[1,2,3,4,5,6],[7,8,9,10,11,12]]) 我们创建了一个拥有2行6列的二维数组。所有数据都是整数（integers）。记住，在numpy的数组里，所有数据都必须是相同的数据类型。 当然数组可以是更加复杂的三维数组或者N维数组。 创建空的数组Arrays我们可以用Numpy array()函数创建一个空的，全是数字0的数组。 1np.array([[0,0,0],[0,0,0]]) 如果你需要创建更加大的多维数组，效率就不够高了： 123np.array([[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]) 别怕，我们可以用 Numpy reshape()方法： 1np.zeros(90).reshape((3,30)) 这个方法也不是很好，我们有更好的。 走，去看 zeros函数！ Zeros函数语法这个函数可以让你创建只有0的数组。 更重要地，这个函数可以让你指定数组的维度（dimensions）。也可以让你指定数据类型。 Then inside the zeros() function, there is a set of arguments. The first positional argument is a tuple of values that specifies the dimensions of the new array. Next, there’s an argument that enables you to specify the data type. If you don’t specify a data type, np.zeros() will use floats by default. 可以简单地看成，np.zeros(shape = (n行, m列), dtype = 数据类型)。如果不指定数据类型，会默认为floats。 例子例子1有5个0，1维数组 1np.zeros(5) 那我们可以看到数组里有5个元素，都是0。并且都是浮点数。 例子2用 dtype 指定数据类型，整数(int)。 1np.zeros(3, dtype = int) 还可以用dtype测试下数据的类型是不是整数int： 123&gt;&gt;&gt; np.zeros(3, dtype = int).dtype&gt;&gt;&gt; dtype('int64') 例子3指定shape： 1np.zeros(shape = (2, 3)) 也可以写成这样： 1np.zeros((2, 3)) 例子4指定shape和dtype： 1np.zeros(shape = (3, 5), dtype = 'int') 我们创建了一个3行5列的都是0的矩阵。 例子5接下来我们可以试试更加大的数组： 1np.zeros(shape = (3, 3, 5), dtype = 'int')]]></content>
-      <categories>
-        <category>数据科学</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>numpy</tag>
-        <tag>zeros</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Python numpy.zeros使用方法]]></title>
-    <url>%2F2019%2F05%2F19%2FPython-numpy-zeros%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[https://docs.scipy.org/doc/ https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html?highlight=zeros numpy.zeros(shape, dtype=float, order=’C’) Return a new array of given shape and type, filled with zeros. Parametersshape : int or tuple of ints Shape of the new array, e.g., (2, 3) or 2. dtype : data-type, optional The desired data-type for the array, e.g., numpy.int8. Default is numpy.float64. order : {‘C’, ‘F’}, optional, default: ‘C’ Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory. Returnsout : ndarray Array of zeros with the given shape, dtype, and order. 例子12&gt;&gt;&gt; np.zeros(5)array([ 0., 0., 0., 0., 0.]) 12&gt;&gt;&gt; np.zeros((5,), dtype=int)array([0, 0, 0, 0, 0]) 123&gt;&gt;&gt; np.zeros((2, 1))array([[ 0.], [ 0.]]) 1234&gt;&gt;&gt; s = (2,2)&gt;&gt;&gt; np.zeros(s)array([[ 0., 0.], [ 0., 0.]]) 123&gt;&gt;&gt; np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtypearray([(0, 0), (0, 0)], dtype=[('x', '&lt;i4'), ('y', '&lt;i4')])]]></content>
-      <categories>
-        <category>数据科学</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>numpy.zeros</tag>
-        <tag>Numpy</tag>
+        <tag>data science</tag>
       </tags>
   </entry>
   <entry>
@@ -270,9 +283,9 @@
         <category>Chrome</category>
       </categories>
       <tags>
-        <tag>chrome</tag>
-        <tag>快捷键</tag>
         <tag>win10</tag>
+        <tag>快捷键</tag>
+        <tag>chrome</tag>
       </tags>
   </entry>
   <entry>
@@ -283,9 +296,9 @@
         <category>win10</category>
       </categories>
       <tags>
-        <tag>快捷键</tag>
-        <tag>win10</tag>
         <tag>WIN10</tag>
+        <tag>win10</tag>
+        <tag>快捷键</tag>
       </tags>
   </entry>
 </search>
