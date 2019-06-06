@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python PEP263]]></title>
+    <url>%2F2019%2F06%2F07%2Fpython-PEP263%2F</url>
+    <content type="text"><![CDATA[https://www.python.org/dev/peps/pep-0263/ SyntaxError Non-ASCII character ‘\xe5’ in file D:\python_work\electric_car_1.py on line 23, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details 本来可以正常run的py文件突然这样提示error，去官网看下解决方法。 原因 In Python 2.1, Unicode literals can only be written using the Latin-1 based encoding “unicode-escape”. This makes the programming environment rather unfriendly to Python users who live and work in non-Latin-1 locales such as many of the Asian countries. Programmers can write their 8-bit strings using the favorite encoding, but are bound to the “unicode-escape” encoding for Unicode literals. 在Python 2.1中，Unicode文字只能使用基于Latin-1的编码“unicode-escape”编写。这使得编程环境对在非拉丁语1语言环境中生活和工作的Python用户非常不友好，例如许多亚洲国家。程序员可以使用喜欢的编码来编写他们的8位字符串，但是绑定到Unicode文字的“unicode-escape”编码。 解决方法 I propose to make the Python source code encoding both visible and changeable on a per-source file basis by using a special comment at the top of the file to declare the encoding. 我建议在每个源文件的基础上使Python源代码编码可见和可更改，方法是使用文件顶部的特殊注释来声明编码。 Python will default to ASCII as standard encoding if no other encoding hints are given. 如果没有给出其他编码提示，Python将默认为ASCII作为标准编码。 在py文件开头加上： 12#!/usr/bin/python# -*- coding: UTF-8 -*-]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python naming conflict]]></title>
+    <url>%2F2019%2F05%2F30%2FPython-naming-conflict%2F</url>
+    <content type="text"><![CDATA[案例群里小伙伴说pycharm可以正常run代码，debug有错误提示。 DebugAttributeError：module ‘numbers’ has no attribute ‘Number’ 解决方法原因是Naming conflict，有个叫numbers.py的文件与python的standard library里的numbers命名冲突，把numbers.py文件重命名或者删掉它，pycharm debug就不会有traceback了。 类似的问题我看到类似的问题还有，AttributeError: module &#39;random&#39; has no attribute &#39;randint&#39;。 那要记得命名时不要命名为random.py。 注意py文件命名时，不要和python内建函数、standard library重名。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Anaconda下载慢]]></title>
+    <url>%2F2019%2F05%2F30%2FAnaconda%E4%B8%8B%E8%BD%BD%E6%85%A2%2F</url>
+    <content type="text"><![CDATA[Anaconda下载慢为了录视频，想演示下anaconda安装使用，所以卸载了打算重新安装。没想到下载了半天都下载不下来，刚好这个月清华镜像也不能用。反正很多库暂时用不到，所以先把录视频所需的几样东西安装好了就行了… 重新下载安装需要的东西： python （在官网下载） numpy （cmd输入pip install numpy） pandas （cmd输入pip install pandas） matplotlib （cmd输入pip install matplotlib） jupyter notebook （cmd输入pip install jupyter） Jupyter notebook https://jupyter.org/install.html error安装了之后我输入jupyter，报错： 1jupyter: error: one of the arguments --version subcommand --config-dir --data-dir --runtime-dir --paths is required 解决方法：cmd输入 1jupyter notebook 就能打开本地http://localhost:8888/tree，浏览器会自动弹出。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[matplotlib c argument]]></title>
+    <url>%2F2019%2F05%2F30%2Fmatplotlib-c-argument%2F</url>
+    <content type="text"><![CDATA[1plt.scatter(x_values, y_values, c=(0, 0, 0.8), edgecolor='none', s=40) Warn ‘c’ argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with ‘x’ &amp; ‘y’. Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points. Answer from stackoverflow In the latest version of matplotlib (3.0.3), argument ‘c’ should be a 2-D array. If the length of ‘c’ matches with the length of ‘x’ and ‘y’, the color of each point corresponds to the element of the ‘c’. If you want to make every point show the same color, ‘c’ should be a 2-D array with a single row, such as c=np.array([0.5, 0.5, 0.5]). https://stackoverflow.com/questions/55109716/c-argument-looks-like-a-single-numeric-rgb-or-rgba-sequence 原因是新的matplotlib版本里，argument c 应该是2维数组。 我试过改成c=np.array([0, 0, 0.8])，还是不行。 最终解决方法为： 把 ’c‘ argument 改成 color。 1plt.scatter(x_values, y_values, color=(0, 0, 0.8), edgecolor='none', s=40)]]></content>
+      <categories>
+        <category>数据科学</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>data science</tag>
+        <tag>数据科学</tag>
+        <tag>matplotlib</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[numpy 100题练习 Day5]]></title>
     <url>%2F2019%2F05%2F24%2Fnumpy-100%E9%A2%98%E7%BB%83%E4%B9%A0-Day5%2F</url>
     <content type="text"><![CDATA[https://github.com/rougier/numpy-100 How to sum a small array faster than np.sum?1234# Author: Evgeni BurovskiZ = np.arange(10)np.add.reduce(Z) Consider two random array A and B, check if they are equal12345678910A = np.random.randint(0,2,5)B = np.random.randint(0,2,5)# Assuming identical shape of the arrays and a tolerance for the comparison of valuesequal = np.allclose(A,B)print(equal)# Checking both the shape and the element values, no tolerance (values have to be exactly equal)equal = np.array_equal(A,B)print(equal) Make an array immutable (read-only)123Z = np.zeros(10)Z.flags.writeable = FalseZ[0] = 1 Consider a random 10x2 matrix representing cartesian coordinates, convert them to polar coordinates123456Z = np.random.random((10,2))X,Y = Z[:,0], Z[:,1]R = np.sqrt(X**2+Y**2)T = np.arctan2(Y,X)print(R)print(T) Create random vector of size 10 and replace the maximum value by 0123Z = np.random.random(10)Z[Z.argmax()] = 0print(Z) Create a structured array with x and y coordinates covering the [0,1]x[0,1] area1234Z = np.zeros((5,5), [('x',float),('y',float)])Z['x'], Z['y'] = np.meshgrid(np.linspace(0,1,5), np.linspace(0,1,5))print(Z) Given two arrays, X and Y, construct the Cauchy matrix C (Cij =1/(xi - yj))123456# Author: Evgeni BurovskiX = np.arange(8)Y = X + 0.5C = 1.0 / np.subtract.outer(X, Y)print(np.linalg.det(C)) Print the minimum and maximum representable value for each numpy scalar type1234567for dtype in [np.int8, np.int32, np.int64]: print(np.iinfo(dtype).min) print(np.iinfo(dtype).max)for dtype in [np.float32, np.float64]: print(np.finfo(dtype).min) print(np.finfo(dtype).max) print(np.finfo(dtype).eps) How to print all the values of an array?123np.set_printoptions(threshold=np.nan)Z = np.zeros((16,16))print(Z) How to find the closest value (to a given scalar) in a vector?1234Z = np.arange(100)v = np.random.uniform(0,100)index = (np.abs(Z-v)).argmin()print(Z[index])]]></content>
