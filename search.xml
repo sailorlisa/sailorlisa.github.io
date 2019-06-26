@@ -32,7 +32,7 @@
   <entry>
     <title><![CDATA[U盘容量变小解决方法]]></title>
     <url>%2F2019%2F06%2F07%2FU%E7%9B%98%E5%AE%B9%E9%87%8F%E5%8F%98%E5%B0%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[之前U盘用来装镜像ISO了，很久没用，突然发现容量只有3M多… 比较麻烦的解决方法清除磁盘打开命令提示符窗口，输入list disk，找到自己的U盘 磁盘2就是我的U盘。 接下来输入select disk 2，显示磁盘2现在是所选磁盘。 然后输入clean 添加卷win10系统，右键此电脑，点击管理，跳转到计算机管理窗口。 储存——&gt;磁盘管理 ——&gt; 找到自己的U盘，如果是黑色条的话，右键黑色条，选择新建简单卷 一直点击下一步直到确定。 成功的话，颜色就变成深蓝色，提示状态良好。 查看下U盘的容量，就变正常了。 比较快的解决方法下载工具（优启通），点击归还空间]]></content>
+    <content type="text"><![CDATA[之前U盘用来装镜像ISO了，很久没用，突然发现容量只有3M多… 比较麻烦的解决方法清除磁盘打开命令提示符窗口，输入diskpart 后再输入 list disk，找到自己的U盘 磁盘2就是我的U盘。 接下来输入select disk 2，显示磁盘2现在是所选磁盘。 然后输入clean 添加卷win10系统，右键此电脑，点击管理，跳转到计算机管理窗口。 储存——&gt;磁盘管理 ——&gt; 找到自己的U盘，如果是黑色条的话，右键黑色条，选择新建简单卷 一直点击下一步直到确定。 成功的话，颜色就变成深蓝色，提示状态良好。 查看下U盘的容量，就变正常了。 比较快的解决方法下载工具（优启通），点击归还空间]]></content>
   </entry>
   <entry>
     <title><![CDATA[python编程 从入门到实践 9.3 TypeError]]></title>
@@ -447,8 +447,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>主题</tag>
+        <tag>hexo</tag>
         <tag>NextT</tag>
         <tag>theme</tag>
         <tag>博客</tag>
